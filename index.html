@@ -542,10 +542,9 @@
       <h2 id="guideTitle" style="margin:10px 0">Download the Investigative Guide</h2>
       <p class="lead" style="font-size:1rem;margin-bottom:20px">Get the complimentary guide and continue the conversation after Infosecurity Europe 2026.</p>
 
-   <form name="guide-download" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="guide-download">
-        <input type="hidden" name="form-name" value="guide-download" />
-        <p style="display:none"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+  <form id="guideForm" name="guide-download" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="guide-download" />
+<p style="display:none"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
         <div class="field"><label for="guide-name">Name</label><input id="guide-name" name="name" required /></div>
         <div class="field" style="margin-top:12px"><label for="guide-email">Email</label><input id="guide-email" name="email" type="email" required /></div>
