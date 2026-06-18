@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,124 +10,240 @@
 <meta name="description" content="Learn how Open Source Intelligence (OSINT) is used in Europe for investigations, compliance, cybersecurity and due diligence.">
 
 <style>
+:root{
+  --navy:#071322;
+  --navy2:#0d1b2e;
+  --card:#10223a;
+  --cyan:#00c8f0;
+  --gold:#f0a500;
+  --white:#f4f8fb;
+  --muted:#9bb7cc;
+  --border:rgba(0,200,240,.22);
+}
+
+*{
+  box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-    line-height:1.7;
-    color:#222;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:
+    radial-gradient(circle at 75% 10%,rgba(0,200,240,.16),transparent 32%),
+    linear-gradient(135deg,#06101d 0%,#0d1b2e 58%,#071322 100%);
+  color:var(--white);
+  line-height:1.75;
 }
-h1,h2{
-    color:#0d3b66;
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,200,240,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,200,240,.035) 1px,transparent 1px);
+  background-size:54px 54px;
+  pointer-events:none;
 }
-img{
-    max-width:100%;
-    border-radius:10px;
+
+.article-wrap{
+  position:relative;
+  max-width:980px;
+  margin:0 auto;
+  padding:48px 22px 90px;
 }
-a{
-    color:#0066cc;
+
+.article-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 28px 90px rgba(0,0,0,.35);
 }
+
+.back{
+  display:inline-block;
+  margin-bottom:24px;
+  color:var(--cyan);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.back:hover{
+  color:white;
+}
+
 .hero{
-    margin-bottom:30px;
+  width:100%;
+  border-radius:20px;
+  border:1px solid var(--border);
+  margin-bottom:30px;
+  box-shadow:0 18px 54px rgba(0,0,0,.28);
 }
+
+h1{
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1.08;
+  color:white;
+  margin:0 0 20px;
+}
+
+h2{
+  margin-top:42px;
+  color:var(--cyan);
+}
+
+p,li{
+  color:#b8d3e5;
+  font-size:1.05rem;
+}
+
 .date{
-    color:#666;
-    margin-bottom:20px;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+.cta-box{
+  margin-top:40px;
+  padding:24px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  background:rgba(0,200,240,.08);
+}
+
+.cta-box h3{
+  margin-top:0;
+  color:white;
+}
+
+.button{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 22px;
+  background:var(--cyan);
+  color:#06101d;
+  font-weight:700;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+.button:hover{
+  opacity:.9;
+}
+
+.footer-link{
+  margin-top:30px;
+  display:block;
+}
+
+@media(max-width:640px){
+  .article-card{
+    padding:22px;
+  }
+
+  p,li{
+    font-size:1rem;
+  }
 }
 </style>
+
 </head>
 
 <body>
 
-<a href="/">← Back to Home</a>
+<div class="article-wrap">
 
-<div class="hero">
-<img src="/blog-osint-europe.jpg" alt="OSINT Europe">
-</div>
+<a class="back" href="/">← Back to Home</a>
+
+<article class="article-card">
+
+<img class="hero" src="/blog-osint-europe.jpg" alt="European OSINT research and information gathering">
 
 <h1>OSINT in Europe: A Practical Guide for Investigators</h1>
 
-<p class="date">Published June 2026</p>
+<div class="date">Published June 2026</div>
 
 <p>
-Open Source Intelligence (OSINT) has become one of the most valuable tools for modern investigators, compliance professionals and cybersecurity teams. Every day, vast amounts of information are published online through websites, social media platforms, public registers and company databases.
+Open Source Intelligence (OSINT) has become one of the most valuable tools for investigators, compliance professionals, journalists and cybersecurity teams across Europe.
 </p>
 
 <p>
-The challenge is no longer finding information. The challenge is finding reliable information, verifying it and transforming it into actionable intelligence.
+Every day, millions of pieces of information become available through corporate registers, social media, government databases, procurement portals, court records and public websites. The challenge is no longer finding information. The challenge is identifying reliable information and transforming it into actionable intelligence.
 </p>
 
 <h2>What is OSINT?</h2>
 
 <p>
-OSINT refers to information collected from publicly available sources. Unlike confidential intelligence, OSINT is gathered legally from information that anyone can access.
-</p>
-
-<p>
-Examples include:
+OSINT refers to intelligence gathered from publicly available sources. Unlike covert intelligence collection, OSINT relies on information that can be accessed legally and ethically.
 </p>
 
 <ul>
-<li>Corporate registers</li>
+<li>Company registers</li>
 <li>Public procurement databases</li>
-<li>Social media profiles</li>
-<li>Court records</li>
+<li>Court decisions</li>
 <li>News archives</li>
+<li>Social media platforms</li>
 <li>Government publications</li>
+<li>Academic sources</li>
 <li>Satellite imagery</li>
-<li>Academic databases</li>
 </ul>
 
-<h2>Why OSINT Matters in Europe</h2>
+<h2>Why Europe is Different</h2>
 
 <p>
-Europe offers a unique investigative environment. Investigators often need to work across multiple jurisdictions, languages and legal systems. Understanding where information is stored and how it can be accessed legally is critical.
+European investigations often involve multiple jurisdictions, languages and legal systems. An investigator may need to verify information from several countries while respecting GDPR requirements and national regulations.
 </p>
 
 <p>
-Whether you are conducting due diligence, investigating fraud, verifying business partners or supporting cybersecurity operations, OSINT provides an efficient and cost-effective starting point.
+Understanding where information is stored, how it can be accessed and how it should be documented is often more important than the technology itself.
 </p>
 
-<h2>Common OSINT Applications</h2>
+<h2>Common Uses of OSINT</h2>
 
 <ul>
-<li>Background checks</li>
-<li>Corporate investigations</li>
+<li>Due diligence investigations</li>
 <li>Fraud detection</li>
-<li>Compliance and AML screening</li>
-<li>Cyber threat intelligence</li>
-<li>Journalistic investigations</li>
+<li>Corporate intelligence</li>
+<li>Cybersecurity investigations</li>
+<li>AML and compliance screening</li>
 <li>Academic research</li>
+<li>Journalistic investigations</li>
 </ul>
 
-<h2>Key Skills for Effective OSINT</h2>
+<h2>Verification Matters</h2>
 
 <p>
-Successful investigators combine technical tools with critical thinking. Information must always be verified through multiple independent sources.
+One of the biggest mistakes beginners make is trusting a single source. Professional investigators compare information from multiple independent sources before drawing conclusions.
 </p>
 
 <p>
-Important skills include:
+Verification, documentation and transparency remain the foundations of professional investigative work.
 </p>
 
-<ul>
-<li>Source evaluation</li>
-<li>Verification techniques</li>
-<li>Advanced search methods</li>
-<li>Data analysis</li>
-<li>Legal and ethical awareness</li>
-</ul>
-
-<h2>Learn More</h2>
+<h2>The Future of Investigations</h2>
 
 <p>
-The Information Gathering and Private Investigation in Europe course provides a practical introduction to OSINT methodologies used across Europe. Participants learn how to collect, verify and analyse information while respecting legal and ethical boundaries.
+Artificial intelligence, automation and increasingly accessible databases are transforming the way investigators work. However, critical thinking, legal awareness and source evaluation remain essential skills.
 </p>
 
+<div class="cta-box">
+
+<h3>Learn Practical European OSINT Methods</h3>
+
 <p>
-<a href="/">Return to homepage</a>
+Our Information Gathering and Private Investigation in Europe course introduces practical OSINT methodologies, verification techniques and investigative workflows used across Europe.
 </p>
+
+<a class="button" href="/">Visit the Main Website</a>
+
+</div>
+
+<a class="footer-link back" href="/">← Return to Homepage</a>
+
+</article>
+
+</div>
 
 </body>
 </html>
