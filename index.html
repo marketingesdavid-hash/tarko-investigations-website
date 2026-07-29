@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Information Gathering and Private Investigation in Europe | OSINT, HUMINT & European Investigative Training</title>
-  <meta name="description" content="Practical European information gathering and private investigation training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners. Based on doctoral research and European investigative practice." />
-  <meta name="keywords" content="information gathering, private investigation, OSINT, HUMINT, European investigations, investigative techniques, compliance investigations, cybersecurity training, GDPR investigation, university investigation course" />
-  <link rel="canonical" href="https://tarko-investigations.com/" />
+  <title>Information Gathering and Private Investigation in Europe</title>
+  <meta id="metaDescription" name="description" content="Practical European information gathering and private investigation training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.">
+  <meta name="keywords" content="information gathering, private investigation, OSINT, HUMINT, European investigations, cybersecurity training, GDPR investigation">
+  <link rel="canonical" href="https://tarko-investigations.com/">
 
-  <meta property="og:title" content="Information Gathering and Private Investigation in Europe" />
-  <meta property="og:description" content="Explore academic and professional partnership opportunities around a practical European investigative methodologies course." />
-  <meta property="og:image" content="https://tarko-investigations.com/hero-david-aron.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tarko-investigations.com/" />
+  <meta id="ogTitle" property="og:title" content="Information Gathering and Private Investigation in Europe">
+  <meta id="ogDescription" property="og:description" content="Academic and professional partnership opportunities around a practical European investigative methodologies course.">
+  <meta property="og:image" content="https://tarko-investigations.com/hero-david-aron.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tarko-investigations.com/">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Information Gathering and Private Investigation in Europe" />
-  <meta name="twitter:description" content="Practical European investigative training for universities, organisations and professionals." />
-  <meta name="twitter:image" content="https://tarko-investigations.com/hero-david-aron.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twitterTitle" name="twitter:title" content="Information Gathering and Private Investigation in Europe">
+  <meta id="twitterDescription" name="twitter:description" content="Practical European investigative training for universities, organisations and professionals.">
+  <meta name="twitter:image" content="https://tarko-investigations.com/hero-david-aron.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --navy:#071322;--navy2:#0d1b2e;--navy3:#132338;--card:#162b44;--card2:#10223a;
+      --navy:#071322;--navy2:#0d1b2e;--navy3:#132338;--card:#162b44;
       --cyan:#00c8f0;--cyan2:#68e4ff;--gold:#f0a500;--white:#f4f8fb;--muted:#9bb7cc;
       --border:rgba(0,200,240,.18);--border2:rgba(240,165,0,.25);--shadow:0 28px 90px rgba(0,0,0,.45);
       --radius:18px;--body:'Inter',system-ui,sans-serif;--head:'Playfair Display',Georgia,serif;
@@ -38,41 +38,43 @@
     a{color:inherit;text-decoration:none}
     button,input,textarea,select{font-family:inherit}
     .container{max-width:1180px;margin:auto;padding:0 24px}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--cyan);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .eyebrow:before{content:"";width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 18px var(--cyan)}
     h1,h2,h3{font-family:var(--head);line-height:1.08}
     h1{font-size:clamp(2.55rem,5.6vw,5.4rem);letter-spacing:-.04em}
     h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.03em}
     h3{font-size:1.35rem}
     .lead{color:var(--muted);font-size:1.08rem;max-width:720px}
     .small{font-size:.86rem;color:var(--muted)}
-    .gold{color:var(--gold)}.cyan{color:var(--cyan)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:800;font-size:.92rem;transition:.2s ease;cursor:pointer;border:1px solid transparent;text-align:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--cyan);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 18px var(--cyan)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;font-weight:800;font-size:.92rem;transition:.2s;cursor:pointer;border:1px solid transparent;text-align:center}
     .btn-primary{background:var(--cyan);color:#071322}
-    .btn-primary:hover{background:#fff;transform:translateY(-2px)}
-    .btn-secondary{border-color:var(--border);background:rgba(255,255,255,.03);color:var(--white)}
+    .btn-primary:hover,.btn-gold:hover{background:#fff;transform:translateY(-2px)}
+    .btn-secondary{border-color:var(--border);background:rgba(255,255,255,.03)}
     .btn-secondary:hover{border-color:var(--cyan);background:rgba(0,200,240,.08);transform:translateY(-2px)}
     .btn-gold{background:var(--gold);color:#071322}
-    .btn-gold:hover{background:#fff;transform:translateY(-2px)}
 
-    header{position:sticky;top:0;z-index:1000;background:rgba(7,19,34,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    header{position:sticky;top:0;z-index:1000;background:rgba(7,19,34,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+    .nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#0c1929}
     .brand strong{font-family:var(--head);font-size:1.08rem}
     .brand span{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
-    .navlinks{display:flex;align-items:center;gap:18px}
-    .navlinks a{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
-    .navlinks a:hover{color:var(--white)}
-    .mobile-toggle{display:none;background:none;border:0;color:var(--white);font-size:1.8rem}
+    .nav-right{display:flex;align-items:center;gap:14px}
+    .navlinks{display:flex;align-items:center;gap:16px}
+    .navlinks a{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:800}
+    .navlinks a:hover{color:#fff}
+    .language-switch{display:flex;gap:5px;padding:4px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03)}
+    .language-switch button{border:0;background:transparent;color:var(--muted);font-weight:900;font-size:.72rem;padding:7px 10px;border-radius:999px;cursor:pointer}
+    .language-switch button.active{background:var(--cyan);color:#071322}
+    .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.8rem}
 
     .hero{position:relative;padding:98px 0 70px;background:radial-gradient(circle at 75% 12%,rgba(0,200,240,.19),transparent 34%),linear-gradient(135deg,#06101d 0%,#0d1b2e 58%,#071322 100%);overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,240,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,240,.035) 1px,transparent 1px);background-size:54px 54px;opacity:.9}
+    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,240,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,240,.035) 1px,transparent 1px);background-size:54px 54px}
     .hero .container{position:relative}
     .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
     .hero-copy p{margin-top:22px}
     .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
-    .pill{display:inline-flex;align-items:center;border:1px solid var(--border);background:rgba(0,200,240,.07);color:var(--cyan2);border-radius:999px;padding:7px 12px;font-size:.76rem;font-weight:800}
+    .pill{border:1px solid var(--border);background:rgba(0,200,240,.07);color:var(--cyan2);border-radius:999px;padding:7px 12px;font-size:.76rem;font-weight:800}
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
     .hero-card{position:relative}
     .hero-photo{border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;background:#10223a}
@@ -80,120 +82,78 @@
     .hero-note strong{display:block;margin-bottom:3px}
     .trust-strip{margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .trust{border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.035);padding:16px}
-    .trust b{display:block;font-size:1.25rem;color:#fff}
-    .trust span{font-size:.78rem;color:var(--muted)}
+    .trust b{display:block;font-size:1.25rem}.trust span{font-size:.78rem;color:var(--muted)}
 
     section{padding:86px 0}
     .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
     .section-head p{max-width:620px}
-    .bg-mid{background:var(--navy2)}
-    .bg-card{background:var(--navy3)}
+    .bg-mid{background:var(--navy2)}.bg-card{background:var(--navy3)}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:0 18px 54px rgba(0,0,0,.18)}
-    .card:hover{border-color:rgba(0,200,240,.42)}
-    .card .icon{width:44px;height:44px;border-radius:14px;background:rgba(0,200,240,.11);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-weight:900;margin-bottom:16px}
     .card p{color:var(--muted);font-size:.94rem;margin-top:10px}
-    .pathways{grid-template-columns:repeat(3,1fr)}
-    .pathway{position:relative;overflow:hidden}
-    .pathway:before{content:"";position:absolute;inset:auto -40px -60px auto;width:160px;height:160px;border-radius:50%;background:rgba(0,200,240,.08)}
+    .card .icon{width:44px;height:44px;border-radius:14px;background:rgba(0,200,240,.11);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
     .pathway .btn{margin-top:20px;width:100%}
-
     .split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
     .panel{border:1px solid var(--border);border-radius:24px;background:linear-gradient(180deg,rgba(22,43,68,.82),rgba(16,34,58,.7));padding:34px}
     .list{list-style:none;margin-top:20px}
     .list li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);color:var(--muted)}
-    .list li:last-child{border-bottom:0}
-    .check{color:var(--cyan);font-weight:900;flex:0 0 auto}
+    .list li:last-child{border-bottom:0}.check{color:var(--cyan);font-weight:900}
     .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .person{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}
-    .person img{width:150px;height:150px;object-fit:cover;border-radius:18px;border:1px solid var(--border);background:#10223a}
+    .person img{width:150px;height:150px;object-fit:cover;border-radius:18px;border:1px solid var(--border)}
     .role{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:var(--gold);margin:7px 0 10px}
-
     .video-wrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
     .video-wrap:before{content:"";display:block;padding-top:56.25%}
     .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
     .curriculum{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .module{display:flex;gap:16px;padding:20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
     .module-num{width:42px;height:42px;border-radius:14px;background:rgba(240,165,0,.12);border:1px solid var(--border2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}
     .module p{color:var(--muted);font-size:.9rem;margin-top:6px}
-
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .post-card{overflow:hidden;padding:0}
-    .post-card img{width:100%;height:190px;object-fit:cover;background:#10223a;border-bottom:1px solid var(--border)}
-    .post-body{padding:24px}
-    .post-meta{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:900;margin-bottom:8px}
-    .post-body h3{margin-bottom:10px}
-    .post-body a{color:var(--cyan);font-weight:800;font-size:.9rem}
-
-    .cta-band{border:1px solid var(--border);border-radius:28px;padding:42px;background:radial-gradient(circle at 90% 10%,rgba(0,200,240,.18),transparent 30%),linear-gradient(135deg,#10223a,#071322);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+    .post-card img{width:100%;height:190px;object-fit:cover;border-bottom:1px solid var(--border)}
+    .post-body{padding:24px}.post-meta{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:900;margin-bottom:8px}
+    .post-body a{color:var(--cyan);font-weight:800}
     .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .faq details{border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.035);padding:18px}
-    .faq summary{cursor:pointer;font-weight:800}
-    .faq p{color:var(--muted);font-size:.92rem;margin-top:12px}
-
+    .faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);font-size:.92rem;margin-top:12px}
     .form-box{max-width:860px;margin:auto;border:1px solid var(--border);border-radius:24px;background:var(--card);padding:34px}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .field{display:flex;flex-direction:column;gap:7px}
-    .field.full{grid-column:1/-1}
+    .field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
     .field label{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
-    .field input,.field textarea,.field select{background:#071322;border:1px solid var(--border);color:var(--white);border-radius:12px;padding:12px}
+    .field input,.field textarea,.field select{background:#071322;border:1px solid var(--border);color:#fff;border-radius:12px;padding:12px}
     .field textarea{min-height:135px;resize:vertical}
     .checkbox-field{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.9rem}
     .checkbox-field input{margin-top:5px;accent-color:var(--cyan)}
     .checkbox-field a{color:var(--cyan);font-weight:800}
     .submit{width:100%;margin-top:18px}
     .subnav{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-
     .legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .legal-card p,.legal-card li{color:var(--muted);font-size:.9rem}
-    .legal-card ul{margin:14px 0 0 18px}
-    .legal-card h3{margin-bottom:10px}
-
+    .legal-card p,.legal-card li{color:var(--muted);font-size:.9rem}.legal-card ul{margin:14px 0 0 18px}
     footer{background:#050c16;border-top:1px solid var(--border);padding:44px 0}
     .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.86rem}
-    .footer a{color:var(--muted)}
     .footer a:hover{color:var(--cyan)}
-
     .modal{display:none;position:fixed;inset:0;z-index:5000;background:rgba(5,12,22,.9);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}
-    .modal.active{display:flex}
-    .modal-box{max-width:540px;width:100%;border:1px solid var(--border);border-radius:24px;background:var(--card);padding:34px;position:relative;max-height:92vh;overflow:auto}
+    .modal.active{display:flex}.modal-box{max-width:540px;width:100%;border:1px solid var(--border);border-radius:24px;background:var(--card);padding:34px;position:relative;max-height:92vh;overflow:auto}
     .close{position:absolute;right:18px;top:14px;background:none;border:0;color:var(--muted);font-size:1.8rem;cursor:pointer}
-    .cover{width:160px;border-radius:14px;border:1px solid var(--border);margin:0 auto 18px;background:#10223a}
-    .success-box{display:none;border:1px solid var(--border);background:rgba(0,200,240,.08);border-radius:16px;padding:18px;margin-top:18px}
-    .success-box.active{display:block}
+    .cover{width:160px;border-radius:14px;border:1px solid var(--border);margin:0 auto 18px}
+    .success-box{display:none;border:1px solid var(--border);background:rgba(0,200,240,.08);border-radius:16px;padding:18px;margin-top:18px}.success-box.active{display:block}
     .cookie{position:fixed;right:18px;bottom:18px;z-index:4000;display:none;width:min(380px,calc(100% - 36px));border:1px solid var(--border);border-radius:18px;background:var(--card);padding:18px;box-shadow:var(--shadow)}
-    .cookie p{font-size:.82rem;color:var(--muted);margin:8px 0 14px}
-    .cookie-actions{display:flex;gap:10px}
-    .cookie .btn{padding:10px 12px;flex:1;font-size:.8rem}
+    .cookie p{font-size:.82rem;color:var(--muted);margin:8px 0 14px}.cookie-actions{display:flex;gap:10px}.cookie .btn{padding:10px 12px;flex:1}
 
     @media(max-width:980px){
-      .hero-grid,.split,.cta-band{grid-template-columns:1fr}
-      .cards,.pathways,.trust-strip,.blog-grid,.legal-grid{grid-template-columns:1fr 1fr}
+      .hero-grid,.split{grid-template-columns:1fr}
+      .cards,.trust-strip,.blog-grid,.legal-grid{grid-template-columns:1fr 1fr}
       .team-grid,.curriculum,.faq{grid-template-columns:1fr}
-      .person{grid-template-columns:120px 1fr}
-      .person img{width:120px;height:120px}
-      .section-head{display:block}
-      .section-head p{margin-top:12px}
+      .section-head{display:block}.section-head p{margin-top:12px}
       .navlinks{display:none;position:absolute;left:0;right:0;top:74px;background:var(--navy2);border-bottom:1px solid var(--border);padding:20px 24px;flex-direction:column;align-items:flex-start}
-      .navlinks.open{display:flex}
-      .mobile-toggle{display:block}
-      .subnav{grid-template-columns:1fr}
+      .navlinks.open{display:flex}.mobile-toggle{display:block}.subnav{grid-template-columns:1fr}
     }
     @media(max-width:640px){
-      .container{padding:0 18px}
-      .hero{padding:74px 0 46px}
-      section{padding:62px 0}
-      .cards,.pathways,.trust-strip,.form-grid,.blog-grid,.legal-grid{grid-template-columns:1fr}
-      .hero-actions .btn,.cta-band .btn{width:100%}
-      .person{grid-template-columns:1fr}
-      .person img{width:100%;height:220px}
-      .brand span{display:none}
-      .hero-note{position:static;margin-top:12px}
-      .modal-box,.form-box{padding:24px}
-      .nav{height:68px}
-      .navlinks{top:68px}
-      .brand img{width:42px;height:42px}
+      .container{padding:0 18px}.hero{padding:74px 0 46px}section{padding:62px 0}
+      .cards,.trust-strip,.form-grid,.blog-grid,.legal-grid{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}.person{grid-template-columns:1fr}.person img{width:100%;height:220px}
+      .brand span{display:none}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
     }
   </style>
 
@@ -216,16 +176,7 @@
         "description":"A practical European course on information gathering, private investigation, OSINT, HUMINT, verification, GDPR-conscious investigative practice and professional reporting.",
         "provider":{"@id":"https://tarko-investigations.com/#organization"},
         "educationalCredentialAwarded":"Certificate of completion via Udemy",
-        "inLanguage":"en"
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://tarko-investigations.com/#faq",
-        "mainEntity":[
-          {"@type":"Question","name":"Who developed this course?","acceptedAnswer":{"@type":"Answer","text":"The course is created and presented by Dávid Komporday. The academic content and investigative methodology are based on Áron Tarkó PhD’s doctoral research and professional expertise."}},
-          {"@type":"Question","name":"Can universities integrate it into a programme?","acceptedAnswer":{"@type":"Answer","text":"Yes. It can be used as recommended learning, integrated into an existing module, developed into an elective, or supported with guest lectures and workshops."}},
-          {"@type":"Question","name":"Is the course theoretical or practical?","acceptedAnswer":{"@type":"Answer","text":"It combines academic foundation with practical workflows including OSINT, HUMINT, verification, observation, documentation, reporting, GDPR, ethics and European case studies."}}
-        ]
+        "inLanguage":["en","hu"]
       }
     ]
   }
@@ -233,404 +184,379 @@
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Home">
-        <img src="logo.png" alt="Tarkó Investigations logo" />
-        <div><strong>European Investigative Learning</strong><span>Information · Strategy · Protection</span></div>
-      </a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="Tarkó Investigations logo">
+      <div><strong data-i18n="brandTitle">European Investigative Learning</strong><span data-i18n="brandTagline">Information · Strategy · Protection</span></div>
+    </a>
+    <div class="nav-right">
       <nav class="navlinks" id="navlinks">
-        <a href="#pathways">Pathways</a>
-        <a href="#universities">Universities</a>
-        <a href="#organisations">Organisations</a>
-        <a href="#course">Course</a>
-        <a href="#team">Team</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <a href="#pathways" data-i18n="navPathways">Pathways</a>
+        <a href="#universities" data-i18n="navUniversities">Universities</a>
+        <a href="#organisations" data-i18n="navOrganisations">Organisations</a>
+        <a href="#course" data-i18n="navCourse">Course</a>
+        <a href="#team" data-i18n="navTeam">Team</a>
+        <a href="#blog" data-i18n="navBlog">Blog</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
+      <div class="language-switch">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="hu">HU</button>
+      </div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">European investigative training · OSINT · HUMINT · GDPR awareness</span>
-          <h1>Information Gathering and Private Investigation in Europe</h1>
-          <p class="lead">Practical European investigative training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.</p>
-          <p class="lead">Created and presented by <strong>Dávid Komporday</strong>, based on the doctoral research and investigative expertise of <strong>Áron Tarkó, PhD</strong>.</p>
-          <div class="hero-badges">
-            <span class="pill">Cybersecurity & Infosecurity Teams</span>
-            <span class="pill">Universities</span>
-            <span class="pill">Professional Organisations</span>
-            <span class="pill">Compliance & Corporate Investigations</span>
-          </div>
-          <div class="hero-actions">
-            <button class="btn btn-primary" data-open-guide>Download the Investigative Guide</button>
-            <a class="btn btn-secondary" href="#contact">Discuss Collaboration</a>
-          </div>
-          <div class="trust-strip">
-            <div class="trust"><b>10h</b><span>structured learning content</span></div>
-            <div class="trust"><b>6+1</b><span>sections plus bonus module</span></div>
-            <div class="trust"><b>OSINT</b><span>HUMINT, GDPR, verification</span></div>
-            <div class="trust"><b>EU</b><span>case studies & legal context</span></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img class="hero-photo" src="hero-david-aron.png" alt="Dávid Komporday and Áron Tarkó at a London cybersecurity and investigation conference" />
-          <div class="hero-note"><strong>Thank you for connecting with us in London.</strong><span class="small">This page is designed for the people, universities and professional organisations we met through the Infosecurity Europe network.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pathways" class="bg-mid">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="eyebrow">Choose your path</span><h2>How would you like to work with us?</h2></div>
-          <p class="lead">The highest-value opportunities are academic and professional partnerships. Individual Udemy enrolment remains available for learners who want to start immediately.</p>
-        </div>
-        <div class="cards pathways">
-          <article class="card pathway"><div class="icon">🎓</div><h3>For Universities</h3><p>Integrate European investigative methodologies into existing programmes, build an elective module or invite us for a guest lecture.</p><a href="#contact" class="btn btn-primary">Explore Academic Collaboration</a></article>
-          <article class="card pathway"><div class="icon">🤝</div><h3>For Professional Organisations</h3><p>Offer your members practical investigative training through webinars, licensing, bulk access or partnership campaigns.</p><a href="#contact" class="btn btn-primary">Discuss Partnership Options</a></article>
-          <article class="card pathway"><div class="icon">▶</div><h3>For Individual Learners</h3><p>Start with the full Udemy course and learn practical OSINT, HUMINT, verification, reporting, ethics and case-analysis methods.</p><a href="#course" class="btn btn-secondary">View the Course</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="universities">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Academic partnerships</span>
-          <h2>Bring European Investigative Methodologies into Your Curriculum</h2>
-          <p class="lead">For universities, lecturers and programme directors in criminology, security studies, intelligence analysis, journalism, law, compliance and cybersecurity education.</p>
-          <ul class="list">
-            <li><span class="check">✓</span><span>Use the course as recommended learning or pre-class material.</span></li>
-            <li><span class="check">✓</span><span>Integrate selected modules into an existing subject.</span></li>
-            <li><span class="check">✓</span><span>Build a new elective around information gathering and private investigation in Europe.</span></li>
-            <li><span class="check">✓</span><span>Invite Dávid and/or Áron for a guest lecture, workshop or pilot session.</span></li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Why it fits academic programmes</h3>
-          <ul class="list">
-            <li><span class="check">✓</span><span>PhD-based academic foundation adapted into practical learning.</span></li>
-            <li><span class="check">✓</span><span>Structured curriculum with quizzes, assignments, reflection and certificate-ready learning flow.</span></li>
-            <li><span class="check">✓</span><span>European perspective: GDPR, legal boundaries, ethical conduct and realistic cases.</span></li>
-            <li><span class="check">✓</span><span>Useful for students who need source verification, critical thinking and investigative logic.</span></li>
-          </ul>
-          <a href="#contact" class="btn btn-gold" style="margin-top:22px;width:100%">Schedule an Academic Discussion</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="organisations" class="bg-mid">
-      <div class="container split">
-        <div class="panel">
-          <h3>Partnership models</h3>
-          <ul class="list">
-            <li><span class="check">✓</span><span>Member discount campaigns with dedicated links.</span></li>
-            <li><span class="check">✓</span><span>Affiliate or revenue-sharing partnership.</span></li>
-            <li><span class="check">✓</span><span>Joint webinar or online briefing for your community.</span></li>
-            <li><span class="check">✓</span><span>Bulk licences for teams, chapters or member groups.</span></li>
-            <li><span class="check">✓</span><span>In-person lecture, conference talk or specialist workshop.</span></li>
-          </ul>
-          <a href="#contact" class="btn btn-primary" style="margin-top:22px;width:100%">Explore Partnership Opportunities</a>
-        </div>
-        <div>
-          <span class="eyebrow">Professional organisations</span>
-          <h2>Equip Your Members with Practical Investigative Skills</h2>
-          <p class="lead">For cybersecurity communities, OSINT groups, compliance associations, corporate security networks, fraud prevention groups and professional training providers.</p>
-          <div class="cards" style="grid-template-columns:1fr 1fr;margin-top:24px">
-            <div class="card"><h3>Workplace relevance</h3><p>Information verification, source assessment, internal inquiry logic, fraud examples and structured reporting.</p></div>
-            <div class="card"><h3>European credibility</h3><p>GDPR-aware methodology, legal and ethical boundaries and European case studies instead of generic global content.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="course">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="eyebrow">Course preview</span><h2>Information Gathering and Private Investigation in Europe</h2></div>
-          <p class="lead">A complete Udemy-compatible learning structure: video lessons, quizzes, assignments, case studies, final reflection and optional mentoring pathways.</p>
-        </div>
-        <div class="video-wrap" aria-label="Course introduction video">
-          <iframe src="https://www.youtube.com/embed/lY9cyyxJmqc" title="Information Gathering and Private Investigation in Europe – Course Introduction" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="curriculum" style="margin-top:28px">
-          <div class="module"><div class="module-num">1</div><div><h3>Introduction to Private Investigation</h3><p>History, ethics, legal boundaries and the investigator’s mindset.</p></div></div>
-          <div class="module"><div class="module-num">2</div><div><h3>Core Principles of Information Gathering</h3><p>Open, human and technical sources; OSINT, HUMINT, verification and triangulation.</p></div></div>
-          <div class="module"><div class="module-num">3</div><div><h3>Tools and Techniques</h3><p>Digital tools, observation, documentation, analysis, reporting and presentation.</p></div></div>
-          <div class="module"><div class="module-num">4</div><div><h3>European Case Studies</h3><p>Corporate data leak, missing-person scenario and disinformation campaign analysis.</p></div></div>
-          <div class="module"><div class="module-num">5</div><div><h3>Professional Practice</h3><p>Trust, client management, GDPR, confidentiality, pricing, contracts and credibility.</p></div></div>
-          <div class="module"><div class="module-num">6+</div><div><h3>Next Steps & Mentoring</h3><p>Final review, certificate, reflection assignment and optional consultation pathways.</p></div></div>
-        </div>
-        <div class="subnav">
-          <button class="btn btn-primary" data-open-guide>Download the Guide</button>
-          <a class="btn btn-secondary" href="https://www.udemy.com/course/information-gathering-and-private-investigation-in-europe/" target="_blank" rel="noopener">Start Learning on Udemy</a>
-          <a class="btn btn-secondary" href="#contact">Discuss a Partnership</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="bg-card">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="eyebrow">Meet the team</span><h2>The people behind the course</h2></div>
-          <p class="lead">The project combines practical learning design, business development, academic research and specialist European investigative knowledge.</p>
-        </div>
-        <div class="team-grid">
-          <article class="card person"><img src="david-portrait.jpg" alt="Dávid Komporday, course creator and presenter" /><div><h3>Dávid Komporday</h3><span class="role">Course Creator & Presenter</span><p>Dávid created and presents the Udemy course, adapting academic research into a practical, visual and accessible professional learning experience for European audiences.</p></div></article>
-          <article class="card person"><img src="aron-portrait.jpg" alt="Áron Tarkó PhD, academic lead and investigative expert" /><div><h3>Áron Tarkó, PhD</h3><span class="role">Academic Lead & Subject Matter Expert</span><p>Áron contributes the doctoral research and investigative expertise behind the methodology, with a focus on European information gathering, ethics and legal frameworks.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-   <section id="blog">
-  <div class="container">
-    <div class="section-head">
-      <div><span class="eyebrow">Insights</span><h2>European investigation blog</h2></div>
-      <p class="lead">Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.</p>
-    </div>
-
-```
-<div class="blog-grid">
-
-  <article class="card post-card">
-    <img src="blog-osint-europe.jpg" alt="European OSINT research and information gathering" />
-    <div class="post-body">
-      <div class="post-meta">OSINT · Europe</div>
-      <h3>What makes OSINT different in Europe?</h3>
-      <p>European open-source research requires legal awareness, language sensitivity and careful documentation.</p>
-      <a href="/blog/osint-europe.html">Read article →</a>
-    </div>
-  </article>
-
-  <article class="card post-card">
-    <img src="blog-gdpr-investigations.jpg" alt="GDPR compliant investigation and professional documentation" />
-    <div class="post-body">
-      <div class="post-meta">GDPR · Compliance</div>
-      <h3>GDPR-aware investigation is a method, not an obstacle</h3>
-      <p>Professional investigators must treat privacy, proportionality and documentation as part of the workflow.</p>
-      <a href="/blog/gdpr-investigations.html">Read article →</a>
-    </div>
-  </article>
-
-  <article class="card post-card">
-    <img src="blog-private-investigation-training.jpg" alt="Private investigation training for universities and professional organisations" />
-    <div class="post-body">
-      <div class="post-meta">Training · Education</div>
-      <h3>Why investigative thinking belongs in professional education</h3>
-      <p>Source assessment, verification and structured reporting are valuable far beyond private investigation.</p>
-      <a href="/blog/private-investigation-training.html">Read article →</a>
-    </div>
-  </article>
-
-</div>
-
-<p class="small" style="margin-top:18px">
-  Explore practical articles covering OSINT, GDPR-conscious investigations and professional investigative training across Europe.
-</p>
-```
-
   </div>
-</section>
+</header>
 
-
-    <section id="faq" class="bg-mid">
-      <div class="container">
-        <div class="section-head"><div><span class="eyebrow">Questions</span><h2>FAQ for partners and learners</h2></div></div>
-        <div class="faq">
-          <details open><summary>Who developed this course?</summary><p>The course is created and presented by Dávid Komporday. The academic content and investigative methodology are based on Áron Tarkó PhD’s doctoral research and professional expertise.</p></details>
-          <details><summary>Is this only for private detectives?</summary><p>No. It is designed for cybersecurity and infosecurity teams, compliance professionals, corporate investigators, educators, researchers, journalists, students and legal professionals.</p></details>
-          <details><summary>Can universities integrate it into a programme?</summary><p>Yes. It can be used as recommended learning, integrated into an existing module, developed into an elective or supported with guest lectures and workshops.</p></details>
-          <details><summary>Can professional organisations resell or recommend it?</summary><p>Yes. We can discuss member discounts, affiliate partnerships, bulk access, webinars, joint campaigns or speaking opportunities.</p></details>
-          <details><summary>Is the course theoretical or practical?</summary><p>It combines academic foundation with practical workflows: OSINT, HUMINT, verification, observation, documentation, reporting, GDPR, ethics and European case studies.</p></details>
-          <details><summary>Who is Marek Marlow?</summary><p>Marek Marlow is an AI-supported educational persona used in selected course materials and video introductions. The course itself is created by Dávid and based on Áron’s research and expertise.</p></details>
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="heroEyebrow">European investigative training · OSINT · HUMINT · GDPR awareness</span>
+        <h1 data-i18n="heroTitle">Information Gathering and Private Investigation in Europe</h1>
+        <p class="lead" data-i18n="heroLead1">Practical European investigative training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.</p>
+        <p class="lead" data-i18n-html="heroLead2">Created and presented by <strong>Dávid Komporday</strong>, based on the research and investigative expertise of <strong>Áron Tarkó</strong>.</p>
+        <div class="hero-badges">
+          <span class="pill" data-i18n="badgeCyber">Cybersecurity & Infosecurity Teams</span>
+          <span class="pill" data-i18n="badgeUniversities">Universities</span>
+          <span class="pill" data-i18n="badgeOrganisations">Professional Organisations</span>
+          <span class="pill" data-i18n="badgeCompliance">Compliance & Corporate Investigations</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-guide data-i18n="downloadGuide">Download the Investigative Guide</button>
+          <a class="btn btn-secondary" href="#contact" data-i18n="discussCollaboration">Discuss Collaboration</a>
+        </div>
+        <div class="trust-strip">
+          <div class="trust"><b>10h</b><span data-i18n="trustHours">structured learning content</span></div>
+          <div class="trust"><b>6+1</b><span data-i18n="trustSections">sections plus bonus module</span></div>
+          <div class="trust"><b>OSINT</b><span data-i18n="trustMethods">HUMINT, GDPR, verification</span></div>
+          <div class="trust"><b>EU</b><span data-i18n="trustEU">case studies & legal context</span></div>
         </div>
       </div>
-    </section>
-
-    <section id="contact">
-      <div class="container form-box">
-        <span class="eyebrow">Contact</span>
-        <h2 style="margin:12px 0 10px">Let’s discuss the right next step</h2>
-        <p class="lead" style="margin-bottom:22px">Use this form for university collaboration, guest lectures, professional organisation partnerships, corporate training, speaking opportunities or individual course questions.</p>
-
-       <form name="contact-enquiry" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact-enquiry">
-  <p style="display:none">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
-
-          <div class="form-grid">
-            <div class="field"><label for="contact-name">Name</label><input id="contact-name" name="name" required /></div>
-            <div class="field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required /></div>
-            <div class="field"><label for="contact-org">Organisation / University</label><input id="contact-org" name="organisation" placeholder="Optional" /></div>
-            <div class="field"><label for="contact-topic">What are you interested in?</label>
-              <select id="contact-topic" name="interest" required>
-                <option value="">Please choose one</option>
-                <option>University / curriculum collaboration</option>
-                <option>Guest lecture or workshop</option>
-                <option>Professional organisation partnership</option>
-                <option>Corporate training / bulk access</option>
-                <option>Speaking opportunity</option>
-                <option>Udemy course / individual learning</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="field full"><label for="contact-message">Message</label><textarea id="contact-message" name="message" placeholder="Please briefly tell us who you are, what type of collaboration or learning opportunity you are interested in, and what would be the best next step."></textarea></div>
-            <div class="field full checkbox-field"><input id="privacy" type="checkbox" name="privacy_policy_agreed" required /><label for="privacy">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
-            <div class="field full checkbox-field"><input id="updates" type="checkbox" name="updates_opt_in" /><label for="updates">I would like to receive occasional updates about new courses, webinars and learning opportunities.</label></div>
-          </div>
-          <button class="btn btn-primary submit" type="submit">Send Enquiry</button>
-          <div class="success-box" id="contactSuccess"><strong>Thank you.</strong><br />Your enquiry has been received. We personally review every message and will get back to you shortly.</div>
-        </form>
+      <div class="hero-card">
+        <img class="hero-photo" src="hero-david-aron.png" alt="Dávid Komporday and Áron Tarkó">
+        <div class="hero-note"><strong data-i18n="heroNoteTitle">Thank you for connecting with us in London.</strong><span class="small" data-i18n="heroNoteText">This page is designed for the people, universities and professional organisations we met through the Infosecurity Europe network.</span></div>
       </div>
-    </section>
-
-    <section id="privacy-policy" class="bg-mid">
-      <div class="container">
-        <div class="section-head"><div><span class="eyebrow">Legal</span><h2>Privacy Policy & Terms</h2></div><p class="lead">This section keeps the website transparent and GDPR-conscious while remaining simple for visitors.</p></div>
-        <div class="legal-grid">
-          <article class="card legal-card">
-            <h3>Privacy Policy</h3>
-            <p>We collect only the information you voluntarily submit through our forms, such as your name, email address, organisation, area of interest and message.</p>
-            <ul>
-              <li>Purpose: responding to enquiries, sending the guide, and discussing relevant learning or collaboration opportunities.</li>
-              <li>Data controller: Tarkó Investigations.</li>
-              <li>Contact: contact@tarko-investigations.com.</li>
-              <li>You may request access, correction or deletion of your data at any time.</li>
-              <li>We do not sell your personal data.</li>
-            </ul>
-          </article>
-          <article id="terms-and-conditions" class="card legal-card">
-            <h3>Terms & Conditions</h3>
-            <p>This website and downloadable guide are provided for educational and informational purposes only. They do not constitute legal advice or a professional investigation service agreement.</p>
-            <ul>
-              <li>Udemy enrolments are subject to Udemy’s own terms and conditions.</li>
-              <li>Academic, organisational or corporate collaborations are agreed separately in writing.</li>
-              <li>All course materials, guide content and website materials are protected by copyright.</li>
-              <li>Use of this website does not create a client relationship.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer">
-      <div><strong>European Investigative Learning</strong><br />Information Gathering and Private Investigation in Europe<div>
-<a href="/privacy-policy.html">Privacy Policy</a>
- ·
-<a href="/terms-and-conditions.html">Terms & Conditions</a>
- ·
-<a href="/cookie-policy.html">Cookie Policy</a>
- ·
-<a href="#contact">Contact</a>
-</div>
     </div>
-  </footer>
+  </section>
 
-  <div class="modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
-    <div class="modal-box">
-      <button class="close" data-close-guide aria-label="Close">×</button>
-      <img class="cover" src="guide-cover.png" alt="10 Things Every European Investigator Must Know guide cover" />
-      <span class="eyebrow">Free guide</span>
-      <h2 id="guideTitle" style="margin:10px 0">Download the Investigative Guide</h2>
-      <p class="lead" style="font-size:1rem;margin-bottom:20px">Get the complimentary guide and continue the conversation after Infosecurity Europe 2026.</p>
+  <section id="pathways" class="bg-mid">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="choosePath">Choose your path</span><h2 data-i18n="pathwaysTitle">How would you like to work with us?</h2></div>
+        <p class="lead" data-i18n="pathwaysLead">The highest-value opportunities are academic and professional partnerships. Individual Udemy enrolment remains available for learners who want to start immediately.</p>
+      </div>
+      <div class="cards">
+        <article class="card pathway"><div class="icon">🎓</div><h3 data-i18n="forUniversities">For Universities</h3><p data-i18n="forUniversitiesText">Integrate European investigative methodologies into existing programmes, build an elective module or invite us for a guest lecture.</p><a href="#contact" class="btn btn-primary" data-i18n="academicCollab">Explore Academic Collaboration</a></article>
+        <article class="card pathway"><div class="icon">🤝</div><h3 data-i18n="forOrganisations">For Professional Organisations</h3><p data-i18n="forOrganisationsText">Offer your members practical investigative training through webinars, licensing, bulk access or partnership campaigns.</p><a href="#contact" class="btn btn-primary" data-i18n="partnershipOptions">Discuss Partnership Options</a></article>
+        <article class="card pathway"><div class="icon">▶</div><h3 data-i18n="forLearners">For Individual Learners</h3><p data-i18n="forLearnersText">Start with the full Udemy course and learn practical OSINT, HUMINT, verification, reporting, ethics and case-analysis methods.</p><a href="#course" class="btn btn-secondary" data-i18n="viewCourse">View the Course</a></article>
+      </div>
+    </div>
+  </section>
 
-<form id="guideForm" name="guide-download" method="POST" data-netlify="true" action="/10-things-every-european-investigator-must-know.pdf">
-<input type="hidden" name="form-name" value="guide-download" />
-<p style="display:none"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-  
-        <div class="field"><label for="guide-name">Name</label><input id="guide-name" name="name" required /></div>
-        <div class="field" style="margin-top:12px"><label for="guide-email">Email</label><input id="guide-email" name="email" type="email" required /></div>
-        <div class="field" style="margin-top:12px">
-          <label for="guide-type">I am mainly interested in</label>
-          <select id="guide-type" name="interest" required>
-            <option>University collaboration</option>
-            <option>Professional organisation partnership</option>
-            <option>Corporate training</option>
-            <option>Individual learning</option>
-            <option>Other</option>
-          </select>
+  <section id="universities">
+    <div class="container split">
+      <div>
+        <span class="eyebrow" data-i18n="academicPartnerships">Academic partnerships</span>
+        <h2 data-i18n="universitiesTitle">Bring European Investigative Methodologies into Your Curriculum</h2>
+        <p class="lead" data-i18n="universitiesLead">For universities, lecturers and programme directors in criminology, security studies, intelligence analysis, journalism, law, compliance and cybersecurity education.</p>
+        <ul class="list">
+          <li><span class="check">✓</span><span data-i18n="uni1">Use the course as recommended learning or pre-class material.</span></li>
+          <li><span class="check">✓</span><span data-i18n="uni2">Integrate selected modules into an existing subject.</span></li>
+          <li><span class="check">✓</span><span data-i18n="uni3">Build a new elective around information gathering and private investigation in Europe.</span></li>
+          <li><span class="check">✓</span><span data-i18n="uni4">Invite Dávid and/or Áron for a guest lecture, workshop or pilot session.</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 data-i18n="whyFitsTitle">Why it fits academic programmes</h3>
+        <ul class="list">
+          <li><span class="check">✓</span><span data-i18n="why1">Research-based academic foundation adapted into practical learning.</span></li>
+          <li><span class="check">✓</span><span data-i18n="why2">Structured curriculum with quizzes, assignments, reflection and certificate-ready learning flow.</span></li>
+          <li><span class="check">✓</span><span data-i18n="why3">European perspective: GDPR, legal boundaries, ethical conduct and realistic cases.</span></li>
+          <li><span class="check">✓</span><span data-i18n="why4">Useful for students who need source verification, critical thinking and investigative logic.</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-gold" style="margin-top:22px;width:100%" data-i18n="scheduleAcademic">Schedule an Academic Discussion</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="organisations" class="bg-mid">
+    <div class="container split">
+      <div class="panel">
+        <h3 data-i18n="partnershipModels">Partnership models</h3>
+        <ul class="list">
+          <li><span class="check">✓</span><span data-i18n="partner1">Member discount campaigns with dedicated links.</span></li>
+          <li><span class="check">✓</span><span data-i18n="partner2">Affiliate or revenue-sharing partnership.</span></li>
+          <li><span class="check">✓</span><span data-i18n="partner3">Joint webinar or online briefing for your community.</span></li>
+          <li><span class="check">✓</span><span data-i18n="partner4">Bulk licences for teams, chapters or member groups.</span></li>
+          <li><span class="check">✓</span><span data-i18n="partner5">In-person lecture, conference talk or specialist workshop.</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="margin-top:22px;width:100%" data-i18n="explorePartnership">Explore Partnership Opportunities</a>
+      </div>
+      <div>
+        <span class="eyebrow" data-i18n="professionalOrganisations">Professional organisations</span>
+        <h2 data-i18n="organisationsTitle">Equip Your Members with Practical Investigative Skills</h2>
+        <p class="lead" data-i18n="organisationsLead">For cybersecurity communities, OSINT groups, compliance associations, corporate security networks, fraud prevention groups and professional training providers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="course">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="coursePreview">Course preview</span><h2 data-i18n="courseTitle">Information Gathering and Private Investigation in Europe</h2></div>
+        <p class="lead" data-i18n="courseLead">A complete Udemy-compatible learning structure: video lessons, quizzes, assignments, case studies, final reflection and optional mentoring pathways.</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/lY9cyyxJmqc" title="Course Introduction" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="curriculum" style="margin-top:28px">
+        <div class="module"><div class="module-num">1</div><div><h3 data-i18n="module1Title">Introduction to Private Investigation</h3><p data-i18n="module1Text">History, ethics, legal boundaries and the investigator’s mindset.</p></div></div>
+        <div class="module"><div class="module-num">2</div><div><h3 data-i18n="module2Title">Core Principles of Information Gathering</h3><p data-i18n="module2Text">Open, human and technical sources; OSINT, HUMINT, verification and triangulation.</p></div></div>
+        <div class="module"><div class="module-num">3</div><div><h3 data-i18n="module3Title">Tools and Techniques</h3><p data-i18n="module3Text">Digital tools, observation, documentation, analysis, reporting and presentation.</p></div></div>
+        <div class="module"><div class="module-num">4</div><div><h3 data-i18n="module4Title">European Case Studies</h3><p data-i18n="module4Text">Corporate data leak, missing-person scenario and disinformation campaign analysis.</p></div></div>
+        <div class="module"><div class="module-num">5</div><div><h3 data-i18n="module5Title">Professional Practice</h3><p data-i18n="module5Text">Trust, client management, GDPR, confidentiality, pricing, contracts and credibility.</p></div></div>
+        <div class="module"><div class="module-num">6+</div><div><h3 data-i18n="module6Title">Next Steps & Mentoring</h3><p data-i18n="module6Text">Final review, certificate, reflection assignment and optional consultation pathways.</p></div></div>
+      </div>
+      <div class="subnav">
+        <button class="btn btn-primary" data-open-guide data-i18n="downloadGuideShort">Download the Guide</button>
+        <a class="btn btn-secondary" href="https://www.udemy.com/course/information-gathering-and-private-investigation-in-europe/" target="_blank" rel="noopener" data-i18n="startUdemy">Start Learning on Udemy</a>
+        <a class="btn btn-secondary" href="#contact" data-i18n="discussPartnership">Discuss a Partnership</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="bg-card">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="meetTeam">Meet the team</span><h2 data-i18n="teamTitle">The people behind the course</h2></div>
+        <p class="lead" data-i18n="teamLead">The project combines practical learning design, business development, academic research and specialist European investigative knowledge.</p>
+      </div>
+      <div class="team-grid">
+        <article class="card person"><img src="david-portrait.jpg" alt="Dávid Komporday"><div><h3>Dávid Komporday</h3><span class="role" data-i18n="davidRole">Course Creator & Presenter</span><p data-i18n="davidBio">Dávid created and presents the Udemy course, adapting academic research into a practical, visual and accessible professional learning experience for European audiences.</p></div></article>
+        <article class="card person"><img src="aron-portrait.jpg" alt="Áron Tarkó"><div><h3>Áron Tarkó</h3><span class="role" data-i18n="aronRole">Academic Lead & Subject Matter Expert</span><p data-i18n="aronBio">Áron contributes the research and investigative expertise behind the methodology, with a focus on European information gathering, ethics and legal frameworks.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="insights">Insights</span><h2 data-i18n="blogTitle">European investigation blog</h2></div>
+        <p class="lead" data-i18n="blogLead">Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.</p>
+      </div>
+      <div class="blog-grid">
+        <article class="card post-card"><img src="blog-osint-europe.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post1Meta">OSINT · Europe</div><h3 data-i18n="post1Title">What makes OSINT different in Europe?</h3><p data-i18n="post1Text">European open-source research requires legal awareness, language sensitivity and careful documentation.</p><a href="/blog/osint-europe.html" data-i18n="readArticle">Read article →</a></div></article>
+        <article class="card post-card"><img src="blog-gdpr-investigations.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post2Meta">GDPR · Compliance</div><h3 data-i18n="post2Title">GDPR-aware investigation is a method, not an obstacle</h3><p data-i18n="post2Text">Professional investigators must treat privacy, proportionality and documentation as part of the workflow.</p><a href="/blog/gdpr-investigations.html" data-i18n="readArticle">Read article →</a></div></article>
+        <article class="card post-card"><img src="blog-private-investigation-training.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post3Meta">Training · Education</div><h3 data-i18n="post3Title">Why investigative thinking belongs in professional education</h3><p data-i18n="post3Text">Source assessment, verification and structured reporting are valuable far beyond private investigation.</p><a href="/blog/private-investigation-training.html" data-i18n="readArticle">Read article →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="bg-mid">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-i18n="questions">Questions</span><h2 data-i18n="faqTitle">FAQ for partners and learners</h2></div></div>
+      <div class="faq">
+        <details open><summary data-i18n="faq1Q">Who developed this course?</summary><p data-i18n="faq1A">The course is created and presented by Dávid Komporday. The academic content and investigative methodology are based on Áron Tarkó’s research and professional expertise.</p></details>
+        <details><summary data-i18n="faq2Q">Is this only for private detectives?</summary><p data-i18n="faq2A">No. It is designed for cybersecurity and infosecurity teams, compliance professionals, corporate investigators, educators, researchers, journalists, students and legal professionals.</p></details>
+        <details><summary data-i18n="faq3Q">Can universities integrate it into a programme?</summary><p data-i18n="faq3A">Yes. It can be used as recommended learning, integrated into an existing module, developed into an elective or supported with guest lectures and workshops.</p></details>
+        <details><summary data-i18n="faq4Q">Can professional organisations resell or recommend it?</summary><p data-i18n="faq4A">Yes. We can discuss member discounts, affiliate partnerships, bulk access, webinars, joint campaigns or speaking opportunities.</p></details>
+        <details><summary data-i18n="faq5Q">Is the course theoretical or practical?</summary><p data-i18n="faq5A">It combines academic foundations with practical workflows: OSINT, HUMINT, verification, observation, documentation, reporting, GDPR, ethics and European case studies.</p></details>
+        <details><summary data-i18n="faq6Q">Who is Marek Marlow?</summary><p data-i18n="faq6A">Marek Marlow is an AI-supported educational persona used in selected course materials and video introductions. The course itself is created by Dávid and based on Áron’s research and expertise.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container form-box">
+      <span class="eyebrow" data-i18n="contactEyebrow">Contact</span>
+      <h2 style="margin:12px 0 10px" data-i18n="contactTitle">Let’s discuss the right next step</h2>
+      <p class="lead" style="margin-bottom:22px" data-i18n="contactLead">Use this form for university collaboration, guest lectures, professional organisation partnerships, corporate training, speaking opportunities or individual course questions.</p>
+      <form id="contactForm" name="contact-enquiry" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact-enquiry">
+        <p style="display:none"><label>Don’t fill this out: <input name="bot-field"></label></p>
+        <div class="form-grid">
+          <div class="field"><label for="contact-name" data-i18n="labelName">Name</label><input id="contact-name" name="name" required></div>
+          <div class="field"><label for="contact-email" data-i18n="labelEmail">Email</label><input id="contact-email" name="email" type="email" required></div>
+          <div class="field"><label for="contact-org" data-i18n="labelOrganisation">Organisation / University</label><input id="contact-org" name="organisation" data-i18n-placeholder="optional" placeholder="Optional"></div>
+          <div class="field"><label for="contact-topic" data-i18n="labelInterest">What are you interested in?</label>
+            <select id="contact-topic" name="interest" required>
+              <option value="" data-i18n="selectChoose">Please choose one</option>
+              <option data-i18n="interestUniversity">University / curriculum collaboration</option>
+              <option data-i18n="interestGuest">Guest lecture or workshop</option>
+              <option data-i18n="interestOrganisation">Professional organisation partnership</option>
+              <option data-i18n="interestCorporate">Corporate training / bulk access</option>
+              <option data-i18n="interestSpeaking">Speaking opportunity</option>
+              <option data-i18n="interestUdemy">Udemy course / individual learning</option>
+              <option data-i18n="interestOther">Other</option>
+            </select>
+          </div>
+          <div class="field full"><label for="contact-message" data-i18n="labelMessage">Message</label><textarea id="contact-message" name="message" data-i18n-placeholder="messagePlaceholder"></textarea></div>
+          <div class="field full checkbox-field"><input id="privacy" type="checkbox" name="privacy_policy_agreed" required><label for="privacy" data-i18n-html="privacyAgree">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
+          <div class="field full checkbox-field"><input id="updates" type="checkbox" name="updates_opt_in"><label for="updates" data-i18n="updatesAgree">I would like to receive occasional updates about new courses, webinars and learning opportunities.</label></div>
         </div>
-        <div class="field checkbox-field" style="margin-top:12px"><input id="guide-privacy" type="checkbox" name="privacy_policy_agreed" required /><label for="guide-privacy">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
-        <div class="field checkbox-field" style="margin-top:12px"><input id="guide-updates" type="checkbox" name="updates_opt_in" /><label for="guide-updates">I would like to receive occasional updates about new courses, webinars and learning opportunities.</label></div>
-
-        <button class="btn btn-primary submit" type="submit">Download the Free Guide</button>
-        <p class="small" style="margin-top:12px">After submission, the PDF will open automatically. If it does not, use the direct link shown after submission.</p>
-        <div class="success-box" id="guideSuccess">
-          <strong>Thank you for downloading the guide.</strong><br />
-          Your PDF should open automatically. If it does not, <a class="cyan" href="/10-things-every-european-investigator-must-know.pdf" target="_blank" rel="noopener">click here to download it</a>.<br /><br />
-          If you represent a university, professional organisation or corporate team, please use the contact form to discuss collaboration.
-        </div>
+        <button class="btn btn-primary submit" type="submit" data-i18n="sendEnquiry">Send Enquiry</button>
+        <div class="success-box" id="contactSuccess"><strong data-i18n="thankYou">Thank you.</strong><br><span data-i18n="contactSuccessText">Your enquiry has been received. We personally review every message and will get back to you shortly.</span></div>
       </form>
     </div>
+  </section>
+
+  <section id="privacy-policy" class="bg-mid">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow" data-i18n="legalEyebrow">Legal</span><h2 data-i18n="legalTitle">Privacy Policy & Terms</h2></div></div>
+      <div class="legal-grid">
+        <article class="card legal-card">
+          <h3 data-i18n="privacyTitle">Privacy Policy</h3>
+          <p data-i18n="privacyIntro">We collect only the information you voluntarily submit through our forms.</p>
+          <ul>
+            <li data-i18n="privacy1">Purpose: responding to enquiries, sending the guide, and discussing relevant learning or collaboration opportunities.</li>
+            <li data-i18n="privacy2">Data controller: Tarkó Investigations.</li>
+            <li>Contact: contact@tarko-investigations.com.</li>
+            <li data-i18n="privacy4">You may request access, correction or deletion of your data at any time.</li>
+            <li data-i18n="privacy5">We do not sell your personal data.</li>
+          </ul>
+        </article>
+        <article class="card legal-card">
+          <h3 data-i18n="termsTitle">Terms & Conditions</h3>
+          <p data-i18n="termsIntro">This website and downloadable guide are provided for educational and informational purposes only.</p>
+          <ul>
+            <li data-i18n="terms1">Udemy enrolments are subject to Udemy’s own terms and conditions.</li>
+            <li data-i18n="terms2">Academic, organisational or corporate collaborations are agreed separately in writing.</li>
+            <li data-i18n="terms3">All course materials, guide content and website materials are protected by copyright.</li>
+            <li data-i18n="terms4">Use of this website does not create a client relationship.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong data-i18n="footerTitle">European Investigative Learning</strong><br><span data-i18n="footerSubtitle">Information Gathering and Private Investigation in Europe</span></div>
+    <div><a href="/privacy-policy.html" data-i18n="privacyTitle">Privacy Policy</a> · <a href="/terms-and-conditions.html" data-i18n="termsTitle">Terms & Conditions</a> · <a href="/cookie-policy.html" data-i18n="cookiePolicy">Cookie Policy</a> · <a href="#contact" data-i18n="navContact">Contact</a></div>
   </div>
+</footer>
 
-  <div class="cookie" id="cookie">
-    <strong>Cookie notice</strong>
-    <p>We use essential cookies and basic form functionality to operate this website. If analytics are added later, this notice should be updated accordingly.</p>
-    <div class="cookie-actions"><button class="btn btn-primary" id="acceptCookie">Accept</button><button class="btn btn-secondary" id="declineCookie">Decline</button></div>
+<div class="modal" id="guideModal">
+  <div class="modal-box">
+    <button class="close" data-close-guide>×</button>
+    <img class="cover" src="guide-cover.png" alt="">
+    <span class="eyebrow" data-i18n="freeGuide">Free guide</span>
+    <h2 style="margin:10px 0" data-i18n="guideModalTitle">Download the Investigative Guide</h2>
+    <p class="lead" style="font-size:1rem;margin-bottom:20px" data-i18n="guideModalLead">Get the complimentary guide and continue the conversation after Infosecurity Europe 2026.</p>
+    <form id="guideForm" name="guide-download" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="guide-download">
+      <div class="field"><label for="guide-name" data-i18n="labelName">Name</label><input id="guide-name" name="name" required></div>
+      <div class="field" style="margin-top:12px"><label for="guide-email" data-i18n="labelEmail">Email</label><input id="guide-email" name="email" type="email" required></div>
+      <div class="field checkbox-field" style="margin-top:12px"><input id="guide-privacy" type="checkbox" required><label for="guide-privacy" data-i18n-html="privacyAgree">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
+      <button class="btn btn-primary submit" type="submit" data-i18n="downloadFreeGuide">Download the Free Guide</button>
+      <div class="success-box" id="guideSuccess"><strong data-i18n="guideThanks">Thank you for downloading the guide.</strong><br><a class="cyan" href="/10-things-every-european-investigator-must-know.pdf" target="_blank" data-i18n="clickDownload">click here to download it</a>.</div>
+    </form>
   </div>
+</div>
 
-  <script>
-    const navlinks=document.getElementById('navlinks');
-    document.getElementById('mobileToggle').addEventListener('click',()=>navlinks.classList.toggle('open'));
-    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+<div class="cookie" id="cookie">
+  <strong data-i18n="cookieNotice">Cookie notice</strong>
+  <p data-i18n="cookieText">We use essential cookies and basic form functionality to operate this website.</p>
+  <div class="cookie-actions"><button class="btn btn-primary" id="acceptCookie" data-i18n="accept">Accept</button><button class="btn btn-secondary" id="declineCookie" data-i18n="decline">Decline</button></div>
+</div>
 
-    const modal=document.getElementById('guideModal');
-    document.querySelectorAll('[data-open-guide]').forEach(b=>b.addEventListener('click',()=>modal.classList.add('active')));
-    document.querySelectorAll('[data-close-guide]').forEach(b=>b.addEventListener('click',()=>modal.classList.remove('active')));
-    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('active')});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('active')});
+<script>
+const translations={
+en:{
+pageTitle:"Information Gathering and Private Investigation in Europe",
+metaDescription:"Practical European information gathering and private investigation training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.",
+ogTitle:"Information Gathering and Private Investigation in Europe",ogDescription:"Academic and professional partnership opportunities around a practical European investigative methodologies course.",twitterTitle:"Information Gathering and Private Investigation in Europe",twitterDescription:"Practical European investigative training for universities, organisations and professionals.",
+brandTitle:"European Investigative Learning",brandTagline:"Information · Strategy · Protection",navPathways:"Pathways",navUniversities:"Universities",navOrganisations:"Organisations",navCourse:"Course",navTeam:"Team",navBlog:"Blog",navContact:"Contact",
+heroEyebrow:"European investigative training · OSINT · HUMINT · GDPR awareness",heroTitle:"Information Gathering and Private Investigation in Europe",heroLead1:"Practical European investigative training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.",heroLead2:"Created and presented by <strong>Dávid Komporday</strong>, based on the research and investigative expertise of <strong>Áron Tarkó</strong>.",
+badgeCyber:"Cybersecurity & Infosecurity Teams",badgeUniversities:"Universities",badgeOrganisations:"Professional Organisations",badgeCompliance:"Compliance & Corporate Investigations",downloadGuide:"Download the Investigative Guide",discussCollaboration:"Discuss Collaboration",
+trustHours:"structured learning content",trustSections:"sections plus bonus module",trustMethods:"HUMINT, GDPR, verification",trustEU:"case studies & legal context",heroNoteTitle:"Thank you for connecting with us in London.",heroNoteText:"This page is designed for the people, universities and professional organisations we met through the Infosecurity Europe network.",
+choosePath:"Choose your path",pathwaysTitle:"How would you like to work with us?",pathwaysLead:"The highest-value opportunities are academic and professional partnerships. Individual Udemy enrolment remains available for learners who want to start immediately.",
+forUniversities:"For Universities",forUniversitiesText:"Integrate European investigative methodologies into existing programmes, build an elective module or invite us for a guest lecture.",academicCollab:"Explore Academic Collaboration",
+forOrganisations:"For Professional Organisations",forOrganisationsText:"Offer your members practical investigative training through webinars, licensing, bulk access or partnership campaigns.",partnershipOptions:"Discuss Partnership Options",
+forLearners:"For Individual Learners",forLearnersText:"Start with the full Udemy course and learn practical OSINT, HUMINT, verification, reporting, ethics and case-analysis methods.",viewCourse:"View the Course",
+academicPartnerships:"Academic partnerships",universitiesTitle:"Bring European Investigative Methodologies into Your Curriculum",universitiesLead:"For universities, lecturers and programme directors in criminology, security studies, intelligence analysis, journalism, law, compliance and cybersecurity education.",
+uni1:"Use the course as recommended learning or pre-class material.",uni2:"Integrate selected modules into an existing subject.",uni3:"Build a new elective around information gathering and private investigation in Europe.",uni4:"Invite Dávid and/or Áron for a guest lecture, workshop or pilot session.",
+whyFitsTitle:"Why it fits academic programmes",why1:"Research-based academic foundation adapted into practical learning.",why2:"Structured curriculum with quizzes, assignments, reflection and certificate-ready learning flow.",why3:"European perspective: GDPR, legal boundaries, ethical conduct and realistic cases.",why4:"Useful for students who need source verification, critical thinking and investigative logic.",scheduleAcademic:"Schedule an Academic Discussion",
+partnershipModels:"Partnership models",partner1:"Member discount campaigns with dedicated links.",partner2:"Affiliate or revenue-sharing partnership.",partner3:"Joint webinar or online briefing for your community.",partner4:"Bulk licences for teams, chapters or member groups.",partner5:"In-person lecture, conference talk or specialist workshop.",explorePartnership:"Explore Partnership Opportunities",
+professionalOrganisations:"Professional organisations",organisationsTitle:"Equip Your Members with Practical Investigative Skills",organisationsLead:"For cybersecurity communities, OSINT groups, compliance associations, corporate security networks, fraud prevention groups and professional training providers.",
+coursePreview:"Course preview",courseTitle:"Information Gathering and Private Investigation in Europe",courseLead:"A complete Udemy-compatible learning structure: video lessons, quizzes, assignments, case studies, final reflection and optional mentoring pathways.",
+module1Title:"Introduction to Private Investigation",module1Text:"History, ethics, legal boundaries and the investigator’s mindset.",module2Title:"Core Principles of Information Gathering",module2Text:"Open, human and technical sources; OSINT, HUMINT, verification and triangulation.",module3Title:"Tools and Techniques",module3Text:"Digital tools, observation, documentation, analysis, reporting and presentation.",module4Title:"European Case Studies",module4Text:"Corporate data leak, missing-person scenario and disinformation campaign analysis.",module5Title:"Professional Practice",module5Text:"Trust, client management, GDPR, confidentiality, pricing, contracts and credibility.",module6Title:"Next Steps & Mentoring",module6Text:"Final review, certificate, reflection assignment and optional consultation pathways.",
+downloadGuideShort:"Download the Guide",startUdemy:"Start Learning on Udemy",discussPartnership:"Discuss a Partnership",
+meetTeam:"Meet the team",teamTitle:"The people behind the course",teamLead:"The project combines practical learning design, business development, academic research and specialist European investigative knowledge.",davidRole:"Course Creator & Presenter",davidBio:"Dávid created and presents the Udemy course, adapting academic research into a practical, visual and accessible professional learning experience for European audiences.",aronRole:"Academic Lead & Subject Matter Expert",aronBio:"Áron contributes the research and investigative expertise behind the methodology, with a focus on European information gathering, ethics and legal frameworks.",
+insights:"Insights",blogTitle:"European investigation blog",blogLead:"Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.",post1Meta:"OSINT · Europe",post1Title:"What makes OSINT different in Europe?",post1Text:"European open-source research requires legal awareness, language sensitivity and careful documentation.",post2Meta:"GDPR · Compliance",post2Title:"GDPR-aware investigation is a method, not an obstacle",post2Text:"Professional investigators must treat privacy, proportionality and documentation as part of the workflow.",post3Meta:"Training · Education",post3Title:"Why investigative thinking belongs in professional education",post3Text:"Source assessment, verification and structured reporting are valuable far beyond private investigation.",readArticle:"Read article →",
+questions:"Questions",faqTitle:"FAQ for partners and learners",faq1Q:"Who developed this course?",faq1A:"The course is created and presented by Dávid Komporday. The academic content and investigative methodology are based on Áron Tarkó’s research and professional expertise.",faq2Q:"Is this only for private detectives?",faq2A:"No. It is designed for cybersecurity and infosecurity teams, compliance professionals, corporate investigators, educators, researchers, journalists, students and legal professionals.",faq3Q:"Can universities integrate it into a programme?",faq3A:"Yes. It can be used as recommended learning, integrated into an existing module, developed into an elective or supported with guest lectures and workshops.",faq4Q:"Can professional organisations resell or recommend it?",faq4A:"Yes. We can discuss member discounts, affiliate partnerships, bulk access, webinars, joint campaigns or speaking opportunities.",faq5Q:"Is the course theoretical or practical?",faq5A:"It combines academic foundations with practical workflows: OSINT, HUMINT, verification, observation, documentation, reporting, GDPR, ethics and European case studies.",faq6Q:"Who is Marek Marlow?",faq6A:"Marek Marlow is an AI-supported educational persona used in selected course materials and video introductions. The course itself is created by Dávid and based on Áron’s research and expertise.",
+contactEyebrow:"Contact",contactTitle:"Let’s discuss the right next step",contactLead:"Use this form for university collaboration, guest lectures, professional organisation partnerships, corporate training, speaking opportunities or individual course questions.",labelName:"Name",labelEmail:"Email",labelOrganisation:"Organisation / University",optional:"Optional",labelInterest:"What are you interested in?",selectChoose:"Please choose one",interestUniversity:"University / curriculum collaboration",interestGuest:"Guest lecture or workshop",interestOrganisation:"Professional organisation partnership",interestCorporate:"Corporate training / bulk access",interestSpeaking:"Speaking opportunity",interestUdemy:"Udemy course / individual learning",interestOther:"Other",labelMessage:"Message",messagePlaceholder:"Please briefly tell us who you are, what type of collaboration or learning opportunity you are interested in, and what would be the best next step.",privacyAgree:'I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.',updatesAgree:"I would like to receive occasional updates about new courses, webinars and learning opportunities.",sendEnquiry:"Send Enquiry",thankYou:"Thank you.",contactSuccessText:"Your enquiry has been received. We personally review every message and will get back to you shortly.",
+legalEyebrow:"Legal",legalTitle:"Privacy Policy & Terms",privacyTitle:"Privacy Policy",privacyIntro:"We collect only the information you voluntarily submit through our forms.",privacy1:"Purpose: responding to enquiries, sending the guide, and discussing relevant learning or collaboration opportunities.",privacy2:"Data controller: Tarkó Investigations.",privacy4:"You may request access, correction or deletion of your data at any time.",privacy5:"We do not sell your personal data.",termsTitle:"Terms & Conditions",termsIntro:"This website and downloadable guide are provided for educational and informational purposes only.",terms1:"Udemy enrolments are subject to Udemy’s own terms and conditions.",terms2:"Academic, organisational or corporate collaborations are agreed separately in writing.",terms3:"All course materials, guide content and website materials are protected by copyright.",terms4:"Use of this website does not create a client relationship.",footerTitle:"European Investigative Learning",footerSubtitle:"Information Gathering and Private Investigation in Europe",cookiePolicy:"Cookie Policy",freeGuide:"Free guide",guideModalTitle:"Download the Investigative Guide",guideModalLead:"Get the complimentary guide and continue the conversation after Infosecurity Europe 2026.",downloadFreeGuide:"Download the Free Guide",guideThanks:"Thank you for downloading the guide.",clickDownload:"click here to download it",cookieNotice:"Cookie notice",cookieText:"We use essential cookies and basic form functionality to operate this website.",accept:"Accept",decline:"Decline"
+},
+hu:{
+pageTitle:"Információgyűjtés és magánnyomozás Európában",metaDescription:"Gyakorlati európai információgyűjtési és magánnyomozási képzés egyetemek, szakmai szervezetek, kiberbiztonsági csapatok, compliance szakemberek és egyéni tanulók számára.",ogTitle:"Információgyűjtés és magánnyomozás Európában",ogDescription:"Egyetemi és szakmai együttműködési lehetőségek egy gyakorlati európai nyomozásmódszertani kurzus kapcsán.",twitterTitle:"Információgyűjtés és magánnyomozás Európában",twitterDescription:"Gyakorlati európai nyomozási képzés egyetemek, szervezetek és szakemberek számára.",
+brandTitle:"Európai Nyomozási Képzés",brandTagline:"Információ · Stratégia · Védelem",navPathways:"Lehetőségek",navUniversities:"Egyetemek",navOrganisations:"Szervezetek",navCourse:"Kurzus",navTeam:"Csapat",navBlog:"Blog",navContact:"Kapcsolat",
+heroEyebrow:"Európai nyomozási képzés · OSINT · HUMINT · GDPR-tudatosság",heroTitle:"Információgyűjtés és magánnyomozás Európában",heroLead1:"Gyakorlati európai nyomozási képzés egyetemek, szakmai szervezetek, kiberbiztonsági csapatok, compliance szakemberek és egyéni tanulók számára.",heroLead2:"A kurzust <strong>Komporday Dávid</strong> készítette és mutatja be, <strong>Tarkó Áron</strong> kutatására és nyomozási szakértelmére építve.",
+badgeCyber:"Kiberbiztonsági és infosecurity csapatok",badgeUniversities:"Egyetemek",badgeOrganisations:"Szakmai szervezetek",badgeCompliance:"Compliance és vállalati vizsgálatok",downloadGuide:"Nyomozási útmutató letöltése",discussCollaboration:"Együttműködés megbeszélése",trustHours:"strukturált tananyag",trustSections:"szakasz és egy bónuszmodul",trustMethods:"HUMINT, GDPR, ellenőrzés",trustEU:"esettanulmányok és jogi környezet",heroNoteTitle:"Köszönjük, hogy kapcsolatba lépett velünk Londonban.",heroNoteText:"Ezt az oldalt azoknak a szakembereknek, egyetemeknek és szakmai szervezeteknek készítettük, akikkel az Infosecurity Europe hálózatán keresztül találkoztunk.",
+choosePath:"Válasszon lehetőséget",pathwaysTitle:"Milyen formában működne együtt velünk?",pathwaysLead:"A legnagyobb értéket az egyetemi és szakmai partnerségek jelentik. Az Udemy-kurzus egyéni tanulók számára továbbra is azonnal elérhető.",forUniversities:"Egyetemeknek",forUniversitiesText:"Építse be az európai nyomozásmódszertant meglévő képzésbe, alakítson ki választható modult, vagy hívjon meg bennünket vendégelőadásra.",academicCollab:"Egyetemi együttműködés",forOrganisations:"Szakmai szervezeteknek",forOrganisationsText:"Kínáljon tagjainak gyakorlati nyomozási képzést webinárium, licencelés, csoportos hozzáférés vagy partnerkampány formájában.",partnershipOptions:"Partnerségi lehetőségek",forLearners:"Egyéni tanulóknak",forLearnersText:"Kezdje el a teljes Udemy-kurzust, és sajátítsa el az OSINT, HUMINT, ellenőrzés, jelentéskészítés, etika és esetelemzés gyakorlati módszereit.",viewCourse:"A kurzus megtekintése",
+academicPartnerships:"Egyetemi partnerségek",universitiesTitle:"Építse be az európai nyomozásmódszertant a képzésébe",universitiesLead:"Kriminológiai, biztonságpolitikai, hírszerzési, újságírói, jogi, compliance- és kiberbiztonsági képzéseket működtető egyetemek, oktatók és programvezetők számára.",uni1:"Használja a kurzust ajánlott tananyagként vagy órai felkészítő anyagként.",uni2:"Építsen be kiválasztott modulokat egy már létező tantárgyba.",uni3:"Hozzon létre új választható tárgyat az európai információgyűjtésről és magánnyomozásról.",uni4:"Hívja meg Dávidot és/vagy Áront vendégelőadásra, workshopra vagy pilot alkalomra.",whyFitsTitle:"Miért illeszkedik egyetemi programokhoz?",why1:"Kutatásalapú tudományos háttér, gyakorlati tanulássá alakítva.",why2:"Strukturált tanterv kvízekkel, feladatokkal, reflexióval és igazolható tanulási folyamattal.",why3:"Európai szemlélet: GDPR, jogi korlátok, etikus magatartás és valószerű esetek.",why4:"Hasznos azoknak a hallgatóknak, akiknek forrásellenőrzésre, kritikai gondolkodásra és nyomozási logikára van szükségük.",scheduleAcademic:"Egyetemi egyeztetés kérése",
+partnershipModels:"Partnerségi modellek",partner1:"Tagi kedvezménykampányok egyedi hivatkozásokkal.",partner2:"Affiliate vagy bevételmegosztási együttműködés.",partner3:"Közös webinárium vagy online szakmai tájékoztató.",partner4:"Csoportos licencek csapatok, tagozatok vagy tagcsoportok számára.",partner5:"Személyes előadás, konferencia-előadás vagy szakmai workshop.",explorePartnership:"Partnerségi lehetőségek megismerése",professionalOrganisations:"Szakmai szervezetek",organisationsTitle:"Adjon tagjainak gyakorlati nyomozási készségeket",organisationsLead:"Kiberbiztonsági közösségek, OSINT-csoportok, compliance-szövetségek, vállalati biztonsági hálózatok, csalásmegelőzési szervezetek és képzési szolgáltatók számára.",
+coursePreview:"Kurzuselőzetes",courseTitle:"Információgyűjtés és magánnyomozás Európában",courseLead:"Teljes, Udemy-kompatibilis tanulási struktúra: videóleckék, kvízek, feladatok, esettanulmányok, záró reflexió és választható mentorálási lehetőségek.",module1Title:"Bevezetés a magánnyomozásba",module1Text:"Történet, etika, jogi korlátok és a nyomozói gondolkodásmód.",module2Title:"Az információgyűjtés alapelvei",module2Text:"Nyílt, emberi és technikai források; OSINT, HUMINT, ellenőrzés és trianguláció.",module3Title:"Eszközök és technikák",module3Text:"Digitális eszközök, megfigyelés, dokumentálás, elemzés, jelentéskészítés és prezentáció.",module4Title:"Európai esettanulmányok",module4Text:"Vállalati adatszivárgás, eltűnt személy esete és dezinformációs kampány elemzése.",module5Title:"Szakmai gyakorlat",module5Text:"Bizalom, ügyfélkezelés, GDPR, titoktartás, árazás, szerződések és hitelesség.",module6Title:"Következő lépések és mentorálás",module6Text:"Záró összefoglaló, tanúsítvány, reflexiós feladat és választható konzultációs lehetőségek.",downloadGuideShort:"Útmutató letöltése",startUdemy:"Tanulás megkezdése az Udemy-n",discussPartnership:"Partnerség megbeszélése",
+meetTeam:"Ismerje meg a csapatot",teamTitle:"A kurzus mögött álló szakemberek",teamLead:"A projekt a gyakorlati tananyagfejlesztést, az üzletfejlesztést, a tudományos kutatást és az európai nyomozási szaktudást egyesíti.",davidRole:"Kurzusalkotó és előadó",davidBio:"Dávid hozta létre és mutatja be az Udemy-kurzust, a tudományos kutatást gyakorlati, vizuális és könnyen érthető szakmai tanulási élménnyé alakítva az európai közönség számára.",aronRole:"Szakmai vezető és szakterületi szakértő",aronBio:"Áron biztosítja a módszertan mögötti kutatási és nyomozási szakértelmet, különös tekintettel az európai információgyűjtésre, az etikára és a jogi keretekre.",
+insights:"Szakmai tartalmak",blogTitle:"Európai nyomozási blog",blogLead:"Rövid szakmai cikkek az OSINT-ról, HUMINT-ról, GDPR-tudatos vizsgálatokról, forrásellenőrzésről és az európai nyomozási gyakorlatról.",post1Meta:"OSINT · Európa",post1Title:"Miben különbözik az OSINT Európában?",post1Text:"Az európai nyílt forrású kutatáshoz jogi tudatosság, nyelvi érzékenység és gondos dokumentálás szükséges.",post2Meta:"GDPR · Compliance",post2Title:"A GDPR-tudatos vizsgálat módszer, nem akadály",post2Text:"A szakmai nyomozóknak a magánszférát, az arányosságot és a dokumentálást a munkafolyamat részeként kell kezelniük.",post3Meta:"Képzés · Oktatás",post3Title:"Miért van helye a nyomozói gondolkodásnak a szakmai oktatásban?",post3Text:"A forrásértékelés, az ellenőrzés és a strukturált jelentéskészítés jóval a magánnyomozáson túl is értékes.",readArticle:"Cikk elolvasása →",
+questions:"Kérdések",faqTitle:"Gyakori kérdések partnereknek és tanulóknak",faq1Q:"Ki dolgozta ki a kurzust?",faq1A:"A kurzust Komporday Dávid készítette és mutatja be. A tudományos tartalom és a nyomozási módszertan Tarkó Áron kutatására és szakmai tapasztalatára épül.",faq2Q:"Csak magánnyomozóknak szól?",faq2A:"Nem. Kiberbiztonsági és infosecurity csapatok, compliance szakemberek, vállalati vizsgálók, oktatók, kutatók, újságírók, hallgatók és jogi szakemberek számára készült.",faq3Q:"Beépíthetik az egyetemek a képzésükbe?",faq3A:"Igen. Használható ajánlott tananyagként, meglévő modulba építve, választható tárgyként, illetve vendégelőadásokkal és workshopokkal kiegészítve.",faq4Q:"Ajánlhatják vagy értékesíthetik szakmai szervezetek?",faq4A:"Igen. Tagi kedvezményről, affiliate együttműködésről, csoportos hozzáférésről, webináriumról, közös kampányról vagy előadásról is lehet egyeztetni.",faq5Q:"Elméleti vagy gyakorlati a kurzus?",faq5A:"A tudományos alapokat gyakorlati munkafolyamatokkal kapcsolja össze: OSINT, HUMINT, ellenőrzés, megfigyelés, dokumentálás, jelentéskészítés, GDPR, etika és európai esettanulmányok.",faq6Q:"Ki Marek Marlow?",faq6A:"Marek Marlow egy mesterséges intelligenciával támogatott oktatási karakter, aki egyes kurzusanyagokban és videós bevezetőkben szerepel. A kurzust Dávid készítette, Áron kutatására és szakértelmére építve.",
+contactEyebrow:"Kapcsolat",contactTitle:"Beszéljük meg a megfelelő következő lépést",contactLead:"Az űrlap egyetemi együttműködéshez, vendégelőadáshoz, szakmai szervezeti partnerséghez, vállalati képzéshez, előadói felkéréshez vagy egyéni kurzuskérdéshez használható.",labelName:"Név",labelEmail:"E-mail",labelOrganisation:"Szervezet / Egyetem",optional:"Nem kötelező",labelInterest:"Mi érdekli?",selectChoose:"Válasszon egy lehetőséget",interestUniversity:"Egyetemi / tantervi együttműködés",interestGuest:"Vendégelőadás vagy workshop",interestOrganisation:"Szakmai szervezeti partnerség",interestCorporate:"Vállalati képzés / csoportos hozzáférés",interestSpeaking:"Előadói lehetőség",interestUdemy:"Udemy-kurzus / egyéni tanulás",interestOther:"Egyéb",labelMessage:"Üzenet",messagePlaceholder:"Röviden írja le, hogy kicsoda, milyen együttműködési vagy tanulási lehetőség érdekli, és mi lenne a legjobb következő lépés.",privacyAgree:'Elolvastam és elfogadom az <a href="#privacy-policy">Adatvédelmi tájékoztatót</a>.',updatesAgree:"Szeretnék alkalmanként tájékoztatást kapni új kurzusokról, webináriumokról és tanulási lehetőségekről.",sendEnquiry:"Üzenet elküldése",thankYou:"Köszönjük.",contactSuccessText:"Megkaptuk az üzenetét. Minden megkeresést személyesen átnézünk, és hamarosan válaszolunk.",
+legalEyebrow:"Jogi információk",legalTitle:"Adatvédelem és feltételek",privacyTitle:"Adatvédelmi tájékoztató",privacyIntro:"Kizárólag azokat az adatokat gyűjtjük, amelyeket Ön önkéntesen megad az űrlapokon.",privacy1:"Cél: megkeresések megválaszolása, az útmutató elküldése és a megfelelő tanulási vagy együttműködési lehetőségek megbeszélése.",privacy2:"Adatkezelő: Tarkó Investigations.",privacy4:"Bármikor kérheti adataihoz való hozzáférést, azok helyesbítését vagy törlését.",privacy5:"Személyes adatait nem értékesítjük.",termsTitle:"Felhasználási feltételek",termsIntro:"A weboldal és a letölthető útmutató kizárólag oktatási és tájékoztatási célokat szolgál.",terms1:"Az Udemy-jelentkezésekre az Udemy saját feltételei vonatkoznak.",terms2:"Az egyetemi, szervezeti vagy vállalati együttműködésekről külön írásbeli megállapodás készül.",terms3:"A kurzus, az útmutató és a weboldal minden anyaga szerzői jogi védelem alatt áll.",terms4:"A weboldal használata nem hoz létre ügyfélkapcsolatot.",footerTitle:"Európai Nyomozási Képzés",footerSubtitle:"Információgyűjtés és magánnyomozás Európában",cookiePolicy:"Cookie-tájékoztató",freeGuide:"Ingyenes útmutató",guideModalTitle:"A nyomozási útmutató letöltése",guideModalLead:"Töltse le az ingyenes útmutatót, és folytassa velünk a beszélgetést az Infosecurity Europe 2026 után.",downloadFreeGuide:"Az ingyenes útmutató letöltése",guideThanks:"Köszönjük, hogy letöltötte az útmutatót.",clickDownload:"kattintson ide a letöltéshez",cookieNotice:"Cookie-tájékoztató",cookieText:"A weboldal működtetéséhez nélkülözhetetlen cookie-kat és alapvető űrlapfunkciókat használunk.",accept:"Elfogadom",decline:"Elutasítom"
+}
+};
 
-    const cookie=document.getElementById('cookie');
-    if(!localStorage.getItem('eil_cookie'))cookie.style.display='block';
-    document.getElementById('acceptCookie').onclick=()=>{localStorage.setItem('eil_cookie','accepted');cookie.style.display='none'};
-    document.getElementById('declineCookie').onclick=()=>{localStorage.setItem('eil_cookie','declined');cookie.style.display='none'};
+function setLanguage(lang){
+  const t=translations[lang]||translations.en;
+  document.documentElement.lang=lang;
+  document.title=t.pageTitle;
+  document.getElementById("metaDescription").content=t.metaDescription;
+  document.getElementById("ogTitle").content=t.ogTitle;
+  document.getElementById("ogDescription").content=t.ogDescription;
+  document.getElementById("twitterTitle").content=t.twitterTitle;
+  document.getElementById("twitterDescription").content=t.twitterDescription;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(t[k]!==undefined)el.textContent=t[k]});
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{const k=el.dataset.i18nHtml;if(t[k]!==undefined)el.innerHTML=t[k]});
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{const k=el.dataset.i18nPlaceholder;if(t[k]!==undefined)el.placeholder=t[k]});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+  localStorage.setItem("eil_language",lang);
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));
+setLanguage(localStorage.getItem("eil_language")||((navigator.language||"en").toLowerCase().startsWith("hu")?"hu":"en"));
 
-    function encodeFormData(form){
-      return new URLSearchParams(new FormData(form)).toString();
-    }
+const navlinks=document.getElementById("navlinks");
+document.getElementById("mobileToggle").onclick=()=>navlinks.classList.toggle("open");
+navlinks.querySelectorAll("a").forEach(a=>a.onclick=()=>navlinks.classList.remove("open"));
 
-    const guideForm=document.getElementById('guideForm');
-    const guideSuccess=document.getElementById('guideSuccess');
-    const guidePdf="/10-things-every-european-investigator-must-know.pdf";
+const modal=document.getElementById("guideModal");
+document.querySelectorAll("[data-open-guide]").forEach(b=>b.onclick=()=>modal.classList.add("active"));
+document.querySelectorAll("[data-close-guide]").forEach(b=>b.onclick=()=>modal.classList.remove("active"));
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove("active")};
 
-    guideForm.addEventListener('submit',function(e){
-      e.preventDefault();
-      fetch("/",{
-        method:"POST",
-        headers:{"Content-Type":"application/x-www-form-urlencoded"},
-        body:encodeFormData(guideForm)
-      }).then(()=>{
-        guideSuccess.classList.add('active');
-        window.open(guidePdf,"_blank");
-      }).catch(()=>{
-        guideForm.submit();
-      });
-    });
+const cookie=document.getElementById("cookie");
+if(!localStorage.getItem("eil_cookie"))cookie.style.display="block";
+document.getElementById("acceptCookie").onclick=()=>{localStorage.setItem("eil_cookie","accepted");cookie.style.display="none"};
+document.getElementById("declineCookie").onclick=()=>{localStorage.setItem("eil_cookie","declined");cookie.style.display="none"};
 
-    const contactForm=document.getElementById('contactForm');
-    const contactSuccess=document.getElementById('contactSuccess');
-    contactForm.addEventListener('submit',function(e){
-      e.preventDefault();
-      fetch("/",{
-        method:"POST",
-        headers:{"Content-Type":"application/x-www-form-urlencoded"},
-        body:encodeFormData(contactForm)
-      }).then(()=>{
-        contactSuccess.classList.add('active');
-        contactForm.reset();
-      }).catch(()=>{
-        contactForm.submit();
-      });
-    });
-  </script>
+function encodeFormData(form){return new URLSearchParams(new FormData(form)).toString()}
+
+const guideForm=document.getElementById("guideForm");
+guideForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:encodeFormData(guideForm)})
+    .then(()=>{document.getElementById("guideSuccess").classList.add("active");window.open("/10-things-every-european-investigator-must-know.pdf","_blank")})
+    .catch(()=>guideForm.submit());
+});
+
+const contactForm=document.getElementById("contactForm");
+contactForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:encodeFormData(contactForm)})
+    .then(()=>{document.getElementById("contactSuccess").classList.add("active");contactForm.reset()})
+    .catch(()=>contactForm.submit());
+});
+</script>
 </body>
 </html>
