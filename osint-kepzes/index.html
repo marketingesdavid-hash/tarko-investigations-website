@@ -130,6 +130,16 @@
       display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;
       align-items:stretch
     }
+    .teacher-photo{
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:center;
+      border-radius:24px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+    }
     .teacher-badge{
       border:1px solid var(--line);border-radius:24px;padding:30px;
       background:linear-gradient(145deg,rgba(22,199,238,.10),rgba(16,34,58,.82))
@@ -278,13 +288,16 @@
         <h2>Tarkó Áron</h2>
 
         <div class="teacher">
-          <div class="teacher-badge">
-            <div class="teacher-name">Tarkó Áron</div>
-            <div class="teacher-title">magánnyomozó • kriminológus • oktató • OSINT-kutató</div>
-            <p class="muted">
-              Rendőrségi nyomozói múlttal és több mint egy évtizedes rendészeti,
-              magánnyomozói és szakmai tapasztalattal.
-            </p>
+          <div>
+            <img class="teacher-photo" src="../aron-portrait.jpg" alt="Tarkó Áron, a képzés oktatója">
+            <div class="teacher-badge">
+              <div class="teacher-name">Tarkó Áron</div>
+              <div class="teacher-title">magánnyomozó • kriminológus • oktató • OSINT-kutató</div>
+              <p class="muted" style="margin-bottom:0">
+                Rendőrségi nyomozói múlttal és több mint egy évtizedes rendészeti,
+                magánnyomozói és szakmai tapasztalattal.
+              </p>
+            </div>
           </div>
 
           <div class="card">
@@ -473,4 +486,3 @@
   </footer>
 </body>
 </html>
-
