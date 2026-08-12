@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OSINT a gyakorlatban – információgyűjtés a magánnyomozástól a HR-ig | Tarkó Investigations</title>
+
+  <meta
+    name="description"
+    content="Mi az OSINT, és hogyan használható a magánnyomozásban, HR-ben, compliance-ben, jogi és vállalati területen? Ismerd meg a professzionális információgyűjtés gyakorlati lehetőségeit."
+  />
+
+  <meta
+    name="keywords"
+    content="OSINT, információgyűjtés, magánnyomozás, HR, compliance, due diligence, nyomozás, kiberbiztonság, Tarkó Investigations"
+  />
+
+  <meta name="author" content="Tarkó Investigations" />
+
+  <meta property="og:type" content="article" />
+
+  <meta
+    property="og:title"
+    content="OSINT a gyakorlatban: miért lett az információgyűjtés fontos készség?"
+  />
+
+  <meta
+    property="og:description"
+    content="Az OSINT ma már nemcsak magánnyomozóknak fontos. Megmutatjuk, hogyan alkalmazható HR-ben, compliance-ben, jogi, üzleti és kiberbiztonsági területen."
+  />
+
+  <meta
+    property="og:image"
+    content="https://tarko-investigations.com/blog-osint-gyakorlatban.png"
+  />
+
+  <meta
+    property="og:url"
+    content="https://tarko-investigations.com/blog/osint-gyakorlatban.html"
+  />
+
+  <meta name="theme-color" content="#071322" />
+
+  <style>
+    :root {
+      --navy: #071322;
+      --navy2: #0b1b2e;
+      --card: #10223a;
+      --cyan: #16c7ee;
+      --cyan2: #67e4ff;
+      --text: #f6f8fb;
+      --muted: #a8b7c9;
+      --line: rgba(22, 199, 238, .24);
+      --shadow: 0 24px 70px rgba(0, 0, 0, .30);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system,
+              BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at 82% 7%, rgba(22,199,238,.10), transparent 26%),
+        linear-gradient(rgba(22,199,238,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(22,199,238,.028) 1px, transparent 1px),
+        var(--navy);
+      background-size: auto, 48px 48px, 48px 48px, auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .article-wrap {
+      width: min(820px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(7,19,34,.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.08;
+    }
+
+    .nav-link {
+      color: var(--cyan2);
+      font-weight: 800;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 17px;
+    }
+
+    .hero {
+      padding: 76px 0 40px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: .88rem;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      letter-spacing: -.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      line-height: 1;
+      margin: 16px 0 24px;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin-top: 54px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    .lead {
+      font-size: clamp(1.12rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .hero-image {
+      margin: 38px auto 12px;
+      width: min(1100px, calc(100% - 40px));
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    article {
+      padding: 34px 0 80px;
+    }
+
+    article p {
+      color: #dce6ef;
+      font-size: 1.06rem;
+    }
+
+    article strong {
+      color: white;
+    }
+
+    .highlight {
+      margin: 40px 0;
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(22,199,238,.38);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.76)
+        );
+    }
+
+    .highlight strong {
+      color: var(--cyan2);
+    }
+
+    ul {
+      padding-left: 24px;
+      margin: 18px 0 28px;
+    }
+
+    li {
+      margin: 10px 0;
+      color: #dce6ef;
+    }
+
+    .question {
+      color: var(--cyan2);
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 18px 0;
+    }
+
+    .course-box {
+      margin-top: 55px;
+      padding: 32px;
+      border-radius: 24px;
+      border: 1px solid rgba(22,199,238,.42);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.12),
+          rgba(16,34,58,.82)
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .course-box h2 {
+      margin-top: 10px;
+    }
+
+    .course-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    .detail {
+      background: rgba(7,19,34,.55);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .detail strong {
+      display: block;
+      color: var(--cyan);
+      margin-bottom: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cyan);
+      color: #04101b;
+      font-weight: 900;
+      padding: 15px 24px;
+      border-radius: 14px;
+      margin-top: 10px;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #52dcfa;
+    }
+
+    .author {
+      margin-top: 50px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0 50px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .wrap,
+      .article-wrap,
+      .hero-image {
+        width: min(100% - 28px, 1100px);
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .course-details {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+      }
+
+      .brand-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      .course-box,
+      .highlight {
+        padding: 23px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap nav">
+
+      <a class="brand" href="../index.html">
+        <img
+          class="brand-logo"
+          src="../logo.png"
+          alt="Tarkó Investigations"
+        />
+
+        <div class="brand-name">
+          Európai<br>
+          Nyomozási Képzés
+        </div>
+      </a>
+
+      <a
+        class="nav-link"
+        href="../osint-kepzes/"
+      >
+        OSINT képzés
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="article-wrap">
+
+        <div class="eyebrow">
+          OSINT • Információgyűjtés • Nyomozás
+        </div>
+
+        <h1>
+          OSINT a gyakorlatban: miért lett az információgyűjtés fontos készség a magánnyomozástól a HR-ig?
+        </h1>
+
+        <p class="lead">
+          Ma már szinte minden ember, vállalkozás és szervezet hagy maga
+          után valamilyen digitális nyomot. A valódi kérdés nem az,
+          hogy találunk-e információt, hanem az, hogy tudjuk-e
+          megfelelően megtalálni, ellenőrizni és értelmezni.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <div class="hero-image">
+
+      <img
+        src="../blog-osint-gyakorlatban.png"
+        alt="OSINT a gyakorlatban – információgyűjtés és nyomozás"
+      />
+
+    </div>
+
+
+    <article>
+
+      <div class="article-wrap">
+
+        <p>
+          Weboldalak, közösségi média, cégadatok, nyilvános dokumentumok,
+          szakmai adatbázisok, képek, videók és számos más nyílt forrás
+          tartalmazhat olyan információkat, amelyek önmagukban talán
+          jelentéktelennek tűnnek, megfelelő módszerekkel összekapcsolva
+          azonban egészen más képet mutathatnak.
+        </p>
+
+        <p>
+          Ezzel foglalkozik többek között az
+          <strong>OSINT – Open Source Intelligence</strong>,
+          vagyis a nyílt forrású információszerzés.
+        </p>
+
+
+        <div class="highlight">
+
+          <strong>
+            Az OSINT jóval több annál, mint hogy valaki ügyesen használja a Google-t.
+          </strong>
+
+          <p style="margin:12px 0 0">
+            A valódi kérdés az, hogy mit keresünk, hol érdemes keresni,
+            hogyan ellenőrizzük a megtalált információkat, és milyen
+            következtetéseket lehet belőlük szakmailag és jogszerűen levonni.
+          </p>
+
+        </div>
+
+
+        <h2>
+          Az információ önmagában még nem hírszerzés
+        </h2>
+
+        <p>
+          Az interneten hatalmas mennyiségű adat érhető el.
+          A probléma ma sok esetben nem az információ hiánya,
+          hanem éppen annak túlzott mennyisége.
+        </p>
+
+        <p>
+          Egy professzionális információgyűjtési folyamat során ezért
+          nem elegendő megtalálni egy nevet, profilt, fényképet vagy
+          céges kapcsolatot.
+        </p>
+
+        <p>
+          Meg kell vizsgálni többek között:
+        </p>
+
+        <ul>
+          <li>honnan származik az információ;</li>
+          <li>mennyire tekinthető megbízhatónak;</li>
+          <li>más, független források megerősítik-e;</li>
+          <li>milyen kapcsolatban áll más megtalált adatokkal;</li>
+          <li>mennyire aktuális;</li>
+          <li>
+            és milyen következtetés vonható le belőle anélkül,
+            hogy többet állítanánk annál, amit az adatok valóban
+            alátámasztanak.
+          </li>
+        </ul>
+
+        <p>
+          Pontosan itt kezdődik a
+          <strong>nyomozói gondolkodás.</strong>
+        </p>
+
+
+        <h2>
+          Az OSINT nem csak magánnyomozóknak hasznos
+        </h2>
+
+        <p>
+          Az információgyűjtési technikákat sokan automatikusan
+          a rendőrséggel, hírszerzéssel vagy magánnyomozással
+          kapcsolják össze.
+        </p>
+
+        <p>
+          Pedig a módszerek ennél lényegesen szélesebb körben
+          alkalmazhatók.
+        </p>
+
+
+        <h2>
+          HR és recruitment
+        </h2>
+
+        <p>
+          Egy HR- vagy recruitment szakember számára fontos lehet annak
+          megértése, hogyan ellenőrizhetők jogszerűen nyilvánosan
+          elérhető szakmai információk, hogyan azonosíthatók
+          ellentmondások, illetve hogyan értékelhető egy forrás
+          megbízhatósága.
+        </p>
+
+
+        <h2>
+          Compliance, KYC és due diligence
+        </h2>
+
+        <p>
+          Üzleti kapcsolat vagy partner vizsgálatakor sok esetben
+          különböző nyilvános forrásokból kell összeállítani egy
+          megbízhatóbb képet.
+        </p>
+
+        <p>
+          Céghálók, vezetők, üzleti kapcsolatok, korábbi tevékenységek
+          és más nyilvánosan hozzáférhető információk vizsgálata
+          komoly segítséget jelenthet a kockázatok felismerésében.
+        </p>
+
+
+        <h2>
+          Jogászok
+        </h2>
+
+        <p>
+          Jogi ügyekben szintén jelentősége lehet a nyilvánosan
+          hozzáférhető információk felkutatásának, rendszerezésének
+          és dokumentálásának.
+        </p>
+
+
+        <h2>
+          Kiberbiztonság
+        </h2>
+
+        <p>
+          A digitális környezet feltérképezése, személyek és
+          szervezetek online jelenlétének vizsgálata, valamint
+          különböző nyílt források összekapcsolása a kiberbiztonság
+          számos területén is használható.
+        </p>
+
+
+        <h2>
+          Vállalkozók és cégvezetők
+        </h2>
+
+        <p>
+          Egy új partner, beszállító vagy üzleti kapcsolat előtt
+          sokszor érdemes tudni, milyen nyilvánosan hozzáférhető
+          információk állnak rendelkezésre az adott személyről
+          vagy vállalkozásról.
+        </p>
+
+        <p>
+          A megfelelő információ néha komoly üzleti kockázattól
+          óvhat meg.
+        </p>
+
+
+        <h2>
+          És mi a helyzet a civil érdeklődőkkel?
+        </h2>
+
+        <p>
+          Az OSINT egyik izgalmas tulajdonsága, hogy az alapjaihoz
+          nem szükséges rendőrségi vagy magánnyomozói múlt.
+        </p>
+
+        <p>
+          Ezért a terület
+          <strong>
+            civil érdeklődők, egyetemisták, pályakezdők és vállalkozók
+            számára is elérhető.
+          </strong>
+        </p>
+
+        <p>
+          A módszertan elsajátításának egyik legfontosabb része,
+          hogy az ember megtanuljon másképpen gondolkodni az előtte
+          lévő információkról.
+        </p>
+
+
+        <div class="question">
+          „Mit látok?”
+        </div>
+
+        <div class="question">
+          „Honnan tudom, hogy ez igaz?”
+        </div>
+
+        <div class="question">
+          „Mivel tudom ellenőrizni?”
+        </div>
+
+        <div class="question">
+          „Mi hiányzik a történetből?”
+        </div>
+
+        <div class="question">
+          „Milyen más forrás vezethet tovább?”
+        </div>
+
+
+        <h2>
+          Ezért hoztuk létre a 24 órás élő OSINT képzést
+        </h2>
+
+        <p>
+          Az Európai Nyomozási Képzés keretében
+          <strong>
+            2026. szeptember 6–7-én és szeptember 13–14-én
+          </strong>
+          két hétvégés, összesen
+          <strong>24 órás élő online képzést</strong>
+          tartunk.
+        </p>
+
+        <p>
+          A képzés az OSINT, az információgyűjtés és a gyakorlati
+          nyomozói gondolkodás módszereire épül.
+        </p>
+
+        <p>
+          Nem előre felvett videók önálló megtekintéséről van szó.
+          A képzés élő és interaktív, így a résztvevők kérdezhetnek,
+          közösen elemezhetnek eseteket és gyakorlati feladatokon
+          keresztül próbálhatják ki a bemutatott módszereket.
+        </p>
+
+
+        <h2>
+          Mit tanulhatsz?
+        </h2>
+
+        <ul>
+          <li>OSINT-források és keresési stratégiák;</li>
+          <li>személyek és szervezetek kutatása;</li>
+          <li>közösségi média és digitális nyomok;</li>
+          <li>céges és üzleti kapcsolatok feltérképezése;</li>
+          <li>képek, helyszínek és online tartalmak vizsgálata;</li>
+          <li>nyilvános adatbázisok és dokumentumok használata;</li>
+          <li>forrásellenőrzés;</li>
+          <li>információk értékelése és dokumentálása;</li>
+          <li>az információgyűjtés jogi és etikai keretei.</li>
+        </ul>
+
+
+        <h2>
+          A tanultakat valódi helyzetben is kipróbálhatod
+        </h2>
+
+        <p>
+          A képzés egyik legkülönlegesebb eleme nem maga az utolsó
+          oktatási nap, hanem az, ami utána következhet.
+        </p>
+
+        <div class="highlight">
+
+          <strong>
+            A képzést elvégző résztvevők számára lehetőséget biztosítunk
+            arra, hogy egy valódi nyomozási ügy megfelelően elkülönített
+            részfeladatán is kipróbálják megszerzett tudásukat.
+          </strong>
+
+          <p style="margin:14px 0 0">
+            Természetesen mindez a szükséges szakmai,
+            jogi és adatvédelmi keretek között történik.
+          </p>
+
+        </div>
+
+        <p>
+          <strong>
+            Valódi ügy. Valódi feladat. Valódi tapasztalat.
+          </strong>
+        </p>
+
+
+        <h2>
+          Kinek ajánljuk?
+        </h2>
+
+        <p>
+          A képzés nem kizárólag szakemberek számára nyitott.
+        </p>
+
+        <ul>
+          <li>magánnyomozóknak;</li>
+          <li>HR- és recruitment szakembereknek;</li>
+          <li>compliance-, KYC- és due diligence szakembereknek;</li>
+          <li>jogászoknak;</li>
+          <li>kiberbiztonsági szakembereknek;</li>
+          <li>újságíróknak;</li>
+          <li>vállalati biztonsági szakembereknek;</li>
+          <li>vállalkozóknak és cégvezetőknek;</li>
+          <li>egyetemistáknak és pályakezdőknek;</li>
+          <li>
+            valamint civil érdeklődőknek, akiket érdekel
+            a professzionális információgyűjtés világa.
+          </li>
+        </ul>
+
+        <p>
+          <strong>
+            Előzetes magánnyomozói tapasztalat nem szükséges.
+          </strong>
+        </p>
+
+
+        <div class="course-box">
+
+          <div class="eyebrow">
+            Élő online OSINT képzés
+          </div>
+
+          <h2>
+            Tanulj meg nyomozni!
+          </h2>
+
+          <p>
+            24 órás, élő és interaktív képzés az információgyűjtés,
+            az OSINT és a gyakorlati nyomozói gondolkodás módszereiről.
+          </p>
+
+          <div class="course-details">
+
+            <div class="detail">
+              <strong>Időpont</strong>
+              2026. szeptember 6–7. és 13–14.
+            </div>
+
+            <div class="detail">
+              <strong>Időtartam</strong>
+              24 óra, két hétvégén
+            </div>
+
+            <div class="detail">
+              <strong>Forma</strong>
+              Élő, online, interaktív
+            </div>
+
+            <div class="detail">
+              <strong>Részvételi díj</strong>
+              39 900 Ft
+            </div>
+
+          </div>
+
+          <p>
+            A képzés elvégzéséről a résztvevők tanúsítványt kapnak.
+          </p>
+
+          <a
+            class="btn"
+            href="../osint-kepzes/"
+          >
+            Részletek és jelentkezés
+          </a>
+
+        </div>
+
+
+        <div class="author">
+
+          <strong style="color:white">
+            Tarkó Investigations
+          </strong>
+
+          <br>
+
+          Európai Nyomozási Képzés
+
+          <br>
+
+          <a
+            href="https://tarko-investigations.com/"
+            style="color:var(--cyan2)"
+          >
+            tarko-investigations.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <footer>
+
+    <div class="wrap">
+
+      <strong style="color:white">
+        Európai Nyomozási Képzés
+      </strong>
+
+      <br>
+
+      Tarkó Investigations • contact@tarko-investigations.com
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
