@@ -3,10 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Élő online OSINT képzés | Európai Nyomozási Képzés</title>
-  <meta name="description" content="24 órás élő, online OSINT és információgyűjtési képzés Tarkó Áron magánnyomozó vezetésével. 2026. szeptember 6–7. és 13–14. Részvételi díj: 39 900 Ft." />
-  <meta property="og:title" content="Tanulj meg nyomozni! – 24 órás élő online OSINT képzés" />
-  <meta property="og:description" content="Interaktív oktatás, gyakorlati feladatok és valódi nyomozási ügy részfeladata. 2026. szeptember 6–7. és 13–14. | 39 900 Ft" />
+
+  <meta
+    name="description"
+    content="24 órás élő, online OSINT és információgyűjtési képzés Tarkó Áron magánnyomozó vezetésével. 2026. szeptember 6–7. és 13–14. Részvételi díj: 39 900 Ft."
+  />
+
+  <meta
+    property="og:title"
+    content="Tanulj meg nyomozni! – 24 órás élő online OSINT képzés"
+  />
+
+  <meta
+    property="og:description"
+    content="Interaktív oktatás, gyakorlati feladatok és valódi nyomozási ügy részfeladata. 2026. szeptember 6–7. és 13–14. | 39 900 Ft"
+  />
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tarko-investigations.com/osint-kepzes/" />
   <meta name="theme-color" content="#071322" />
@@ -22,27 +36,50 @@
       --muted:#a8b7c9;
       --line:rgba(22,199,238,.24);
       --shadow:0 24px 70px rgba(0,0,0,.30);
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       color:var(--text);
       font-family:var(--sans);
       line-height:1.6;
       background:
-        radial-gradient(circle at 82% 7%, rgba(22,199,238,.10), transparent 26%),
-        linear-gradient(rgba(22,199,238,.028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(22,199,238,.028) 1px, transparent 1px),
+        radial-gradient(circle at 82% 7%,rgba(22,199,238,.10),transparent 26%),
+        linear-gradient(rgba(22,199,238,.028) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(22,199,238,.028) 1px,transparent 1px),
         var(--navy);
       background-size:auto,48px 48px,48px 48px,auto;
     }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    .section{padding:78px 0}
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .section{
+      padding:78px 0;
+    }
+
     .eyebrow{
       color:var(--cyan);
       font-size:.88rem;
@@ -50,86 +87,312 @@
       letter-spacing:.17em;
       text-transform:uppercase;
     }
-    h1,h2,h3,p{margin-top:0}
-    h1,h2{font-family:var(--serif);letter-spacing:-.035em}
-    h1{font-size:clamp(3.35rem,8vw,6.6rem);line-height:.93;margin:.18em 0 .28em;max-width:900px}
-    h2{font-size:clamp(2.25rem,5vw,4rem);line-height:1.04;margin-bottom:20px}
-    h3{font-size:1.25rem}
-    .lead{font-size:clamp(1.12rem,2.2vw,1.38rem);color:var(--muted);max-width:820px}
-    .muted{color:var(--muted)}
+
+    h1,h2,h3,p{
+      margin-top:0;
+    }
+
+    h1,h2{
+      font-family:var(--serif);
+      letter-spacing:-.035em;
+    }
+
+    h1{
+      font-size:clamp(3.35rem,8vw,6.6rem);
+      line-height:.93;
+      margin:.18em 0 .28em;
+      max-width:900px;
+    }
+
+    h2{
+      font-size:clamp(2.25rem,5vw,4rem);
+      line-height:1.04;
+      margin-bottom:20px;
+    }
+
+    h3{
+      font-size:1.25rem;
+    }
+
+    .lead{
+      font-size:clamp(1.12rem,2.2vw,1.38rem);
+      color:var(--muted);
+      max-width:820px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
 
     header{
-      position:sticky;top:0;z-index:20;
+      position:sticky;
+      top:0;
+      z-index:20;
       background:rgba(7,19,34,.88);
       backdrop-filter:blur(14px);
       border-bottom:1px solid var(--line);
     }
-    .nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:15px}
+
+    .nav{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
     .brand-logo{
-      width:58px;height:58px;object-fit:contain;border-radius:16px;
+      width:58px;
+      height:58px;
+      object-fit:contain;
+      border-radius:16px;
       box-shadow:0 0 28px rgba(22,199,238,.18);
     }
-    .brand-name{font-family:var(--serif);font-size:1.35rem;font-weight:700;line-height:1.08}
-    .nav-cta{
-      border:1px solid var(--cyan);color:var(--cyan2);
-      border-radius:999px;padding:11px 18px;font-weight:850;
+
+    .brand-name{
+      font-family:var(--serif);
+      font-size:1.35rem;
+      font-weight:700;
+      line-height:1.08;
     }
 
-    .hero{padding:82px 0 56px}
-    .hero-inner{max-width:980px}
-    .hero h1 .accent{color:var(--cyan)}
-    .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+    .nav-cta{
+      border:1px solid var(--cyan);
+      color:var(--cyan2);
+      border-radius:999px;
+      padding:11px 18px;
+      font-weight:850;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:82px 0 56px;
+    }
+
+    .hero-inner{
+      max-width:980px;
+    }
+
+    .hero h1 .accent{
+      color:var(--cyan);
+    }
+
+    .hero-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:28px 0;
+    }
+
     .pill{
-      padding:9px 14px;border:1px solid var(--line);
-      border-radius:999px;color:var(--cyan2);
-      background:rgba(16,34,58,.62);font-weight:800;font-size:.92rem
+      padding:9px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--cyan2);
+      background:rgba(16,34,58,.62);
+      font-weight:800;
+      font-size:.92rem;
     }
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:14px;padding:15px 22px;font-weight:900;
-      border:1px solid transparent;transition:.2s ease
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:14px;
+      padding:15px 22px;
+      font-weight:900;
+      border:1px solid transparent;
+      transition:.2s ease;
     }
-    .btn-primary{background:var(--cyan);color:#04101b;box-shadow:0 12px 30px rgba(22,199,238,.20)}
-    .btn-primary:hover{transform:translateY(-2px);background:#52dcfa}
-    .btn-secondary{border-color:var(--line);background:rgba(16,34,58,.6)}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
-    .stat{background:rgba(16,34,58,.78);border:1px solid var(--line);border-radius:18px;padding:20px}
-    .stat strong{display:block;font-size:1.8rem;color:var(--cyan);line-height:1.1}
-    .stat span{color:var(--muted);font-size:.92rem}
+
+    .btn-primary{
+      background:var(--cyan);
+      color:#04101b;
+      box-shadow:0 12px 30px rgba(22,199,238,.20);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#52dcfa;
+    }
+
+    .btn-secondary{
+      border-color:var(--line);
+      background:rgba(16,34,58,.6);
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .stat{
+      background:rgba(16,34,58,.78);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.8rem;
+      color:var(--cyan);
+      line-height:1.1;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* VIDEO */
+
+    .video-intro{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:44px;
+      align-items:center;
+      padding:40px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.08),
+          rgba(16,34,58,.78)
+        );
+      box-shadow:var(--shadow);
+    }
+
+    .video-copy .lead{
+      font-size:1.12rem;
+    }
+
+    .video-frame{
+      width:100%;
+      max-width:360px;
+      margin:auto;
+      aspect-ratio:9 / 16;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid rgba(22,199,238,.28);
+      box-shadow:0 24px 60px rgba(0,0,0,.35);
+      background:#000;
+    }
+
+    .video-frame iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+    /* CASE */
 
     .case{
-      padding:34px;border:1px solid rgba(22,199,238,.40);
+      padding:34px;
+      border:1px solid rgba(22,199,238,.40);
       border-radius:24px;
-      background:linear-gradient(120deg,rgba(22,199,238,.10),rgba(16,34,58,.62));
-      box-shadow:var(--shadow)
-    }
-    .case .big{
-      color:var(--cyan);font-weight:1000;
-      font-size:clamp(1.9rem,4vw,3.2rem);
-      text-transform:uppercase;letter-spacing:.01em;margin:5px 0 12px
+      background:
+        linear-gradient(
+          120deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.62)
+        );
+      box-shadow:var(--shadow);
     }
 
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .case .big{
+      color:var(--cyan);
+      font-weight:1000;
+      font-size:clamp(1.9rem,4vw,3.2rem);
+      text-transform:uppercase;
+      letter-spacing:.01em;
+      margin:5px 0 12px;
+    }
+
+    /* CARDS */
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
     .card{
-      border:1px solid var(--line);background:rgba(16,34,58,.72);
-      border-radius:20px;padding:26px
+      border:1px solid var(--line);
+      background:rgba(16,34,58,.72);
+      border-radius:20px;
+      padding:26px;
     }
-    .card .num{color:var(--cyan);font-weight:1000;font-size:2rem;font-family:var(--serif)}
-    .agenda{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+    .card .num{
+      color:var(--cyan);
+      font-weight:1000;
+      font-size:2rem;
+      font-family:var(--serif);
+    }
+
+    /* PROGRAM */
+
+    .agenda{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
     .agenda-day{
-      border:1px solid var(--line);border-radius:22px;padding:28px;
-      background:linear-gradient(145deg,rgba(16,34,58,.85),rgba(9,24,41,.84))
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(16,34,58,.85),
+          rgba(9,24,41,.84)
+        );
     }
-    .agenda-day .date{color:var(--cyan);font-weight:900}
-    .agenda-day ul{padding-left:20px;margin:18px 0 0}
-    .agenda-day li{margin:8px 0;color:#dbe5ef}
+
+    .agenda-day .date{
+      color:var(--cyan);
+      font-weight:900;
+    }
+
+    .agenda-day ul{
+      padding-left:20px;
+      margin:18px 0 0;
+    }
+
+    .agenda-day li{
+      margin:8px 0;
+      color:#dbe5ef;
+    }
+
+    /* TEACHER */
 
     .teacher{
-      display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;
-      align-items:stretch
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:28px;
+      align-items:stretch;
     }
+
     .teacher-photo{
       width:100%;
       aspect-ratio:4/5;
@@ -140,240 +403,845 @@
       box-shadow:var(--shadow);
       margin-bottom:18px;
     }
+
     .teacher-badge{
-      border:1px solid var(--line);border-radius:24px;padding:30px;
-      background:linear-gradient(145deg,rgba(22,199,238,.10),rgba(16,34,58,.82))
-    }
-    .teacher-name{font-family:var(--serif);font-size:2.35rem;margin-bottom:6px}
-    .teacher-title{color:var(--cyan);font-weight:900;margin-bottom:22px}
-    .teacher-points{display:grid;gap:12px}
-    .teacher-point{
-      padding:14px 16px;border-radius:14px;background:rgba(7,19,34,.48);
-      border:1px solid rgba(22,199,238,.14)
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.82)
+        );
     }
 
-    .audience{display:flex;flex-wrap:wrap;gap:10px}
-    .audience span{
-      border:1px solid var(--line);border-radius:999px;padding:10px 14px;
-      background:rgba(16,34,58,.58);font-weight:750;color:#dbe8f3
+    .teacher-name{
+      font-family:var(--serif);
+      font-size:2.35rem;
+      margin-bottom:6px;
     }
+
+    .teacher-title{
+      color:var(--cyan);
+      font-weight:900;
+      margin-bottom:22px;
+    }
+
+    .teacher-points{
+      display:grid;
+      gap:12px;
+    }
+
+    .teacher-point{
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(7,19,34,.48);
+      border:1px solid rgba(22,199,238,.14);
+    }
+
+    /* AUDIENCE */
+
+    .audience{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .audience span{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 14px;
+      background:rgba(16,34,58,.58);
+      font-weight:750;
+      color:#dbe8f3;
+    }
+
+    /* PRICE */
 
     .price-box{
-      display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;
-      border:1px solid rgba(22,199,238,.40);border-radius:26px;padding:34px;
-      background:linear-gradient(135deg,rgba(22,199,238,.10),rgba(16,34,58,.78))
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:28px;
+      align-items:center;
+      border:1px solid rgba(22,199,238,.40);
+      border-radius:26px;
+      padding:34px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.78)
+        );
     }
-    .price{font-size:clamp(3rem,7vw,5.5rem);line-height:1;font-weight:1000;letter-spacing:-.05em}
-    .price small{font-size:.32em;color:var(--cyan);letter-spacing:0}
 
-    details{border-bottom:1px solid var(--line);padding:17px 0}
-    summary{cursor:pointer;font-weight:850;font-size:1.05rem}
-    details p{color:var(--muted);padding-top:12px;margin-bottom:0}
+    .price{
+      font-size:clamp(3rem,7vw,5.5rem);
+      line-height:1;
+      font-weight:1000;
+      letter-spacing:-.05em;
+    }
+
+    .price small{
+      font-size:.32em;
+      color:var(--cyan);
+      letter-spacing:0;
+    }
+
+    /* FAQ */
+
+    details{
+      border-bottom:1px solid var(--line);
+      padding:17px 0;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:850;
+      font-size:1.05rem;
+    }
+
+    details p{
+      color:var(--muted);
+      padding-top:12px;
+      margin-bottom:0;
+    }
+
+    /* SIGNUP */
 
     .signup{
-      border:1px solid var(--line);border-radius:28px;padding:34px;
-      background:rgba(16,34,58,.76)
-    }
-    .signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    label{display:block;font-weight:800;margin-bottom:7px}
-    input,select,textarea{
-      width:100%;padding:14px 15px;border-radius:12px;
-      border:1px solid rgba(168,183,201,.25);
-      background:#081625;color:white;font:inherit;outline:none
-    }
-    input:focus,select:focus,textarea:focus{border-color:var(--cyan)}
-    textarea{min-height:120px;resize:vertical}
-    .full{grid-column:1/-1}
-    .notice{font-size:.87rem;color:var(--muted)}
-    .form-note{
-      margin-top:18px;padding:14px 16px;border-radius:12px;
-      border:1px dashed rgba(103,228,255,.35);color:var(--muted)
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px;
+      background:rgba(16,34,58,.76);
     }
 
-    footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
+    .signup-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    label{
+      display:block;
+      font-weight:800;
+      margin-bottom:7px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:12px;
+      border:1px solid rgba(168,183,201,.25);
+      background:#081625;
+      color:white;
+      font:inherit;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:var(--cyan);
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .full{
+      grid-column:1/-1;
+    }
+
+    .notice{
+      font-size:.87rem;
+      color:var(--muted);
+    }
+
+    .form-note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:12px;
+      border:1px dashed rgba(103,228,255,.35);
+      color:var(--muted);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:34px 0 50px;
+      color:var(--muted);
+    }
+
+    /* TABLET / MOBILE */
 
     @media(max-width:850px){
-      .wrap{width:min(100% - 28px,1120px)}
-      .section{padding:60px 0}
-      .hero{padding-top:56px}
-      .grid-3,.stats,.agenda,.teacher,.price-box,.signup-grid{grid-template-columns:1fr}
-      .full{grid-column:auto}
-      .nav-cta{display:none}
-      .brand-name{font-size:1.12rem}
-      .brand-logo{width:54px;height:54px}
+
+      .wrap{
+        width:min(100% - 28px,1120px);
+      }
+
+      .section{
+        padding:60px 0;
+      }
+
+      .hero{
+        padding-top:56px;
+      }
+
+      .grid-3,
+      .stats,
+      .agenda,
+      .teacher,
+      .price-box,
+      .signup-grid{
+        grid-template-columns:1fr;
+      }
+
+      .video-intro{
+        grid-template-columns:1fr;
+        padding:30px;
+      }
+
+      .video-copy{
+        text-align:center;
+      }
+
+      .video-copy .lead{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .full{
+        grid-column:auto;
+      }
+
+      .nav-cta{
+        display:none;
+      }
+
+      .brand-name{
+        font-size:1.12rem;
+      }
+
+      .brand-logo{
+        width:54px;
+        height:54px;
+      }
     }
+
     @media(max-width:520px){
-      h1{font-size:3.25rem}
-      .btn{width:100%}
-      .case,.signup,.price-box,.teacher-badge{padding:24px}
+
+      h1{
+        font-size:3.25rem;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .case,
+      .signup,
+      .price-box,
+      .teacher-badge,
+      .video-intro{
+        padding:24px;
+      }
+
+      .video-frame{
+        max-width:300px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- HEADER -->
+
   <header>
     <div class="wrap nav">
+
       <a class="brand" href="/">
-        <img class="brand-logo" src="../logo.png" alt="Európai Nyomozási Képzés logó">
-        <div class="brand-name">Európai<br>Nyomozási Képzés</div>
+        <img
+          class="brand-logo"
+          src="../logo.png"
+          alt="Európai Nyomozási Képzés logó"
+        >
+
+        <div class="brand-name">
+          Európai<br>
+          Nyomozási Képzés
+        </div>
       </a>
-      <a class="nav-cta" href="#jelentkezes">Jelentkezem</a>
+
+      <a class="nav-cta" href="#jelentkezes">
+        Jelentkezem
+      </a>
+
     </div>
   </header>
 
+
   <main>
+
+    <!-- HERO -->
+
     <section class="hero">
+
       <div class="wrap hero-inner">
-        <div class="eyebrow">OSINT • HUMINT • GDPR-tudatosság</div>
-        <h1>Tanulj meg <span class="accent">nyomozni!</span></h1>
+
+        <div class="eyebrow">
+          OSINT • HUMINT • GDPR-tudatosság
+        </div>
+
+        <h1>
+          Tanulj meg
+          <span class="accent">nyomozni!</span>
+        </h1>
+
         <p class="lead">
           24 órás, élő és interaktív online képzés az információgyűjtés,
           az OSINT és a gyakorlati nyomozói gondolkodás módszereiről.
         </p>
 
         <div class="hero-pills">
-          <span class="pill">2026. szeptember 6–7.</span>
-          <span class="pill">2026. szeptember 13–14.</span>
-          <span class="pill">24 óra</span>
-          <span class="pill">39 900 Ft</span>
+
+          <span class="pill">
+            2026. szeptember 6–7.
+          </span>
+
+          <span class="pill">
+            2026. szeptember 13–14.
+          </span>
+
+          <span class="pill">
+            24 óra
+          </span>
+
+          <span class="pill">
+            39 900 Ft
+          </span>
+
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#jelentkezes">Jelentkezem a képzésre</a>
-          <a class="btn btn-secondary" href="#program">Megnézem a programot</a>
+
+          <a
+            class="btn btn-primary"
+            href="#jelentkezes"
+          >
+            Jelentkezem a képzésre
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="#program"
+          >
+            Megnézem a programot
+          </a>
+
         </div>
 
         <div class="stats">
-          <div class="stat"><strong>24 óra</strong><span>élő online oktatás</span></div>
-          <div class="stat"><strong>2 hétvége</strong><span>intenzív, gyakorlati képzés</span></div>
-          <div class="stat"><strong>39 900 Ft</strong><span>teljes részvételi díj</span></div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="case">
-          <div class="eyebrow">A képzés nem ér véget az utolsó órával</div>
-          <div class="big">Próbáld ki magad élesben!</div>
-          <p class="lead">
-            A képzést elvégző résztvevők egy valódi nyomozási ügy megfelelően
-            elkülönített részfeladatán is kipróbálhatják a megszerzett tudásukat.
-          </p>
-          <p class="muted" style="margin-bottom:0">Valódi ügy. Valódi feladat. Valódi tapasztalat.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">Mit jelent az OSINT?</div>
-        <h2>Nyílt forrású információszerzés</h2>
-        <p class="lead">
-          Az OSINT (Open Source Intelligence) olyan módszerek összessége,
-          amelyek segítségével nyilvánosan és jogszerűen hozzáférhető forrásokból
-          gyűjtünk, ellenőrzünk és kapcsolunk össze információkat.
-        </p>
-        <p class="muted" style="max-width:840px">
-          A lényeg nem pusztán a keresés, hanem annak felismerése, hogy mit, hol,
-          milyen sorrendben és milyen módszerrel érdemes vizsgálni, majd hogyan lehet
-          a különálló információkból ellenőrizhető következtetéseket levonni.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">Az oktató</div>
-        <h2>Tarkó Áron</h2>
-
-        <div class="teacher">
-          <div>
-            <img class="teacher-photo" src="../aron-portrait.jpg" alt="Tarkó Áron, a képzés oktatója">
-            <div class="teacher-badge">
-              <div class="teacher-name">Tarkó Áron</div>
-              <div class="teacher-title">magánnyomozó • kriminológus • oktató • OSINT-kutató</div>
-              <p class="muted" style="margin-bottom:0">
-                Rendőrségi nyomozói múlttal és több mint egy évtizedes rendészeti,
-                magánnyomozói és szakmai tapasztalattal.
-              </p>
-            </div>
+          <div class="stat">
+            <strong>24 óra</strong>
+            <span>élő online oktatás</span>
           </div>
 
-          <div class="card">
-            <h3>Gyakorlati tapasztalat, nem pusztán elmélet</h3>
+          <div class="stat">
+            <strong>2 hétvége</strong>
+            <span>intenzív, gyakorlati képzés</span>
+          </div>
+
+          <div class="stat">
+            <strong>39 900 Ft</strong>
+            <span>teljes részvételi díj</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="section">
+
+      <div class="wrap">
+
+        <div class="video-intro">
+
+          <div class="video-copy">
+
+            <div class="eyebrow">
+              Nézd meg röviden
+            </div>
+
+            <h2>
+              Miről szól az OSINT képzés?
+            </h2>
+
+            <p class="lead">
+              Ismerd meg röviden, hogyan használható az OSINT és a
+              professzionális információgyűjtés a gyakorlatban –
+              magánnyomozásban, vállalati környezetben, HR-ben,
+              compliance-ben, jogi területen, kiberbiztonságban
+              és számos más szakmai helyzetben.
+            </p>
+
             <p class="muted">
-              Tarkó Áron 2013-ban kezdte pályafutását rendőrségi nyomozóként, majd
-              2017-től a magánnyomozás területén dolgozott. Többek között biztosítási
-              magánnyomozásban, detektívirodai területi vezetőként, valamint nemzetközi
+              A képzés célja nem egyszerűen eszközök bemutatása,
+              hanem a nyomozói gondolkodás, a források ellenőrzése
+              és az információk strukturált összekapcsolásának
+              elsajátítása.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="#jelentkezes"
+            >
+              Jelentkezem a képzésre
+            </a>
+
+          </div>
+
+
+          <div class="video-frame">
+
+            <iframe
+              src="https://www.youtube.com/embed/zSIPKa7CtYM"
+              title="OSINT képzés – Tarkó Investigations"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REAL CASE -->
+
+    <section class="section">
+
+      <div class="wrap">
+
+        <div class="case">
+
+          <div class="eyebrow">
+            A képzés nem ér véget az utolsó órával
+          </div>
+
+          <div class="big">
+            Próbáld ki magad élesben!
+          </div>
+
+          <p class="lead">
+            A képzést elvégző résztvevők egy valódi nyomozási ügy
+            megfelelően elkülönített részfeladatán is kipróbálhatják
+            a megszerzett tudásukat.
+          </p>
+
+          <p
+            class="muted"
+            style="margin-bottom:0"
+          >
+            Valódi ügy. Valódi feladat. Valódi tapasztalat.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT IS OSINT -->
+
+    <section class="section">
+
+      <div class="wrap">
+
+        <div class="eyebrow">
+          Mit jelent az OSINT?
+        </div>
+
+        <h2>
+          Nyílt forrású információszerzés
+        </h2>
+
+        <p class="lead">
+          Az OSINT (Open Source Intelligence) olyan módszerek
+          összessége, amelyek segítségével nyilvánosan és jogszerűen
+          hozzáférhető forrásokból gyűjtünk, ellenőrzünk és kapcsolunk
+          össze információkat.
+        </p>
+
+        <p
+          class="muted"
+          style="max-width:840px"
+        >
+          A lényeg nem pusztán a keresés, hanem annak felismerése,
+          hogy mit, hol, milyen sorrendben és milyen módszerrel
+          érdemes vizsgálni, majd hogyan lehet a különálló
+          információkból ellenőrizhető következtetéseket levonni.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- TEACHER -->
+
+    <section class="section">
+
+      <div class="wrap">
+
+        <div class="eyebrow">
+          Az oktató
+        </div>
+
+        <h2>
+          Tarkó Áron
+        </h2>
+
+        <div class="teacher">
+
+          <div>
+
+            <img
+              class="teacher-photo"
+              src="../aron-portrait.jpg"
+              alt="Tarkó Áron, a képzés oktatója"
+            >
+
+            <div class="teacher-badge">
+
+              <div class="teacher-name">
+                Tarkó Áron
+              </div>
+
+              <div class="teacher-title">
+                magánnyomozó • kriminológus • oktató • OSINT-kutató
+              </div>
+
+              <p
+                class="muted"
+                style="margin-bottom:0"
+              >
+                Rendőrségi nyomozói múlttal és több mint egy évtizedes
+                rendészeti, magánnyomozói és szakmai tapasztalattal.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>
+              Gyakorlati tapasztalat, nem pusztán elmélet
+            </h3>
+
+            <p class="muted">
+              Tarkó Áron 2013-ban kezdte pályafutását rendőrségi
+              nyomozóként, majd 2017-től a magánnyomozás területén
+              dolgozott. Többek között biztosítási magánnyomozásban,
+              detektívirodai területi vezetőként, valamint nemzetközi
               és vállalati nyomozási környezetben szerzett tapasztalatot.
             </p>
 
             <div class="teacher-points">
-              <div class="teacher-point"><strong>ELTE ÁJK</strong> – kriminológia mesterszak</div>
-              <div class="teacher-point"><strong>Nemzeti Közszolgálati Egyetem</strong> – Hadtudományi Doktori Iskola, PhD-tanulmányok (2019–2025)</div>
-              <div class="teacher-point"><strong>Oktatási és szakmai előadói tapasztalat</strong> – ELTE ÁJK, NKE Rendészettudományi Kar, Gál Ferenc Egyetem, Soproni Egyetem</div>
-              <div class="teacher-point"><strong>Kutatási területek</strong> – OSINT, HUMINT, magánnyomozás, nemzetbiztonsági szolgálatok, információszerzés</div>
-              <div class="teacher-point"><strong>Nemzetközi szakmai jelenlét</strong> – detektív- és szakmai konferenciák több európai országban és az Egyesült Államokban</div>
+
+              <div class="teacher-point">
+                <strong>ELTE ÁJK</strong>
+                – kriminológia mesterszak
+              </div>
+
+              <div class="teacher-point">
+                <strong>Nemzeti Közszolgálati Egyetem</strong>
+                – Hadtudományi Doktori Iskola,
+                PhD-tanulmányok (2019–2025)
+              </div>
+
+              <div class="teacher-point">
+                <strong>Oktatási és szakmai előadói tapasztalat</strong>
+                – ELTE ÁJK, NKE Rendészettudományi Kar,
+                Gál Ferenc Egyetem, Soproni Egyetem
+              </div>
+
+              <div class="teacher-point">
+                <strong>Kutatási területek</strong>
+                – OSINT, HUMINT, magánnyomozás,
+                nemzetbiztonsági szolgálatok, információszerzés
+              </div>
+
+              <div class="teacher-point">
+                <strong>Nemzetközi szakmai jelenlét</strong>
+                – detektív- és szakmai konferenciák több európai
+                országban és az Egyesült Államokban
+              </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- BENEFITS -->
+
     <section class="section">
+
       <div class="wrap">
-        <div class="eyebrow">Mit kapsz a képzésen?</div>
-        <h2>Nem videókat nézel. Együtt dolgoztok.</h2>
+
+        <div class="eyebrow">
+          Mit kapsz a képzésen?
+        </div>
+
+        <h2>
+          Nem videókat nézel. Együtt dolgoztok.
+        </h2>
+
         <div class="grid-3">
-          <article class="card"><div class="num">01</div><h3>Élő, interaktív oktatás</h3><p class="muted">Kérdezhetsz, együtt gondolkodtok, és közösen elemzitek a feladatokat és eseteket.</p></article>
-          <article class="card"><div class="num">02</div><h3>Gyakorlati feladatok</h3><p class="muted">A módszereket nemcsak bemutatjuk: a résztvevők önállóan is kipróbálják őket.</p></article>
-          <article class="card"><div class="num">03</div><h3>Valódi ügy részfeladata</h3><p class="muted">A kurzus után a megszerzett tudás egy valódi nyomozási részfeladaton is próbára tehető.</p></article>
-          <article class="card"><div class="num">04</div><h3>OSINT és információellenőrzés</h3><p class="muted">Személyek, cégek, online források és digitális nyomok strukturált kutatása és ellenőrzése.</p></article>
-          <article class="card"><div class="num">05</div><h3>Jogszerű és etikus módszerek</h3><p class="muted">A képzés a jogszerű, arányos és szakmailag védhető információgyűjtésre épül.</p></article>
-          <article class="card"><div class="num">06</div><h3>Tanúsítvány</h3><p class="muted">A képzés elvégzését igazoló tanúsítványt kapsz.</p></article>
+
+          <article class="card">
+
+            <div class="num">01</div>
+
+            <h3>
+              Élő, interaktív oktatás
+            </h3>
+
+            <p class="muted">
+              Kérdezhetsz, együtt gondolkodtok, és közösen elemzitek
+              a feladatokat és eseteket.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="num">02</div>
+
+            <h3>
+              Gyakorlati feladatok
+            </h3>
+
+            <p class="muted">
+              A módszereket nemcsak bemutatjuk: a résztvevők
+              önállóan is kipróbálják őket.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="num">03</div>
+
+            <h3>
+              Valódi ügy részfeladata
+            </h3>
+
+            <p class="muted">
+              A kurzus után a megszerzett tudás egy valódi
+              nyomozási részfeladaton is próbára tehető.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="num">04</div>
+
+            <h3>
+              OSINT és információellenőrzés
+            </h3>
+
+            <p class="muted">
+              Személyek, cégek, online források és digitális nyomok
+              strukturált kutatása és ellenőrzése.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="num">05</div>
+
+            <h3>
+              Jogszerű és etikus módszerek
+            </h3>
+
+            <p class="muted">
+              A képzés a jogszerű, arányos és szakmailag védhető
+              információgyűjtésre épül.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="num">06</div>
+
+            <h3>
+              Tanúsítvány
+            </h3>
+
+            <p class="muted">
+              A képzés elvégzését igazoló tanúsítványt kapsz.
+            </p>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section" id="program">
+
+    <!-- PROGRAM -->
+
+    <section
+      class="section"
+      id="program"
+    >
+
       <div class="wrap">
-        <div class="eyebrow">A képzés felépítése</div>
-        <h2>Két hétvége. Összesen 24 óra.</h2>
-        <div class="agenda">
-          <div class="agenda-day">
-            <div class="date">1. HÉTVÉGE • SZEPTEMBER 6–7.</div>
-            <h3>Alapok, módszertan és vezetett gyakorlat</h3>
-            <ul>
-              <li>A nyomozói gondolkodás és az információgyűjtés alapjai</li>
-              <li>OSINT-források és keresési stratégiák</li>
-              <li>Személyek és szervezetek kutatása</li>
-              <li>Közösségi média és digitális nyomok</li>
-              <li>Forrásellenőrzés és információk összekapcsolása</li>
-              <li>Gyakorlati feladatok és közös elemzés</li>
-            </ul>
-          </div>
-          <div class="agenda-day">
-            <div class="date">2. HÉTVÉGE • SZEPTEMBER 13–14.</div>
-            <h3>Összetett esetek és önálló munka</h3>
-            <ul>
-              <li>Céges és üzleti kapcsolatok feltérképezése</li>
-              <li>Képek, helyszínek és online tartalmak vizsgálata</li>
-              <li>Adatbázisok és nyilvános dokumentumok használata</li>
-              <li>Információk értékelése és dokumentálása</li>
-              <li>Etikai és jogi keretek</li>
-              <li>Összetett gyakorlati eset és felkészülés az éles feladatra</li>
-            </ul>
-          </div>
+
+        <div class="eyebrow">
+          A képzés felépítése
         </div>
+
+        <h2>
+          Két hétvége. Összesen 24 óra.
+        </h2>
+
+        <div class="agenda">
+
+          <div class="agenda-day">
+
+            <div class="date">
+              1. HÉTVÉGE • SZEPTEMBER 6–7.
+            </div>
+
+            <h3>
+              Alapok, módszertan és vezetett gyakorlat
+            </h3>
+
+            <ul>
+              <li>
+                A nyomozói gondolkodás és az információgyűjtés alapjai
+              </li>
+
+              <li>
+                OSINT-források és keresési stratégiák
+              </li>
+
+              <li>
+                Személyek és szervezetek kutatása
+              </li>
+
+              <li>
+                Közösségi média és digitális nyomok
+              </li>
+
+              <li>
+                Forrásellenőrzés és információk összekapcsolása
+              </li>
+
+              <li>
+                Gyakorlati feladatok és közös elemzés
+              </li>
+            </ul>
+
+          </div>
+
+
+          <div class="agenda-day">
+
+            <div class="date">
+              2. HÉTVÉGE • SZEPTEMBER 13–14.
+            </div>
+
+            <h3>
+              Összetett esetek és önálló munka
+            </h3>
+
+            <ul>
+              <li>
+                Céges és üzleti kapcsolatok feltérképezése
+              </li>
+
+              <li>
+                Képek, helyszínek és online tartalmak vizsgálata
+              </li>
+
+              <li>
+                Adatbázisok és nyilvános dokumentumok használata
+              </li>
+
+              <li>
+                Információk értékelése és dokumentálása
+              </li>
+
+              <li>
+                Etikai és jogi keretek
+              </li>
+
+              <li>
+                Összetett gyakorlati eset és felkészülés
+                az éles feladatra
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- AUDIENCE -->
 
     <section class="section">
+
       <div class="wrap">
-        <div class="eyebrow">Kinek ajánljuk?</div>
-        <h2>Ha a munkádban számít, hogy megtaláld és ellenőrizd az információt.</h2>
+
+        <div class="eyebrow">
+          Kinek ajánljuk?
+        </div>
+
+        <h2>
+          Ha a munkádban számít, hogy megtaláld és ellenőrizd az információt.
+        </h2>
+
         <div class="audience">
+
           <span>OSINT iránt érdeklődők</span>
           <span>Magánnyomozók</span>
           <span>HR-szakemberek</span>
@@ -389,103 +1257,382 @@
           <span>Egyetemisták</span>
           <span>Pályakezdők</span>
           <span>Vállalkozók és cégvezetők</span>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- PRICE -->
+
     <section class="section">
+
       <div class="wrap">
+
         <div class="price-box">
+
           <div>
-            <div class="eyebrow">Részvételi díj</div>
-            <h2 style="margin-bottom:10px">24 óra élő képzés két hétvégén</h2>
-            <p class="muted" style="margin-bottom:0">Szeptember 6–7. és szeptember 13–14. • Élő online • Interaktív</p>
+
+            <div class="eyebrow">
+              Részvételi díj
+            </div>
+
+            <h2 style="margin-bottom:10px">
+              24 óra élő képzés két hétvégén
+            </h2>
+
+            <p
+              class="muted"
+              style="margin-bottom:0"
+            >
+              Szeptember 6–7. és szeptember 13–14.
+              • Élő online • Interaktív
+            </p>
+
           </div>
-          <div class="price">39 900 <small>Ft</small></div>
+
+          <div class="price">
+            39 900
+            <small>Ft</small>
+          </div>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- FAQ -->
 
     <section class="section">
+
       <div class="wrap">
-        <div class="eyebrow">Gyakori kérdések</div>
-        <h2>Amit jelentkezés előtt érdemes tudni</h2>
-        <details><summary>Kell előzetes nyomozási tapasztalat?</summary><p>Nem. A képzés az alapoktól indul, ugyanakkor a gyakorlati megközelítés miatt szakmai háttérrel rendelkezők számára is hasznos.</p></details>
-        <details><summary>Hol zajlik a képzés?</summary><p>Teljes egészében online, élő formában. A pontos csatlakozási információkat a jelentkezők a képzés előtt kapják meg.</p></details>
-        <details><summary>Valóban valódi ügyön dolgozhatok?</summary><p>Igen. A képzés elvégzése után egy valódi nyomozási ügy megfelelően elkülönített részfeladatán próbálhatod ki a megszerzett tudásodat, a szükséges szakmai és adatvédelmi keretek között.</p></details>
-        <details><summary>Kapok igazolást a képzésről?</summary><p>Igen. A képzés elvégzéséről tanúsítványt adunk.</p></details>
+
+        <div class="eyebrow">
+          Gyakori kérdések
+        </div>
+
+        <h2>
+          Amit jelentkezés előtt érdemes tudni
+        </h2>
+
+
+        <details>
+
+          <summary>
+            Kell előzetes nyomozási tapasztalat?
+          </summary>
+
+          <p>
+            Nem. A képzés az alapoktól indul, ugyanakkor a gyakorlati
+            megközelítés miatt szakmai háttérrel rendelkezők számára
+            is hasznos.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Hol zajlik a képzés?
+          </summary>
+
+          <p>
+            Teljes egészében online, élő formában. A pontos
+            csatlakozási információkat a jelentkezők a képzés
+            előtt kapják meg.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Valóban valódi ügyön dolgozhatok?
+          </summary>
+
+          <p>
+            Igen. A képzés elvégzése után egy valódi nyomozási ügy
+            megfelelően elkülönített részfeladatán próbálhatod ki
+            a megszerzett tudásodat, a szükséges szakmai és
+            adatvédelmi keretek között.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Kapok igazolást a képzésről?
+          </summary>
+
+          <p>
+            Igen. A képzés elvégzéséről tanúsítványt adunk.
+          </p>
+
+        </details>
+
       </div>
+
     </section>
 
-    <section class="section" id="jelentkezes">
-      <div class="wrap">
-        <div class="signup">
-          <div class="eyebrow">Jelentkezés</div>
-          <h2>Foglalj helyet a képzésre</h2>
-          <p class="lead">2026. szeptember 6–7. és 13–14. • 24 óra • 39 900 Ft</p>
 
-          <form name="osint-jelentkezes" action="/osint-kepzes/koszonjuk/" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="osint-jelentkezes">
-            <input type="hidden" name="subject" data-remove-prefix value="Új jelentkező – Élő OSINT képzés">
+    <!-- SIGNUP -->
+
+    <section
+      class="section"
+      id="jelentkezes"
+    >
+
+      <div class="wrap">
+
+        <div class="signup">
+
+          <div class="eyebrow">
+            Jelentkezés
+          </div>
+
+          <h2>
+            Foglalj helyet a képzésre
+          </h2>
+
+          <p class="lead">
+            2026. szeptember 6–7. és 13–14.
+            • 24 óra • 39 900 Ft
+          </p>
+
+
+          <form
+            name="osint-jelentkezes"
+            action="/osint-kepzes/koszonjuk/"
+            method="POST"
+            data-netlify="true"
+          >
+
+            <input
+              type="hidden"
+              name="form-name"
+              value="osint-jelentkezes"
+            >
+
+            <input
+              type="hidden"
+              name="subject"
+              data-remove-prefix
+              value="Új jelentkező – Élő OSINT képzés"
+            >
+
+
             <div class="signup-grid">
+
               <div>
-                <label for="name">Név</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
-              </div>
-              <div>
-                <label for="email">E-mail cím</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-              <div>
-                <label for="phone">Telefonszám</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" />
-              </div>
-              <div>
-                <label for="area">Terület / foglalkozás</label>
-                <select id="area" name="area">
-                  <option value="">Válassz…</option>
-                  <option>HR / recruitment</option>
-                  <option>Compliance / KYC / due diligence</option>
-                  <option>Magánnyomozás / biztonság</option>
-                  <option>Kiberbiztonság</option>
-                  <option>Jog</option>
-                  <option>Újságírás</option>
-                  <option>Hallgató / pályakezdő</option>
-                  <option>Egyéb</option>
-                </select>
-              </div>
-              <div class="full">
-                <label for="message">Megjegyzés vagy kérdés</label>
-                <textarea id="message" name="message"></textarea>
-              </div>
-              <div class="full">
-                <label style="display:flex;gap:10px;align-items:flex-start;font-weight:600">
-                  <input type="checkbox" required style="width:auto;margin-top:5px">
-                  <span class="notice">Elfogadom az adatkezelési tájékoztatóban foglaltakat.</span>
+
+                <label for="name">
+                  Név
                 </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+
               </div>
+
+
+              <div>
+
+                <label for="email">
+                  E-mail cím
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+
+              </div>
+
+
+              <div>
+
+                <label for="phone">
+                  Telefonszám
+                </label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                />
+
+              </div>
+
+
+              <div>
+
+                <label for="area">
+                  Terület / foglalkozás
+                </label>
+
+                <select
+                  id="area"
+                  name="area"
+                >
+
+                  <option value="">
+                    Válassz…
+                  </option>
+
+                  <option>
+                    HR / recruitment
+                  </option>
+
+                  <option>
+                    Compliance / KYC / due diligence
+                  </option>
+
+                  <option>
+                    Magánnyomozás / biztonság
+                  </option>
+
+                  <option>
+                    Kiberbiztonság
+                  </option>
+
+                  <option>
+                    Jog
+                  </option>
+
+                  <option>
+                    Újságírás
+                  </option>
+
+                  <option>
+                    Hallgató / pályakezdő
+                  </option>
+
+                  <option>
+                    Egyéb
+                  </option>
+
+                </select>
+
+              </div>
+
+
               <div class="full">
-                <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer;width:100%">
+
+                <label for="message">
+                  Megjegyzés vagy kérdés
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                ></textarea>
+
+              </div>
+
+
+              <div class="full">
+
+                <label
+                  style="
+                    display:flex;
+                    gap:10px;
+                    align-items:flex-start;
+                    font-weight:600;
+                  "
+                >
+
+                  <input
+                    type="checkbox"
+                    name="privacy"
+                    value="accepted"
+                    required
+                    style="
+                      width:auto;
+                      margin-top:5px;
+                    "
+                  >
+
+                  <span class="notice">
+                    Elfogadom az adatkezelési tájékoztatóban foglaltakat.
+                  </span>
+
+                </label>
+
+              </div>
+
+
+              <div class="full">
+
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  style="
+                    border:0;
+                    cursor:pointer;
+                    width:100%;
+                  "
+                >
                   Jelentkezem – 39 900 Ft
                 </button>
+
               </div>
+
             </div>
+
           </form>
 
+
           <div class="form-note">
-            A jelentkezés elküldése után megjelennek a banki átutaláshoz szükséges adatok.
-            A hely a részvételi díj beérkezésével válik véglegessé.
+            A jelentkezés elküldése után megjelennek a banki
+            átutaláshoz szükséges adatok. A hely a részvételi
+            díj beérkezésével válik véglegessé.
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
+
     <div class="wrap">
-      <strong style="color:white">Európai Nyomozási Képzés</strong><br>
-      tarko-investigations.com • contact@tarko-investigations.com
+
+      <strong style="color:white">
+        Európai Nyomozási Képzés
+      </strong>
+
+      <br>
+
+      tarko-investigations.com
+      •
+      contact@tarko-investigations.com
+
     </div>
+
   </footer>
+
 </body>
 </html>
