@@ -109,7 +109,7 @@
     .module{display:flex;gap:16px;padding:20px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
     .module-num{width:42px;height:42px;border-radius:14px;background:rgba(240,165,0,.12);border:1px solid var(--border2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}
     .module p{color:var(--muted);font-size:.9rem;margin-top:6px}
-    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .post-card{overflow:hidden;padding:0}
     .post-card img{width:100%;height:190px;object-fit:cover;border-bottom:1px solid var(--border)}
     .post-body{padding:24px}.post-meta{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-weight:900;margin-bottom:8px}
@@ -155,40 +155,33 @@
       .hero-actions .btn{width:100%}.person{grid-template-columns:1fr}.person img{width:100%;height:220px}
       .brand span{display:none}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
     }
- .course-banner {
-  display: block;
-  width: 100%;
-  background: #00c8f0;
-  color: #071322;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 800;
-  padding: 11px 16px;
-  font-size: 15px;
-  line-height: 1.4;
-  letter-spacing: .02em;
-  border-bottom: 1px solid rgba(255,255,255,.15);
-  transition: .2s ease;
-}
 
-.course-banner:hover {
-  background: #68e4ff;
-}
+    .course-banner {
+      display: block;
+      width: 100%;
+      background: #00c8f0;
+      color: #071322;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 11px 16px;
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: .02em;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      transition: .2s ease;
+    }
 
-.course-banner strong {
-  font-weight: 900;
-}
+    .course-banner:hover { background: #68e4ff; }
+    .course-banner strong { font-weight: 900; }
+    .course-banner:visited { color: #071322; }
 
-.course-banner:visited {
-  color: #071322;
-}
-
-@media (max-width: 600px) {
-  .course-banner {
-    font-size: 13px;
-    padding: 10px 12px;
-  }
-}
+    @media (max-width: 600px) {
+      .course-banner {
+        font-size: 13px;
+        padding: 10px 12px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -386,7 +379,18 @@
         <div><span class="eyebrow" data-i18n="insights">Insights</span><h2 data-i18n="blogTitle">European investigation blog</h2></div>
         <p class="lead" data-i18n="blogLead">Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.</p>
       </div>
+
       <div class="blog-grid">
+        <article class="card post-card">
+          <img src="blog-osint-gyakorlatban.png" alt="OSINT a gyakorlatban – információgyűjtés és nyomozás">
+          <div class="post-body">
+            <div class="post-meta" data-i18n="post4Meta">OSINT · Practical Applications</div>
+            <h3 data-i18n="post4Title">OSINT in Practice: Why Information Gathering Has Become an Essential Skill</h3>
+            <p data-i18n="post4Text">How can OSINT support private investigation, HR, compliance, cybersecurity and better business decisions?</p>
+            <a href="/blog/osint-gyakorlatban.html" data-i18n="readArticle">Read article →</a>
+          </div>
+        </article>
+
         <article class="card post-card"><img src="blog-osint-europe.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post1Meta">OSINT · Europe</div><h3 data-i18n="post1Title">What makes OSINT different in Europe?</h3><p data-i18n="post1Text">European open-source research requires legal awareness, language sensitivity and careful documentation.</p><a href="/blog/osint-europe.html" data-i18n="readArticle">Read article →</a></div></article>
         <article class="card post-card"><img src="blog-gdpr-investigations.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post2Meta">GDPR · Compliance</div><h3 data-i18n="post2Title">GDPR-aware investigation is a method, not an obstacle</h3><p data-i18n="post2Text">Professional investigators must treat privacy, proportionality and documentation as part of the workflow.</p><a href="/blog/gdpr-investigations.html" data-i18n="readArticle">Read article →</a></div></article>
         <article class="card post-card"><img src="blog-private-investigation-training.jpg" alt=""><div class="post-body"><div class="post-meta" data-i18n="post3Meta">Training · Education</div><h3 data-i18n="post3Title">Why investigative thinking belongs in professional education</h3><p data-i18n="post3Text">Source assessment, verification and structured reporting are valuable far beyond private investigation.</p><a href="/blog/private-investigation-training.html" data-i18n="readArticle">Read article →</a></div></article>
@@ -526,7 +530,9 @@ coursePreview:"Course preview",courseTitle:"Information Gathering and Private In
 module1Title:"Introduction to Private Investigation",module1Text:"History, ethics, legal boundaries and the investigator’s mindset.",module2Title:"Core Principles of Information Gathering",module2Text:"Open, human and technical sources; OSINT, HUMINT, verification and triangulation.",module3Title:"Tools and Techniques",module3Text:"Digital tools, observation, documentation, analysis, reporting and presentation.",module4Title:"European Case Studies",module4Text:"Corporate data leak, missing-person scenario and disinformation campaign analysis.",module5Title:"Professional Practice",module5Text:"Trust, client management, GDPR, confidentiality, pricing, contracts and credibility.",module6Title:"Next Steps & Mentoring",module6Text:"Final review, certificate, reflection assignment and optional consultation pathways.",
 downloadGuideShort:"Download the Guide",startUdemy:"Start Learning on Udemy",discussPartnership:"Discuss a Partnership",
 meetTeam:"Meet the team",teamTitle:"The people behind the course",teamLead:"The project combines practical learning design, business development, academic research and specialist European investigative knowledge.",davidRole:"Course Creator & Presenter",davidBio:"Dávid created and presents the Udemy course, adapting academic research into a practical, visual and accessible professional learning experience for European audiences.",aronRole:"Academic Lead & Subject Matter Expert",aronBio:"Áron contributes the research and investigative expertise behind the methodology, with a focus on European information gathering, ethics and legal frameworks.",
-insights:"Insights",blogTitle:"European investigation blog",blogLead:"Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.",post1Meta:"OSINT · Europe",post1Title:"What makes OSINT different in Europe?",post1Text:"European open-source research requires legal awareness, language sensitivity and careful documentation.",post2Meta:"GDPR · Compliance",post2Title:"GDPR-aware investigation is a method, not an obstacle",post2Text:"Professional investigators must treat privacy, proportionality and documentation as part of the workflow.",post3Meta:"Training · Education",post3Title:"Why investigative thinking belongs in professional education",post3Text:"Source assessment, verification and structured reporting are valuable far beyond private investigation.",readArticle:"Read article →",
+insights:"Insights",blogTitle:"European investigation blog",blogLead:"Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.",
+post4Meta:"OSINT · Practical Applications",post4Title:"OSINT in Practice: Why Information Gathering Has Become an Essential Skill",post4Text:"How can OSINT support private investigation, HR, compliance, cybersecurity and better business decisions?",
+post1Meta:"OSINT · Europe",post1Title:"What makes OSINT different in Europe?",post1Text:"European open-source research requires legal awareness, language sensitivity and careful documentation.",post2Meta:"GDPR · Compliance",post2Title:"GDPR-aware investigation is a method, not an obstacle",post2Text:"Professional investigators must treat privacy, proportionality and documentation as part of the workflow.",post3Meta:"Training · Education",post3Title:"Why investigative thinking belongs in professional education",post3Text:"Source assessment, verification and structured reporting are valuable far beyond private investigation.",readArticle:"Read article →",
 questions:"Questions",faqTitle:"FAQ for partners and learners",faq1Q:"Who developed this course?",faq1A:"The course is created and presented by Dávid Komporday. The academic content and investigative methodology are based on Áron Tarkó’s research and professional expertise.",faq2Q:"Is this only for private detectives?",faq2A:"No. It is designed for cybersecurity and infosecurity teams, compliance professionals, corporate investigators, educators, researchers, journalists, students and legal professionals.",faq3Q:"Can universities integrate it into a programme?",faq3A:"Yes. It can be used as recommended learning, integrated into an existing module, developed into an elective or supported with guest lectures and workshops.",faq4Q:"Can professional organisations resell or recommend it?",faq4A:"Yes. We can discuss member discounts, affiliate partnerships, bulk access, webinars, joint campaigns or speaking opportunities.",faq5Q:"Is the course theoretical or practical?",faq5A:"It combines academic foundations with practical workflows: OSINT, HUMINT, verification, observation, documentation, reporting, GDPR, ethics and European case studies.",faq6Q:"Who is Marek Marlow?",faq6A:"Marek Marlow is an AI-supported educational persona used in selected course materials and video introductions. The course itself is created by Dávid and based on Áron’s research and expertise.",
 contactEyebrow:"Contact",contactTitle:"Let’s discuss the right next step",contactLead:"Use this form for university collaboration, guest lectures, professional organisation partnerships, corporate training, speaking opportunities or individual course questions.",labelName:"Name",labelEmail:"Email",labelOrganisation:"Organisation / University",optional:"Optional",labelInterest:"What are you interested in?",selectChoose:"Please choose one",interestUniversity:"University / curriculum collaboration",interestGuest:"Guest lecture or workshop",interestOrganisation:"Professional organisation partnership",interestCorporate:"Corporate training / bulk access",interestSpeaking:"Speaking opportunity",interestUdemy:"Udemy course / individual learning",interestOther:"Other",labelMessage:"Message",messagePlaceholder:"Please briefly tell us who you are, what type of collaboration or learning opportunity you are interested in, and what would be the best next step.",privacyAgree:'I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.',updatesAgree:"I would like to receive occasional updates about new courses, webinars and learning opportunities.",sendEnquiry:"Send Enquiry",thankYou:"Thank you.",contactSuccessText:"Your enquiry has been received. We personally review every message and will get back to you shortly.",
 legalEyebrow:"Legal",legalTitle:"Privacy Policy & Terms",privacyTitle:"Privacy Policy",privacyIntro:"We collect only the information you voluntarily submit through our forms.",privacy1:"Purpose: responding to enquiries, sending the guide, and discussing relevant learning or collaboration opportunities.",privacy2:"Data controller: Tarkó Investigations.",privacy4:"You may request access, correction or deletion of your data at any time.",privacy5:"We do not sell your personal data.",termsTitle:"Terms & Conditions",termsIntro:"This website and downloadable guide are provided for educational and informational purposes only.",terms1:"Udemy enrolments are subject to Udemy’s own terms and conditions.",terms2:"Academic, organisational or corporate collaborations are agreed separately in writing.",terms3:"All course materials, guide content and website materials are protected by copyright.",terms4:"Use of this website does not create a client relationship.",footerTitle:"European Investigative Learning",footerSubtitle:"Information Gathering and Private Investigation in Europe",cookiePolicy:"Cookie Policy",freeGuide:"Free guide",guideModalTitle:"Download the Investigative Guide",guideModalLead:"Get the complimentary guide and continue the conversation after Infosecurity Europe 2026.",downloadFreeGuide:"Download the Free Guide",guideThanks:"Thank you for downloading the guide.",clickDownload:"click here to download it",cookieNotice:"Cookie notice",cookieText:"We use essential cookies and basic form functionality to operate this website.",accept:"Accept",decline:"Decline"
@@ -541,7 +547,9 @@ academicPartnerships:"Egyetemi partnerségek",universitiesTitle:"Építse be az 
 partnershipModels:"Partnerségi modellek",partner1:"Tagi kedvezménykampányok egyedi hivatkozásokkal.",partner2:"Affiliate vagy bevételmegosztási együttműködés.",partner3:"Közös webinárium vagy online szakmai tájékoztató.",partner4:"Csoportos licencek csapatok, tagozatok vagy tagcsoportok számára.",partner5:"Személyes előadás, konferencia-előadás vagy szakmai workshop.",explorePartnership:"Partnerségi lehetőségek megismerése",professionalOrganisations:"Szakmai szervezetek",organisationsTitle:"Adjon tagjainak gyakorlati nyomozási készségeket",organisationsLead:"Kiberbiztonsági közösségek, OSINT-csoportok, compliance-szövetségek, vállalati biztonsági hálózatok, csalásmegelőzési szervezetek és képzési szolgáltatók számára.",
 coursePreview:"Kurzuselőzetes",courseTitle:"Információgyűjtés és magánnyomozás Európában",courseLead:"Teljes, Udemy-kompatibilis tanulási struktúra: videóleckék, kvízek, feladatok, esettanulmányok, záró reflexió és választható mentorálási lehetőségek.",module1Title:"Bevezetés a magánnyomozásba",module1Text:"Történet, etika, jogi korlátok és a nyomozói gondolkodásmód.",module2Title:"Az információgyűjtés alapelvei",module2Text:"Nyílt, emberi és technikai források; OSINT, HUMINT, ellenőrzés és trianguláció.",module3Title:"Eszközök és technikák",module3Text:"Digitális eszközök, megfigyelés, dokumentálás, elemzés, jelentéskészítés és prezentáció.",module4Title:"Európai esettanulmányok",module4Text:"Vállalati adatszivárgás, eltűnt személy esete és dezinformációs kampány elemzése.",module5Title:"Szakmai gyakorlat",module5Text:"Bizalom, ügyfélkezelés, GDPR, titoktartás, árazás, szerződések és hitelesség.",module6Title:"Következő lépések és mentorálás",module6Text:"Záró összefoglaló, tanúsítvány, reflexiós feladat és választható konzultációs lehetőségek.",downloadGuideShort:"Útmutató letöltése",startUdemy:"Tanulás megkezdése az Udemy-n",discussPartnership:"Partnerség megbeszélése",
 meetTeam:"Ismerje meg a csapatot",teamTitle:"A kurzus mögött álló szakemberek",teamLead:"A projekt a gyakorlati tananyagfejlesztést, az üzletfejlesztést, a tudományos kutatást és az európai nyomozási szaktudást egyesíti.",davidRole:"Kurzusalkotó és előadó",davidBio:"Dávid hozta létre és mutatja be az Udemy-kurzust, a tudományos kutatást gyakorlati, vizuális és könnyen érthető szakmai tanulási élménnyé alakítva az európai közönség számára.",aronRole:"Szakmai vezető és szakterületi szakértő",aronBio:"Áron biztosítja a módszertan mögötti kutatási és nyomozási szakértelmet, különös tekintettel az európai információgyűjtésre, az etikára és a jogi keretekre.",
-insights:"Szakmai tartalmak",blogTitle:"Európai nyomozási blog",blogLead:"Rövid szakmai cikkek az OSINT-ról, HUMINT-ról, GDPR-tudatos vizsgálatokról, forrásellenőrzésről és az európai nyomozási gyakorlatról.",post1Meta:"OSINT · Európa",post1Title:"Miben különbözik az OSINT Európában?",post1Text:"Az európai nyílt forrású kutatáshoz jogi tudatosság, nyelvi érzékenység és gondos dokumentálás szükséges.",post2Meta:"GDPR · Compliance",post2Title:"A GDPR-tudatos vizsgálat módszer, nem akadály",post2Text:"A szakmai nyomozóknak a magánszférát, az arányosságot és a dokumentálást a munkafolyamat részeként kell kezelniük.",post3Meta:"Képzés · Oktatás",post3Title:"Miért van helye a nyomozói gondolkodásnak a szakmai oktatásban?",post3Text:"A forrásértékelés, az ellenőrzés és a strukturált jelentéskészítés jóval a magánnyomozáson túl is értékes.",readArticle:"Cikk elolvasása →",
+insights:"Szakmai tartalmak",blogTitle:"Európai nyomozási blog",blogLead:"Rövid szakmai cikkek az OSINT-ról, HUMINT-ról, GDPR-tudatos vizsgálatokról, forrásellenőrzésről és az európai nyomozási gyakorlatról.",
+post4Meta:"OSINT · Gyakorlat",post4Title:"OSINT a gyakorlatban: miért lett az információgyűjtés fontos készség?",post4Text:"Hogyan használható az OSINT a magánnyomozástól a HR-en és compliance-en át egészen az üzleti döntésekig?",
+post1Meta:"OSINT · Európa",post1Title:"Miben különbözik az OSINT Európában?",post1Text:"Az európai nyílt forrású kutatáshoz jogi tudatosság, nyelvi érzékenység és gondos dokumentálás szükséges.",post2Meta:"GDPR · Compliance",post2Title:"A GDPR-tudatos vizsgálat módszer, nem akadály",post2Text:"A szakmai nyomozóknak a magánszférát, az arányosságot és a dokumentálást a munkafolyamat részeként kell kezelniük.",post3Meta:"Képzés · Oktatás",post3Title:"Miért van helye a nyomozói gondolkodásnak a szakmai oktatásban?",post3Text:"A forrásértékelés, az ellenőrzés és a strukturált jelentéskészítés jóval a magánnyomozáson túl is értékes.",readArticle:"Cikk elolvasása →",
 questions:"Kérdések",faqTitle:"Gyakori kérdések partnereknek és tanulóknak",faq1Q:"Ki dolgozta ki a kurzust?",faq1A:"A kurzust Komporday Dávid készítette és mutatja be. A tudományos tartalom és a nyomozási módszertan Tarkó Áron kutatására és szakmai tapasztalatára épül.",faq2Q:"Csak magánnyomozóknak szól?",faq2A:"Nem. Kiberbiztonsági és infosecurity csapatok, compliance szakemberek, vállalati vizsgálók, oktatók, kutatók, újságírók, hallgatók és jogi szakemberek számára készült.",faq3Q:"Beépíthetik az egyetemek a képzésükbe?",faq3A:"Igen. Használható ajánlott tananyagként, meglévő modulba építve, választható tárgyként, illetve vendégelőadásokkal és workshopokkal kiegészítve.",faq4Q:"Ajánlhatják vagy értékesíthetik szakmai szervezetek?",faq4A:"Igen. Tagi kedvezményről, affiliate együttműködésről, csoportos hozzáférésről, webináriumról, közös kampányról vagy előadásról is lehet egyeztetni.",faq5Q:"Elméleti vagy gyakorlati a kurzus?",faq5A:"A tudományos alapokat gyakorlati munkafolyamatokkal kapcsolja össze: OSINT, HUMINT, ellenőrzés, megfigyelés, dokumentálás, jelentéskészítés, GDPR, etika és európai esettanulmányok.",faq6Q:"Ki Marek Marlow?",faq6A:"Marek Marlow egy mesterséges intelligenciával támogatott oktatási karakter, aki egyes kurzusanyagokban és videós bevezetőkben szerepel. A kurzust Dávid készítette, Áron kutatására és szakértelmére építve.",
 contactEyebrow:"Kapcsolat",contactTitle:"Beszéljük meg a megfelelő következő lépést",contactLead:"Az űrlap egyetemi együttműködéshez, vendégelőadáshoz, szakmai szervezeti partnerséghez, vállalati képzéshez, előadói felkéréshez vagy egyéni kurzuskérdéshez használható.",labelName:"Név",labelEmail:"E-mail",labelOrganisation:"Szervezet / Egyetem",optional:"Nem kötelező",labelInterest:"Mi érdekli?",selectChoose:"Válasszon egy lehetőséget",interestUniversity:"Egyetemi / tantervi együttműködés",interestGuest:"Vendégelőadás vagy workshop",interestOrganisation:"Szakmai szervezeti partnerség",interestCorporate:"Vállalati képzés / csoportos hozzáférés",interestSpeaking:"Előadói lehetőség",interestUdemy:"Udemy-kurzus / egyéni tanulás",interestOther:"Egyéb",labelMessage:"Üzenet",messagePlaceholder:"Röviden írja le, hogy kicsoda, milyen együttműködési vagy tanulási lehetőség érdekli, és mi lenne a legjobb következő lépés.",privacyAgree:'Elolvastam és elfogadom az <a href="#privacy-policy">Adatvédelmi tájékoztatót</a>.',updatesAgree:"Szeretnék alkalmanként tájékoztatást kapni új kurzusokról, webináriumokról és tanulási lehetőségekről.",sendEnquiry:"Üzenet elküldése",thankYou:"Köszönjük.",contactSuccessText:"Megkaptuk az üzenetét. Minden megkeresést személyesen átnézünk, és hamarosan válaszolunk.",
 legalEyebrow:"Jogi információk",legalTitle:"Adatvédelem és feltételek",privacyTitle:"Adatvédelmi tájékoztató",privacyIntro:"Kizárólag azokat az adatokat gyűjtjük, amelyeket Ön önkéntesen megad az űrlapokon.",privacy1:"Cél: megkeresések megválaszolása, az útmutató elküldése és a megfelelő tanulási vagy együttműködési lehetőségek megbeszélése.",privacy2:"Adatkezelő: Tarkó Investigations.",privacy4:"Bármikor kérheti adataihoz való hozzáférést, azok helyesbítését vagy törlését.",privacy5:"Személyes adatait nem értékesítjük.",termsTitle:"Felhasználási feltételek",termsIntro:"A weboldal és a letölthető útmutató kizárólag oktatási és tájékoztatási célokat szolgál.",terms1:"Az Udemy-jelentkezésekre az Udemy saját feltételei vonatkoznak.",terms2:"Az egyetemi, szervezeti vagy vállalati együttműködésekről külön írásbeli megállapodás készül.",terms3:"A kurzus, az útmutató és a weboldal minden anyaga szerzői jogi védelem alatt áll.",terms4:"A weboldal használata nem hoz létre ügyfélkapcsolatot.",footerTitle:"Európai Nyomozási Képzés",footerSubtitle:"Információgyűjtés és magánnyomozás Európában",cookiePolicy:"Cookie-tájékoztató",freeGuide:"Ingyenes útmutató",guideModalTitle:"A nyomozási útmutató letöltése",guideModalLead:"Töltse le az ingyenes útmutatót, és folytassa velünk a beszélgetést az Infosecurity Europe 2026 után.",downloadFreeGuide:"Az ingyenes útmutató letöltése",guideThanks:"Köszönjük, hogy letöltötte az útmutatót.",clickDownload:"kattintson ide a letöltéshez",cookieNotice:"Cookie-tájékoztató",cookieText:"A weboldal működtetéséhez nélkülözhetetlen cookie-kat és alapvető űrlapfunkciókat használunk.",accept:"Elfogadom",decline:"Elutasítom"
