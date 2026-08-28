@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — English Live Online Course | Tarkó Investigations</title>
+  <meta name="description" content="Thank you for registering your interest in the English-language live online investigative training by Tarkó Investigations.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#06111d;
+      --navy2:#0b1b2b;
+      --cyan:#36bdf5;
+      --cyan2:#8bdcff;
+      --white:#f5f9fc;
+      --muted:#a8bfd1;
+      --border:rgba(54,189,245,.22);
+      --shadow:0 30px 90px rgba(0,0,0,.45);
+      --body:'Inter',system-ui,sans-serif;
+      --head:'Playfair Display',Georgia,serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      font-family:var(--body);
+      color:var(--white);
+      background:
+        linear-gradient(90deg,rgba(3,12,21,.95),rgba(3,12,21,.82)),
+        url("../../business-bg.jpg") center/cover fixed no-repeat;
+      min-height:100vh;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 70% 28%,rgba(54,189,245,.15),transparent 30%),
+        linear-gradient(180deg,rgba(2,9,16,.08),rgba(2,9,16,.38));
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      position:relative;
+      z-index:2;
+      border-bottom:1px solid var(--border);
+      background:rgba(4,14,24,.82);
+      backdrop-filter:blur(16px);
+    }
+    .nav{
+      max-width:1120px;
+      margin:auto;
+      padding:15px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{
+      width:42px;height:42px;object-fit:contain;
+      border-radius:10px;background:#091827;
+    }
+    .brand strong{font-size:.88rem;letter-spacing:.11em}
+    .home{
+      font-size:.78rem;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .home:hover{color:var(--cyan2)}
+    main{
+      position:relative;
+      z-index:1;
+      min-height:calc(100vh - 74px);
+      display:grid;
+      place-items:center;
+      padding:56px 22px;
+    }
+    .card{
+      width:min(820px,100%);
+      background:rgba(7,19,32,.79);
+      border:1px solid rgba(54,189,245,.35);
+      border-radius:28px;
+      box-shadow:var(--shadow),0 0 40px rgba(54,189,245,.07);
+      backdrop-filter:blur(15px);
+      padding:clamp(30px,6vw,58px);
+      text-align:center;
+    }
+    .check{
+      width:70px;height:70px;
+      display:grid;place-items:center;
+      margin:0 auto 24px;
+      border-radius:50%;
+      border:1px solid rgba(94,229,176,.38);
+      background:rgba(94,229,176,.10);
+      font-size:32px;
+      color:#75e7b5;
+      box-shadow:0 0 32px rgba(94,229,176,.10);
+    }
+    .eyebrow{
+      color:var(--cyan2);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:800;
+      font-size:.72rem;
+    }
+    h1{
+      font-family:var(--head);
+      font-size:clamp(2.35rem,6vw,4.5rem);
+      line-height:1.03;
+      letter-spacing:-.035em;
+      margin:12px auto 18px;
+    }
+    .lead{
+      max-width:650px;
+      margin:0 auto;
+      color:#d7e5ef;
+      font-size:1.08rem;
+      line-height:1.7;
+    }
+    .course{
+      margin:30px auto 0;
+      max-width:610px;
+      padding:22px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.035);
+    }
+    .course strong{
+      display:block;
+      font-size:1.08rem;
+      margin-bottom:8px;
+    }
+    .facts{
+      display:flex;
+      justify-content:center;
+      gap:12px 22px;
+      flex-wrap:wrap;
+      color:var(--cyan2);
+      font-weight:700;
+      font-size:.9rem;
+    }
+    .next{
+      margin:26px auto 0;
+      max-width:620px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:.95rem;
+    }
+    .actions{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:800;
+      font-size:.9rem;
+      border:1px solid transparent;
+      transition:.2s;
+    }
+    .primary{
+      background:var(--cyan);
+      color:#06111d;
+    }
+    .primary:hover{background:#fff;transform:translateY(-2px)}
+    .secondary{
+      border-color:rgba(255,255,255,.18);
+      background:rgba(255,255,255,.035);
+    }
+    .secondary:hover{
+      border-color:var(--cyan);
+      color:var(--cyan2);
+      transform:translateY(-2px);
+    }
+    .signature{
+      margin-top:34px;
+      color:var(--muted);
+      font-size:.84rem;
+    }
+    @media(max-width:620px){
+      .nav{padding:12px 16px}
+      .brand strong{font-size:.72rem}
+      main{padding:32px 16px}
+      .card{padding:30px 20px;border-radius:22px}
+      .actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav">
+      <a class="brand" href="/business-intelligence/">
+        <img src="../../logo.png" alt="Tarkó Investigations">
+        <strong>TARKÓ INVESTIGATIONS</strong>
+      </a>
+      <a class="home" href="/business-intelligence/">Back to Business Intelligence</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="check">✓</div>
+      <div class="eyebrow">Registration received</div>
+      <h1>Thank you for your registration!</h1>
+      <p class="lead">
+        Your interest in the English-language live online course has been received successfully.
+      </p>
+
+      <div class="course">
+        <strong>English Live Online Course</strong>
+        <div class="facts">
+          <span>21–22 November 2026</span>
+          <span>2 × 5 hours</span>
+          <span>Live online</span>
+        </div>
+      </div>
+
+      <p class="next">
+        We will contact you shortly with the next steps, payment information and practical details.
+        No payment has been taken on this page.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="/business-intelligence/">Back to Business Intelligence</a>
+        <a class="btn secondary" href="https://www.udemy.com/course/information-gathering-and-private-investigation-in-europe/?referralCode=F5C680AF901D2247C0E4" target="_blank" rel="noopener">Explore the English Udemy Course</a>
+      </div>
+
+      <div class="signature">Tarkó Investigations · European investigative training</div>
+    </section>
+  </main>
+</body>
+</html>
