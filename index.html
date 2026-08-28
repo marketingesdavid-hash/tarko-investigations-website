@@ -68,17 +68,81 @@
     .language-switch button.active{background:var(--cyan);color:#071322}
     .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.8rem}
 
-    .hero{position:relative;padding:98px 0 70px;background:radial-gradient(circle at 75% 12%,rgba(0,200,240,.19),transparent 34%),linear-gradient(135deg,#06101d 0%,#0d1b2e 58%,#071322 100%);overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,240,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,240,.035) 1px,transparent 1px);background-size:54px 54px}
-    .hero .container{position:relative}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+    .hero{
+      position:relative;
+      padding:98px 0 70px;
+      overflow:hidden;
+      isolation:isolate;
+      background:
+        linear-gradient(90deg,rgba(4,13,24,.93) 0%,rgba(4,13,24,.84) 48%,rgba(4,13,24,.70) 100%),
+        url("business-bg.jpg") center 44%/cover no-repeat;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-18px;
+      z-index:-2;
+      background:url("business-bg.jpg") center 44%/cover no-repeat;
+      filter:blur(5px);
+      transform:scale(1.035);
+      opacity:.26;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:
+        radial-gradient(circle at 72% 28%,rgba(0,200,240,.13),transparent 30%),
+        linear-gradient(rgba(0,200,240,.028) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,200,240,.028) 1px,transparent 1px);
+      background-size:auto,54px 54px,54px 54px;
+      pointer-events:none;
+    }
+    .hero .container{position:relative;z-index:1}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:42px;align-items:center}
     .hero-copy p{margin-top:22px}
     .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
     .pill{border:1px solid var(--border);background:rgba(0,200,240,.07);color:var(--cyan2);border-radius:999px;padding:7px 12px;font-size:.76rem;font-weight:800}
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
-    .hero-card{position:relative}
-    .hero-photo{border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;background:#10223a}
-    .hero-note{position:absolute;left:22px;right:22px;bottom:18px;background:rgba(7,19,34,.84);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .hero-card{
+      position:relative;
+      width:min(100%,560px);
+      justify-self:end;
+      padding:18px;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:30px;
+      background:rgba(7,19,34,.22);
+      border:1px solid rgba(0,200,240,.10);
+      backdrop-filter:blur(3px);
+    }
+    .hero-photo{
+      position:relative;
+      z-index:1;
+      width:100%;
+      border-radius:24px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      aspect-ratio:5/4;
+      object-fit:cover;
+      background:#10223a;
+    }
+    .hero-note{
+      z-index:2;
+      position:absolute;
+      left:40px;
+      right:40px;
+      bottom:36px;
+      background:rgba(7,19,34,.82);
+      backdrop-filter:blur(16px);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+    }
     .hero-note strong{display:block;margin-bottom:3px}
     .trust-strip{margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .trust{border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.035);padding:16px}
@@ -209,7 +273,7 @@
       .container{padding:0 18px}.hero{padding:74px 0 46px}section{padding:62px 0}
       .cards,.trust-strip,.form-grid,.blog-grid,.legal-grid{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}.person{grid-template-columns:1fr}.person img{width:100%;height:220px}
-      .brand span{display:none}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
+      .brand span{display:none}.hero-card{width:100%;padding:10px}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
     }
 
     .course-banners{
