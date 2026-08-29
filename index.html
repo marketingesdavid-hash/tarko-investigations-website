@@ -102,9 +102,18 @@
     .hero .container{position:relative;z-index:1}
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.02fr) minmax(470px,.98fr);
-      gap:34px;
+      grid-template-columns:minmax(0,1.02fr) minmax(440px,.98fr);
+      gap:46px;
       align-items:start;
+    }
+    .hero-copy{
+      min-width:0;
+      position:relative;
+      z-index:2;
+    }
+    .hero-copy h1{
+      font-size:clamp(2.55rem,4.8vw,4.9rem);
+      max-width:760px;
     }
     .hero-copy p{margin-top:18px}
     .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
@@ -113,11 +122,13 @@
     .hero-card{
       position:relative;
       width:100%;
-      max-width:650px;
+      max-width:680px;
+      min-width:0;
       justify-self:end;
       align-self:start;
-      margin-top:0;
+      margin-top:-6px;
       padding:14px;
+      z-index:1;
     }
     .hero-card:before{
       content:"";
@@ -135,12 +146,13 @@
       position:relative;
       z-index:1;
       width:100%;
-      height:560px;
+      height:auto;
+      aspect-ratio:16/10;
       border-radius:24px;
-      border:1px solid rgba(0,200,240,.24);
-      box-shadow:0 26px 70px rgba(0,0,0,.34);
+      border:1px solid rgba(0,200,240,.30);
+      box-shadow:0 28px 80px rgba(0,0,0,.38);
       object-fit:cover;
-      object-position:center 34%;
+      object-position:center 50%;
       background:#10223a;
     }
     .hero-note{
@@ -148,12 +160,12 @@
       position:absolute;
       left:34px;
       right:34px;
-      bottom:30px;
+      bottom:28px;
       background:rgba(7,19,34,.84);
       backdrop-filter:blur(16px);
       border:1px solid rgba(0,200,240,.30);
       border-radius:16px;
-      padding:16px;
+      padding:14px 16px;
     }
     .hero-note strong{display:block;margin-bottom:3px}
     .trust-strip{margin-top:42px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -273,8 +285,13 @@
     }
     .business-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 
+    @media(max-width:1100px){
+      .hero-grid{grid-template-columns:1fr;gap:34px}
+      .hero-card{justify-self:start;width:min(100%,760px);max-width:760px;margin-top:0}
+      .hero-photo{aspect-ratio:16/10}
+    }
     @media(max-width:980px){
-      .hero-grid,.split{grid-template-columns:1fr}.hero-card{justify-self:start;width:min(100%,650px);max-width:650px}.hero-photo{height:auto;aspect-ratio:5/4}
+      .split{grid-template-columns:1fr}
       .cards,.trust-strip,.blog-grid,.legal-grid{grid-template-columns:1fr 1fr}
       .team-grid,.curriculum,.faq{grid-template-columns:1fr}
       .section-head{display:block}.section-head p{margin-top:12px}
@@ -285,7 +302,7 @@
       .container{padding:0 18px}.hero{padding:74px 0 46px}section{padding:62px 0}
       .cards,.trust-strip,.form-grid,.blog-grid,.legal-grid{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}.person{grid-template-columns:1fr}.person img{width:100%;height:220px}
-      .brand span{display:none}.hero-card{width:100%;padding:10px}.hero-photo{height:auto;aspect-ratio:5/4}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
+      .brand span{display:none}.hero-card{width:100%;padding:10px}.hero-photo{height:auto;aspect-ratio:16/10}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
     }
 
     .course-banners{
@@ -539,7 +556,7 @@
         <p class="lead" data-i18n="courseLead">A complete Udemy-compatible learning structure: video lessons, quizzes, assignments, case studies, final reflection and optional mentoring pathways.</p>
       </div>
       <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/lY9cyyxJmqc" title="Course Introduction" loading="lazy" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/zojkyq_1K3M" title="Course Introduction" loading="lazy" allowfullscreen></iframe>
       </div>
       <div class="curriculum" style="margin-top:28px">
         <div class="module"><div class="module-num">1</div><div><h3 data-i18n="module1Title">Introduction to Private Investigation</h3><p data-i18n="module1Text">History, ethics, legal boundaries and the investigator’s mindset.</p></div></div>
@@ -739,17 +756,17 @@ pageTitle:"Információgyűjtés és magánnyomozás Európában",metaDescriptio
 brandTitle:"Európai Nyomozási Képzés",brandTagline:"Információ · Stratégia · Védelem",navPathways:"Lehetőségek",navUniversities:"Egyetemek",navOrganisations:"Szervezetek",navCourse:"Kurzus",navTeam:"Csapat",navBlog:"Blog",navContact:"Kapcsolat",navBusiness:"Üzleti képzés",
 heroEyebrow:"Európai nyomozási képzés · OSINT · HUMINT · GDPR-tudatosság",heroTitle:"Információgyűjtés és magánnyomozás Európában",heroLead1:"Gyakorlati európai nyomozási képzés egyetemek, szakmai szervezetek, kiberbiztonsági csapatok, compliance szakemberek és egyéni tanulók számára.",heroLead2:"A kurzust <strong>Komporday Dávid</strong> készítette és mutatja be, <strong>Tarkó Áron</strong> kutatására és nyomozási szakértelmére építve.",
 badgeCyber:"Kiberbiztonsági és infosecurity csapatok",badgeUniversities:"Egyetemek",badgeOrganisations:"Szakmai szervezetek",badgeCompliance:"Compliance és vállalati vizsgálatok",downloadGuide:"Nyomozási útmutató letöltése",discussCollaboration:"Együttműködés megbeszélése",trustHours:"interaktív szakmai képzés",trustSections:"due diligence és kockázattudatosság",trustMethods:"HUMINT, GDPR, ellenőrzés",trustEU:"jogi környezet és esettanulmányok",heroNoteTitle:"Gyakorlati nyomozási képzés szakembereknek Európa-szerte.",heroNoteText:"OSINT · HUMINT · Due Diligence · GDPR-tudatos vizsgálat",
-businessEyebrow:"Üzleti intelligencia · Due diligence · Vállalati kockázat",businessTitle:"Valóban tudja, kivel köt üzletet?",businessLead:"Gyakorlati nyomozási képzés cégeknek és szakembereknek, akik üzleti partnereket szeretnének ellenőrizni, kockázatot csökkenteni és megalapozottabb döntéseket hozni.",businessPoint1:"OSINT és forrásellenőrzés",businessPoint2:"Due diligence",businessPoint3:"Compliance és vállalati biztonság",businessPoint4:"Angol élő online kurzus",businessCta:"Üzleti nyomozási képzés megtekintése",businessRegister:"Jelentkezés az élő kurzusra",choosePath:"Válasszon lehetőséget",pathwaysTitle:"Milyen formában működne együtt velünk?",pathwaysLead:"A legnagyobb értéket az egyetemi és szakmai partnerségek jelentik. Az Udemy-kurzus egyéni tanulók számára továbbra is azonnal elérhető.",forUniversities:"Egyetemeknek",forUniversitiesText:"Építse be az európai nyomozásmódszertant meglévő képzésbe, alakítson ki választható modult, vagy hívjon meg bennünket vendégelőadásra.",academicCollab:"Egyetemi együttműködés",forOrganisations:"Szakmai szervezeteknek",forOrganisationsText:"Kínáljon tagjainak gyakorlati nyomozási képzést webinárium, licencelés, csoportos hozzáférés vagy partnerkampány formájában.",partnershipOptions:"Partnerségi lehetőségek",forLearners:"Egyéni tanulóknak",forLearnersText:"Kezdje el a teljes Udemy-kurzust, és sajátítsa el az OSINT, HUMINT, ellenőrzés, jelentéskészítés, etika és esetelemzés gyakorlati módszereit.",viewCourse:"A kurzus megtekintése",
+businessEyebrow:"Üzleti intelligencia · Due diligence · Vállalati kockázat",businessTitle:"Valóban tudja, kivel köt üzletet?",businessLead:"Gyakorlati nyomozási képzés cégeknek és szakembereknek, akik üzleti partnereket szeretnének ellenőrizni, kockázatot csökkenteni és megalapozottabb döntéseket hozni.",businessPoint1:"OSINT és forrásellenőrzés",businessPoint2:"Due diligence",businessPoint3:"Compliance és vállalati biztonság",businessPoint4:"Angol élő online kurzus",businessCta:"Üzleti nyomozási képzés megtekintése",businessRegister:"Jelentkezés az élő kurzusra",choosePath:"Válasszon lehetőséget",pathwaysTitle:"Milyen formában működne együtt velünk?",pathwaysLead:"A legnagyobb értéket az egyetemi és szakmai partnerségek jelentik. Az angol nyelvű Udemy-kurzus egyéni tanulók számára továbbra is azonnal elérhető.",forUniversities:"Egyetemeknek",forUniversitiesText:"Építse be az európai nyomozásmódszertant meglévő képzésbe, alakítson ki választható modult, vagy hívjon meg bennünket vendégelőadásra.",academicCollab:"Egyetemi együttműködés",forOrganisations:"Szakmai szervezeteknek",forOrganisationsText:"Kínáljon tagjainak gyakorlati nyomozási képzést webinárium, licencelés, csoportos hozzáférés vagy partnerkampány formájában.",partnershipOptions:"Partnerségi lehetőségek",forLearners:"Egyéni tanulóknak",forLearnersText:"Kezdje el a teljes angol nyelvű Udemy-kurzust, és sajátítsa el az OSINT, HUMINT, ellenőrzés, jelentéskészítés, etika és esetelemzés gyakorlati módszereit.",viewCourse:"A kurzus megtekintése",
 academicPartnerships:"Egyetemi partnerségek",universitiesTitle:"Építse be az európai nyomozásmódszertant a képzésébe",universitiesLead:"Kriminológiai, biztonságpolitikai, hírszerzési, újságírói, jogi, compliance- és kiberbiztonsági képzéseket működtető egyetemek, oktatók és programvezetők számára.",uni1:"Használja a kurzust ajánlott tananyagként vagy órai felkészítő anyagként.",uni2:"Építsen be kiválasztott modulokat egy már létező tantárgyba.",uni3:"Hozzon létre új választható tárgyat az európai információgyűjtésről és magánnyomozásról.",uni4:"Hívja meg Dávidot és/vagy Áront vendégelőadásra, workshopra vagy pilot alkalomra.",whyFitsTitle:"Miért illeszkedik egyetemi programokhoz?",why1:"Kutatásalapú tudományos háttér, gyakorlati tanulássá alakítva.",why2:"Strukturált tanterv kvízekkel, feladatokkal, reflexióval és igazolható tanulási folyamattal.",why3:"Európai szemlélet: GDPR, jogi korlátok, etikus magatartás és valószerű esetek.",why4:"Hasznos azoknak a hallgatóknak, akiknek forrásellenőrzésre, kritikai gondolkodásra és nyomozási logikára van szükségük.",scheduleAcademic:"Egyetemi egyeztetés kérése",
 partnershipModels:"Partnerségi modellek",partner1:"Tagi kedvezménykampányok egyedi hivatkozásokkal.",partner2:"Affiliate vagy bevételmegosztási együttműködés.",partner3:"Közös webinárium vagy online szakmai tájékoztató.",partner4:"Csoportos licencek csapatok, tagozatok vagy tagcsoportok számára.",partner5:"Személyes előadás, konferencia-előadás vagy szakmai workshop.",explorePartnership:"Partnerségi lehetőségek megismerése",professionalOrganisations:"Szakmai szervezetek",organisationsTitle:"Adjon tagjainak gyakorlati nyomozási készségeket",organisationsLead:"Kiberbiztonsági közösségek, OSINT-csoportok, compliance-szövetségek, vállalati biztonsági hálózatok, csalásmegelőzési szervezetek és képzési szolgáltatók számára.",
-coursePreview:"Kurzuselőzetes",courseTitle:"Információgyűjtés és magánnyomozás Európában",courseLead:"Teljes, Udemy-kompatibilis tanulási struktúra: videóleckék, kvízek, feladatok, esettanulmányok, záró reflexió és választható mentorálási lehetőségek.",module1Title:"Bevezetés a magánnyomozásba",module1Text:"Történet, etika, jogi korlátok és a nyomozói gondolkodásmód.",module2Title:"Az információgyűjtés alapelvei",module2Text:"Nyílt, emberi és technikai források; OSINT, HUMINT, ellenőrzés és trianguláció.",module3Title:"Eszközök és technikák",module3Text:"Digitális eszközök, megfigyelés, dokumentálás, elemzés, jelentéskészítés és prezentáció.",module4Title:"Európai esettanulmányok",module4Text:"Vállalati adatszivárgás, eltűnt személy esete és dezinformációs kampány elemzése.",module5Title:"Szakmai gyakorlat",module5Text:"Bizalom, ügyfélkezelés, GDPR, titoktartás, árazás, szerződések és hitelesség.",module6Title:"Következő lépések és mentorálás",module6Text:"Záró összefoglaló, tanúsítvány, reflexiós feladat és választható konzultációs lehetőségek.",downloadGuideShort:"Útmutató letöltése",startUdemy:"Tanulás megkezdése az Udemy-n",discussPartnership:"Partnerség megbeszélése",
-meetTeam:"Ismerje meg a csapatot",teamTitle:"A kurzus mögött álló szakemberek",teamLead:"A projekt a gyakorlati tananyagfejlesztést, az üzletfejlesztést, a tudományos kutatást és az európai nyomozási szaktudást egyesíti.",davidRole:"Kurzusalkotó és előadó",davidBio:"Dávid hozta létre és mutatja be az Udemy-kurzust, a tudományos kutatást gyakorlati, vizuális és könnyen érthető szakmai tanulási élménnyé alakítva az európai közönség számára.",aronRole:"Szakmai vezető és szakterületi szakértő",aronBio:"Áron biztosítja a módszertan mögötti kutatási és nyomozási szakértelmet, különös tekintettel az európai információgyűjtésre, az etikára és a jogi keretekre.",
+coursePreview:"Kurzuselőzetes",courseTitle:"Információgyűjtés és magánnyomozás Európában",courseLead:"Az angol nyelvű Udemy-kurzus teljes tanulási struktúrája: videóleckék, kvízek, feladatok, esettanulmányok, záró reflexió és választható mentorálási lehetőségek.",module1Title:"Bevezetés a magánnyomozásba",module1Text:"Történet, etika, jogi korlátok és a nyomozói gondolkodásmód.",module2Title:"Az információgyűjtés alapelvei",module2Text:"Nyílt, emberi és technikai források; OSINT, HUMINT, ellenőrzés és trianguláció.",module3Title:"Eszközök és technikák",module3Text:"Digitális eszközök, megfigyelés, dokumentálás, elemzés, jelentéskészítés és prezentáció.",module4Title:"Európai esettanulmányok",module4Text:"Vállalati adatszivárgás, eltűnt személy esete és dezinformációs kampány elemzése.",module5Title:"Szakmai gyakorlat",module5Text:"Bizalom, ügyfélkezelés, GDPR, titoktartás, árazás, szerződések és hitelesség.",module6Title:"Következő lépések és mentorálás",module6Text:"Záró összefoglaló, tanúsítvány, reflexiós feladat és választható konzultációs lehetőségek.",downloadGuideShort:"Útmutató letöltése",startUdemy:"Angol nyelvű Udemy-kurzus megnyitása",discussPartnership:"Partnerség megbeszélése",
+meetTeam:"Ismerje meg a csapatot",teamTitle:"A kurzus mögött álló szakemberek",teamLead:"A projekt a gyakorlati tananyagfejlesztést, az üzletfejlesztést, a tudományos kutatást és az európai nyomozási szaktudást egyesíti.",davidRole:"Kurzusalkotó és előadó",davidBio:"Dávid hozta létre és mutatja be az angol nyelvű Udemy-kurzust, a tudományos kutatást gyakorlati, vizuális és könnyen érthető szakmai tanulási élménnyé alakítva az európai közönség számára.",aronRole:"Szakmai vezető és szakterületi szakértő",aronBio:"Áron biztosítja a módszertan mögötti kutatási és nyomozási szakértelmet, különös tekintettel az európai információgyűjtésre, az etikára és a jogi keretekre.",
 insights:"Szakmai tartalmak",blogTitle:"Európai nyomozási blog",blogLead:"Rövid szakmai cikkek az OSINT-ról, HUMINT-ról, GDPR-tudatos vizsgálatokról, forrásellenőrzésről és az európai nyomozási gyakorlatról.",
 post4Meta:"OSINT · Gyakorlat",post4Title:"OSINT a gyakorlatban: miért lett az információgyűjtés fontos készség?",post4Text:"Hogyan használható az OSINT a magánnyomozástól a HR-en és compliance-en át egészen az üzleti döntésekig?",
 post1Meta:"OSINT · Európa",post1Title:"Miben különbözik az OSINT Európában?",post1Text:"Az európai nyílt forrású kutatáshoz jogi tudatosság, nyelvi érzékenység és gondos dokumentálás szükséges.",post2Meta:"GDPR · Compliance",post2Title:"A GDPR-tudatos vizsgálat módszer, nem akadály",post2Text:"A szakmai nyomozóknak a magánszférát, az arányosságot és a dokumentálást a munkafolyamat részeként kell kezelniük.",post3Meta:"Képzés · Oktatás",post3Title:"Miért van helye a nyomozói gondolkodásnak a szakmai oktatásban?",post3Text:"A forrásértékelés, az ellenőrzés és a strukturált jelentéskészítés jóval a magánnyomozáson túl is értékes.",readArticle:"Cikk elolvasása →",
 questions:"Kérdések",faqTitle:"Gyakori kérdések partnereknek és tanulóknak",faq1Q:"Ki dolgozta ki a kurzust?",faq1A:"A kurzust Komporday Dávid készítette és mutatja be. A tudományos tartalom és a nyomozási módszertan Tarkó Áron kutatására és szakmai tapasztalatára épül.",faq2Q:"Csak magánnyomozóknak szól?",faq2A:"Nem. Kiberbiztonsági és infosecurity csapatok, compliance szakemberek, vállalati vizsgálók, oktatók, kutatók, újságírók, hallgatók és jogi szakemberek számára készült.",faq3Q:"Beépíthetik az egyetemek a képzésükbe?",faq3A:"Igen. Használható ajánlott tananyagként, meglévő modulba építve, választható tárgyként, illetve vendégelőadásokkal és workshopokkal kiegészítve.",faq4Q:"Ajánlhatják vagy értékesíthetik szakmai szervezetek?",faq4A:"Igen. Tagi kedvezményről, affiliate együttműködésről, csoportos hozzáférésről, webináriumról, közös kampányról vagy előadásról is lehet egyeztetni.",faq5Q:"Elméleti vagy gyakorlati a kurzus?",faq5A:"A tudományos alapokat gyakorlati munkafolyamatokkal kapcsolja össze: OSINT, HUMINT, ellenőrzés, megfigyelés, dokumentálás, jelentéskészítés, GDPR, etika és európai esettanulmányok.",faq6Q:"Ki Marek Marlow?",faq6A:"Marek Marlow egy mesterséges intelligenciával támogatott oktatási karakter, aki egyes kurzusanyagokban és videós bevezetőkben szerepel. A kurzust Dávid készítette, Áron kutatására és szakértelmére építve.",
-contactEyebrow:"Kapcsolat",contactTitle:"Beszéljük meg a megfelelő következő lépést",contactLead:"Az űrlap egyetemi együttműködéshez, vendégelőadáshoz, szakmai szervezeti partnerséghez, vállalati képzéshez, előadói felkéréshez vagy egyéni kurzuskérdéshez használható.",labelName:"Név",labelEmail:"E-mail",labelOrganisation:"Szervezet / Egyetem",optional:"Nem kötelező",labelInterest:"Mi érdekli?",selectChoose:"Válasszon egy lehetőséget",interestUniversity:"Egyetemi / tantervi együttműködés",interestGuest:"Vendégelőadás vagy workshop",interestOrganisation:"Szakmai szervezeti partnerség",interestCorporate:"Vállalati képzés / csoportos hozzáférés",interestSpeaking:"Előadói lehetőség",interestUdemy:"Udemy-kurzus / egyéni tanulás",interestOther:"Egyéb",labelMessage:"Üzenet",messagePlaceholder:"Röviden írja le, hogy kicsoda, milyen együttműködési vagy tanulási lehetőség érdekli, és mi lenne a legjobb következő lépés.",privacyAgree:'Elolvastam és elfogadom az <a href="#privacy-policy">Adatvédelmi tájékoztatót</a>.',updatesAgree:"Szeretnék alkalmanként tájékoztatást kapni új kurzusokról, webináriumokról és tanulási lehetőségekről.",sendEnquiry:"Üzenet elküldése",thankYou:"Köszönjük.",contactSuccessText:"Megkaptuk az üzenetét. Minden megkeresést személyesen átnézünk, és hamarosan válaszolunk.",
-legalEyebrow:"Jogi információk",legalTitle:"Adatvédelem és feltételek",privacyTitle:"Adatvédelmi tájékoztató",privacyIntro:"Kizárólag azokat az adatokat gyűjtjük, amelyeket Ön önkéntesen megad az űrlapokon.",privacy1:"Cél: megkeresések megválaszolása, az útmutató elküldése és a megfelelő tanulási vagy együttműködési lehetőségek megbeszélése.",privacy2:"Adatkezelő: Tarkó Investigations.",privacy4:"Bármikor kérheti adataihoz való hozzáférést, azok helyesbítését vagy törlését.",privacy5:"Személyes adatait nem értékesítjük.",termsTitle:"Felhasználási feltételek",termsIntro:"A weboldal és a letölthető útmutató kizárólag oktatási és tájékoztatási célokat szolgál.",terms1:"Az Udemy-jelentkezésekre az Udemy saját feltételei vonatkoznak.",terms2:"Az egyetemi, szervezeti vagy vállalati együttműködésekről külön írásbeli megállapodás készül.",terms3:"A kurzus, az útmutató és a weboldal minden anyaga szerzői jogi védelem alatt áll.",terms4:"A weboldal használata nem hoz létre ügyfélkapcsolatot.",footerTitle:"Európai Nyomozási Képzés",footerSubtitle:"Információgyűjtés és magánnyomozás Európában",cookiePolicy:"Cookie-tájékoztató",freeGuide:"Ingyenes útmutató",guideModalTitle:"A nyomozási útmutató letöltése",guideModalLead:"Töltse le az ingyenes nyomozási útmutatót, és ismerje meg a gyakorlati európai nyomozási módszereket.",downloadFreeGuide:"Az ingyenes útmutató letöltése",guideThanks:"Köszönjük, hogy letöltötte az útmutatót.",clickDownload:"kattintson ide a letöltéshez",cookieNotice:"Cookie-tájékoztató",cookieText:"A weboldal működtetéséhez nélkülözhetetlen cookie-kat és alapvető űrlapfunkciókat használunk.",accept:"Elfogadom",decline:"Elutasítom"
+contactEyebrow:"Kapcsolat",contactTitle:"Beszéljük meg a megfelelő következő lépést",contactLead:"Az űrlap egyetemi együttműködéshez, vendégelőadáshoz, szakmai szervezeti partnerséghez, vállalati képzéshez, előadói felkéréshez vagy egyéni kurzuskérdéshez használható.",labelName:"Név",labelEmail:"E-mail",labelOrganisation:"Szervezet / Egyetem",optional:"Nem kötelező",labelInterest:"Mi érdekli?",selectChoose:"Válasszon egy lehetőséget",interestUniversity:"Egyetemi / tantervi együttműködés",interestGuest:"Vendégelőadás vagy workshop",interestOrganisation:"Szakmai szervezeti partnerség",interestCorporate:"Vállalati képzés / csoportos hozzáférés",interestSpeaking:"Előadói lehetőség",interestUdemy:"Angol nyelvű Udemy-kurzus / egyéni tanulás",interestOther:"Egyéb",labelMessage:"Üzenet",messagePlaceholder:"Röviden írja le, hogy kicsoda, milyen együttműködési vagy tanulási lehetőség érdekli, és mi lenne a legjobb következő lépés.",privacyAgree:'Elolvastam és elfogadom az <a href="#privacy-policy">Adatvédelmi tájékoztatót</a>.',updatesAgree:"Szeretnék alkalmanként tájékoztatást kapni új kurzusokról, webináriumokról és tanulási lehetőségekről.",sendEnquiry:"Üzenet elküldése",thankYou:"Köszönjük.",contactSuccessText:"Megkaptuk az üzenetét. Minden megkeresést személyesen átnézünk, és hamarosan válaszolunk.",
+legalEyebrow:"Jogi információk",legalTitle:"Adatvédelem és feltételek",privacyTitle:"Adatvédelmi tájékoztató",privacyIntro:"Kizárólag azokat az adatokat gyűjtjük, amelyeket Ön önkéntesen megad az űrlapokon.",privacy1:"Cél: megkeresések megválaszolása, az útmutató elküldése és a megfelelő tanulási vagy együttműködési lehetőségek megbeszélése.",privacy2:"Adatkezelő: Tarkó Investigations.",privacy4:"Bármikor kérheti adataihoz való hozzáférést, azok helyesbítését vagy törlését.",privacy5:"Személyes adatait nem értékesítjük.",termsTitle:"Felhasználási feltételek",termsIntro:"A weboldal és a letölthető útmutató kizárólag oktatási és tájékoztatási célokat szolgál.",terms1:"Az angol nyelvű Udemy-kurzusra történő jelentkezésekre az Udemy saját feltételei vonatkoznak.",terms2:"Az egyetemi, szervezeti vagy vállalati együttműködésekről külön írásbeli megállapodás készül.",terms3:"A kurzus, az útmutató és a weboldal minden anyaga szerzői jogi védelem alatt áll.",terms4:"A weboldal használata nem hoz létre ügyfélkapcsolatot.",footerTitle:"Európai Nyomozási Képzés",footerSubtitle:"Információgyűjtés és magánnyomozás Európában",cookiePolicy:"Cookie-tájékoztató",freeGuide:"Ingyenes útmutató",guideModalTitle:"A nyomozási útmutató letöltése",guideModalLead:"Töltse le az ingyenes nyomozási útmutatót, és ismerje meg a gyakorlati európai nyomozási módszereket.",downloadFreeGuide:"Az ingyenes útmutató letöltése",guideThanks:"Köszönjük, hogy letöltötte az útmutatót.",clickDownload:"kattintson ide a letöltéshez",cookieNotice:"Cookie-tájékoztató",cookieText:"A weboldal működtetéséhez nélkülözhetetlen cookie-kat és alapvető űrlapfunkciókat használunk.",accept:"Elfogadom",decline:"Elutasítom"
 }
 };
 
