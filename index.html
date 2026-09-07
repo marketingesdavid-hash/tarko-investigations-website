@@ -285,6 +285,92 @@
     }
     .business-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 
+
+    .live-courses{
+      background:
+        radial-gradient(circle at 18% 18%,rgba(0,200,240,.08),transparent 26%),
+        linear-gradient(180deg,#0b1828 0%,#071322 100%);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+    .live-course-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+    .live-course-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      border:1px solid var(--border);
+      border-radius:22px;
+      background:linear-gradient(180deg,rgba(22,43,68,.88),rgba(10,25,43,.9));
+      padding:26px;
+      box-shadow:0 18px 54px rgba(0,0,0,.22);
+      overflow:hidden;
+    }
+    .live-course-card:before{
+      content:"";
+      position:absolute;
+      left:0;right:0;top:0;
+      height:3px;
+      background:linear-gradient(90deg,var(--cyan),transparent);
+    }
+    .live-course-card.featured{
+      border-color:rgba(240,165,0,.42);
+      background:linear-gradient(180deg,rgba(44,38,20,.28),rgba(10,25,43,.94));
+    }
+    .live-course-card.featured:before{
+      background:linear-gradient(90deg,var(--gold),transparent);
+    }
+    .course-kicker{
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      color:var(--cyan2);
+      margin-bottom:10px;
+    }
+    .live-course-card.featured .course-kicker{color:var(--gold)}
+    .live-course-card h3{
+      font-size:1.55rem;
+      margin-bottom:10px;
+    }
+    .course-meta{
+      color:#d9e7f2;
+      font-size:.94rem;
+      margin-bottom:14px;
+    }
+    .course-desc{
+      color:var(--muted);
+      font-size:.92rem;
+      margin-bottom:20px;
+    }
+    .course-price{
+      margin-top:auto;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+    .course-price strong{
+      display:block;
+      font-size:1.7rem;
+      line-height:1.1;
+      color:var(--cyan);
+    }
+    .live-course-card.featured .course-price strong{color:var(--gold)}
+    .course-price span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:.82rem;
+    }
+    .live-course-card .btn{
+      width:100%;
+      margin-top:18px;
+    }
+
     @media(max-width:1100px){
       .hero-grid{grid-template-columns:1fr;gap:34px}
       .hero-card{justify-self:start;width:min(100%,760px);max-width:760px;margin-top:0}
@@ -292,7 +378,7 @@
     }
     @media(max-width:980px){
       .split{grid-template-columns:1fr}
-      .cards,.trust-strip,.blog-grid,.legal-grid{grid-template-columns:1fr 1fr}
+      .cards,.trust-strip,.blog-grid,.legal-grid,.live-course-grid{grid-template-columns:1fr 1fr}
       .team-grid,.curriculum,.faq{grid-template-columns:1fr}
       .section-head{display:block}.section-head p{margin-top:12px}
       .navlinks{display:none;position:absolute;left:0;right:0;top:74px;background:var(--navy2);border-bottom:1px solid var(--border);padding:20px 24px;flex-direction:column;align-items:flex-start}
@@ -300,7 +386,7 @@
     }
     @media(max-width:640px){
       .container{padding:0 18px}.hero{padding:74px 0 46px}section{padding:62px 0}
-      .cards,.trust-strip,.form-grid,.blog-grid,.legal-grid{grid-template-columns:1fr}
+      .cards,.trust-strip,.form-grid,.blog-grid,.legal-grid,.live-course-grid{grid-template-columns:1fr}
       .hero-actions .btn{width:100%}.person{grid-template-columns:1fr}.person img{width:100%;height:220px}
       .brand span{display:none}.hero-card{width:100%;padding:10px}.hero-photo{height:auto;aspect-ratio:16/10}.hero-note{position:static;margin-top:12px}.modal-box,.form-box{padding:24px}
     }
@@ -438,6 +524,7 @@
     </a>
     <div class="nav-right">
       <nav class="navlinks" id="navlinks">
+        <a href="#live-courses" data-i18n="navLiveCourses">Live Courses</a>
         <a href="#pathways" data-i18n="navPathways">Pathways</a>
         <a href="#universities" data-i18n="navUniversities">Universities</a>
         <a href="#organisations" data-i18n="navOrganisations">Organisations</a>
@@ -484,6 +571,59 @@
       <div class="hero-card">
         <img class="hero-photo" src="hero-david-aron.png" alt="Dávid Komporday and Áron Tarkó">
         <div class="hero-note"><strong data-i18n="heroNoteTitle">Practical investigative training for professionals across Europe.</strong><span class="small" data-i18n="heroNoteText">OSINT · HUMINT · Due Diligence · GDPR-aware investigation</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="live-courses" id="live-courses">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-i18n="liveCoursesEyebrow">Upcoming live training</span>
+          <h2 data-i18n="liveCoursesTitle">Choose the live course that fits you</h2>
+        </div>
+        <p class="lead" data-i18n="liveCoursesLead">Three live online formats are currently available: a short Hungarian evening course in September, an intensive Hungarian weekend course in November, and an English-language Business Intelligence & OSINT programme at the end of November.</p>
+      </div>
+
+      <div class="live-course-grid">
+
+        <article class="live-course-card">
+          <div class="course-kicker" data-i18n="courseSepKicker">Hungarian · 10 & 17 September</div>
+          <h3 data-i18n="courseSepTitle">Live Online OSINT Training</h3>
+          <div class="course-meta" data-i18n="courseSepMeta">2 evening sessions · 18:30–22:30 · 8 hours total</div>
+          <p class="course-desc" data-i18n="courseSepDesc">A compact, practical OSINT programme for learners who want an intensive introduction in two live evening sessions.</p>
+          <div class="course-price">
+            <strong>19 950 Ft</strong>
+            <span data-i18n="courseSepPriceNote">Full participation fee</span>
+          </div>
+          <a class="btn btn-secondary" href="/osint-kepzes/" data-i18n="courseSepCta">View September Course</a>
+        </article>
+
+        <article class="live-course-card featured">
+          <div class="course-kicker" data-i18n="courseNovHuKicker">Hungarian · 14–15 November</div>
+          <h3 data-i18n="courseNovHuTitle">Intensive Live Online OSINT Training</h3>
+          <div class="course-meta" data-i18n="courseNovHuMeta">2 × 6 hours · 12 hours total · live online</div>
+          <p class="course-desc" data-i18n="courseNovHuDesc">A deeper two-day programme covering investigative thinking, source verification, digital traces, people and company research, legal and ethical frameworks, and practical exercises.</p>
+          <div class="course-price">
+            <strong>29 900 Ft</strong>
+            <span data-i18n="courseNovHuPriceNote">Early bird until 31 October · regular price 39 900 Ft</span>
+          </div>
+          <a class="btn btn-gold" href="/osint-kepzes-november/" data-i18n="courseNovHuCta">View November Hungarian Course</a>
+        </article>
+
+        <article class="live-course-card">
+          <div class="course-kicker" data-i18n="courseNovEnKicker">English · 28–29 November</div>
+          <h3 data-i18n="courseNovEnTitle">Business Intelligence & OSINT</h3>
+          <div class="course-meta" data-i18n="courseNovEnMeta">2 × 5 hours · live online · English</div>
+          <p class="course-desc" data-i18n="courseNovEnDesc">Practical business intelligence, due diligence, partner verification and OSINT for international professionals, companies and decision-makers.</p>
+          <div class="course-price">
+            <strong>€199</strong>
+            <span data-i18n="courseNovEnPriceNote">Early bird · regular price €249</span>
+          </div>
+          <a class="btn btn-secondary" href="/business-intelligence/" data-i18n="courseNovEnCta">View English Course</a>
+        </article>
+
       </div>
     </div>
   </section>
@@ -748,7 +888,11 @@ en:{
 pageTitle:"Information Gathering and Private Investigation in Europe",
 metaDescription:"Practical European information gathering and private investigation training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.",
 ogTitle:"Information Gathering and Private Investigation in Europe",ogDescription:"Academic and professional partnership opportunities around a practical European investigative methodologies course.",twitterTitle:"Information Gathering and Private Investigation in Europe",twitterDescription:"Practical European investigative training for universities, organisations and professionals.",
-brandTitle:"European Investigative Learning",brandTagline:"Information · Strategy · Protection",navPathways:"Pathways",navUniversities:"Universities",navOrganisations:"Organisations",navCourse:"Course",navTeam:"Team",navBlog:"Blog",navContact:"Contact",navBusiness:"Business",
+brandTitle:"European Investigative Learning",brandTagline:"Information · Strategy · Protection",navLiveCourses:"Live Courses",
+liveCoursesEyebrow:"Upcoming live training",liveCoursesTitle:"Choose the live course that fits you",liveCoursesLead:"Three live online formats are currently available: a short Hungarian evening course in September, an intensive Hungarian weekend course in November, and an English-language Business Intelligence & OSINT programme at the end of November.",
+courseSepKicker:"Hungarian · 10 & 17 September",courseSepTitle:"Live Online OSINT Training",courseSepMeta:"2 evening sessions · 18:30–22:30 · 8 hours total",courseSepDesc:"A compact, practical OSINT programme for learners who want an intensive introduction in two live evening sessions.",courseSepPriceNote:"Full participation fee",courseSepCta:"View September Course",
+courseNovHuKicker:"Hungarian · 14–15 November",courseNovHuTitle:"Intensive Live Online OSINT Training",courseNovHuMeta:"2 × 6 hours · 12 hours total · live online",courseNovHuDesc:"A deeper two-day programme covering investigative thinking, source verification, digital traces, people and company research, legal and ethical frameworks, and practical exercises.",courseNovHuPriceNote:"Early bird until 31 October · regular price 39 900 Ft",courseNovHuCta:"View November Hungarian Course",
+courseNovEnKicker:"English · 28–29 November",courseNovEnTitle:"Business Intelligence & OSINT",courseNovEnMeta:"2 × 5 hours · live online · English",courseNovEnDesc:"Practical business intelligence, due diligence, partner verification and OSINT for international professionals, companies and decision-makers.",courseNovEnPriceNote:"Early bird · regular price €249",courseNovEnCta:"View English Course",navPathways:"Pathways",navUniversities:"Universities",navOrganisations:"Organisations",navCourse:"Course",navTeam:"Team",navBlog:"Blog",navContact:"Contact",navBusiness:"Business",
 heroEyebrow:"European investigative training · OSINT · HUMINT · GDPR awareness",heroTitle:"Information Gathering and Private Investigation in Europe",heroLead1:"Practical European investigative training for universities, professional organisations, cybersecurity teams, compliance professionals and individual learners.",heroLead2:"Created and presented by <strong>Dávid Komporday</strong>, based on the research and investigative expertise of <strong>Áron Tarkó</strong>.",
 badgeCyber:"Cybersecurity & Infosecurity Teams",badgeUniversities:"Universities",badgeOrganisations:"Professional Organisations",badgeCompliance:"Compliance & Corporate Investigations",downloadGuide:"Download the Investigative Guide",discussCollaboration:"Discuss Collaboration",
 trustHours:"interactive professional training",trustSections:"due diligence & risk awareness",trustMethods:"HUMINT, GDPR, verification",trustEU:"legal context & case studies",heroNoteTitle:"Practical investigative training for professionals across Europe.",heroNoteText:"OSINT · HUMINT · Due Diligence · GDPR-aware investigation",
@@ -774,7 +918,11 @@ legalEyebrow:"Legal",legalTitle:"Privacy Policy & Terms",privacyTitle:"Privacy P
 },
 hu:{
 pageTitle:"Információgyűjtés és magánnyomozás Európában",metaDescription:"Gyakorlati európai információgyűjtési és magánnyomozási képzés egyetemek, szakmai szervezetek, kiberbiztonsági csapatok, compliance szakemberek és egyéni tanulók számára.",ogTitle:"Információgyűjtés és magánnyomozás Európában",ogDescription:"Egyetemi és szakmai együttműködési lehetőségek egy gyakorlati európai nyomozásmódszertani kurzus kapcsán.",twitterTitle:"Információgyűjtés és magánnyomozás Európában",twitterDescription:"Gyakorlati európai nyomozási képzés egyetemek, szervezetek és szakemberek számára.",
-brandTitle:"Európai Nyomozási Képzés",brandTagline:"Információ · Stratégia · Védelem",navPathways:"Lehetőségek",navUniversities:"Egyetemek",navOrganisations:"Szervezetek",navCourse:"Kurzus",navTeam:"Csapat",navBlog:"Blog",navContact:"Kapcsolat",navBusiness:"Üzleti képzés",
+brandTitle:"Európai Nyomozási Képzés",brandTagline:"Információ · Stratégia · Védelem",navLiveCourses:"Élő képzések",
+liveCoursesEyebrow:"Következő élő képzések",liveCoursesTitle:"Válassza ki az Önnek megfelelő élő képzést",liveCoursesLead:"Jelenleg három élő online képzés érhető el: egy rövid magyar esti képzés szeptemberben, egy intenzív magyar hétvégi képzés novemberben, valamint egy angol nyelvű Business Intelligence & OSINT program november végén.",
+courseSepKicker:"Magyar · szeptember 10. és 17.",courseSepTitle:"Élő online OSINT képzés",courseSepMeta:"2 esti alkalom · 18:30–22:30 · összesen 8 óra",courseSepDesc:"Kompakt, gyakorlati OSINT-képzés azoknak, akik két élő esti alkalom során szeretnének intenzív bevezetést kapni a módszerekbe.",courseSepPriceNote:"Teljes részvételi díj",courseSepCta:"Szeptemberi képzés megtekintése",
+courseNovHuKicker:"Magyar · november 14–15.",courseNovHuTitle:"Intenzív élő online OSINT képzés",courseNovHuMeta:"2 × 6 óra · összesen 12 óra · élő online",courseNovHuDesc:"Kétnapos, mélyebb program nyomozói gondolkodással, forrásellenőrzéssel, digitális nyomokkal, személy- és cégkutatással, jogi és etikai keretekkel, valamint gyakorlati feladatokkal.",courseNovHuPriceNote:"Early bird október 31-ig · normál ár 39 900 Ft",courseNovHuCta:"Novemberi magyar képzés megtekintése",
+courseNovEnKicker:"Angol · november 28–29.",courseNovEnTitle:"Business Intelligence & OSINT",courseNovEnMeta:"2 × 5 óra · élő online · angol nyelven",courseNovEnDesc:"Gyakorlati business intelligence, due diligence, partnerellenőrzés és OSINT nemzetközi szakembereknek, cégeknek és döntéshozóknak.",courseNovEnPriceNote:"Early bird · normál ár €249",courseNovEnCta:"Angol képzés megtekintése",navPathways:"Lehetőségek",navUniversities:"Egyetemek",navOrganisations:"Szervezetek",navCourse:"Kurzus",navTeam:"Csapat",navBlog:"Blog",navContact:"Kapcsolat",navBusiness:"Üzleti képzés",
 heroEyebrow:"Európai nyomozási képzés · OSINT · HUMINT · GDPR-tudatosság",heroTitle:"Információgyűjtés és magánnyomozás Európában",heroLead1:"Gyakorlati európai nyomozási képzés egyetemek, szakmai szervezetek, kiberbiztonsági csapatok, compliance szakemberek és egyéni tanulók számára.",heroLead2:"A kurzust <strong>Komporday Dávid</strong> készítette és mutatja be, <strong>Tarkó Áron</strong> kutatására és nyomozási szakértelmére építve.",
 badgeCyber:"Kiberbiztonsági és infosecurity csapatok",badgeUniversities:"Egyetemek",badgeOrganisations:"Szakmai szervezetek",badgeCompliance:"Compliance és vállalati vizsgálatok",downloadGuide:"Nyomozási útmutató letöltése",discussCollaboration:"Együttműködés megbeszélése",trustHours:"interaktív szakmai képzés",trustSections:"due diligence és kockázattudatosság",trustMethods:"HUMINT, GDPR, ellenőrzés",trustEU:"jogi környezet és esettanulmányok",heroNoteTitle:"Gyakorlati nyomozási képzés szakembereknek Európa-szerte.",heroNoteText:"OSINT · HUMINT · Due Diligence · GDPR-tudatos vizsgálat",
 businessEyebrow:"Üzleti intelligencia · Due diligence · Vállalati kockázat",businessTitle:"Valóban tudja, kivel köt üzletet?",businessLead:"Gyakorlati nyomozási képzés cégeknek és szakembereknek, akik üzleti partnereket szeretnének ellenőrizni, kockázatot csökkenteni és megalapozottabb döntéseket hozni.",businessPoint1:"OSINT és forrásellenőrzés",businessPoint2:"Due diligence",businessPoint3:"Compliance és vállalati biztonság",businessPoint4:"Angol élő online kurzus",businessCta:"Üzleti nyomozási képzés megtekintése",businessRegister:"Jelentkezés az élő kurzusra",choosePath:"Válasszon lehetőséget",pathwaysTitle:"Milyen formában működne együtt velünk?",pathwaysLead:"A legnagyobb értéket az egyetemi és szakmai partnerségek jelentik. Az angol nyelvű Udemy-kurzus egyéni tanulók számára továbbra is azonnal elérhető.",forUniversities:"Egyetemeknek",forUniversitiesText:"Építse be az európai nyomozásmódszertant meglévő képzésbe, alakítson ki választható modult, vagy hívjon meg bennünket vendégelőadásra.",academicCollab:"Egyetemi együttműködés",forOrganisations:"Szakmai szervezeteknek",forOrganisationsText:"Kínáljon tagjainak gyakorlati nyomozási képzést webinárium, licencelés, csoportos hozzáférés vagy partnerkampány formájában.",partnershipOptions:"Partnerségi lehetőségek",forLearners:"Egyéni tanulóknak",forLearnersText:"Kezdje el a teljes angol nyelvű Udemy-kurzust, és sajátítsa el az OSINT, HUMINT, ellenőrzés, jelentéskészítés, etika és esetelemzés gyakorlati módszereit.",viewCourse:"A kurzus megtekintése",
