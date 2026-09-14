@@ -308,6 +308,8 @@
       padding:26px;
       box-shadow:0 18px 54px rgba(0,0,0,.22);
       overflow:hidden;
+      background-position:center;
+      background-size:cover;
     }
     .live-course-card:before{
       content:"";
@@ -322,6 +324,24 @@
     }
     .live-course-card.featured:before{
       background:linear-gradient(90deg,var(--gold),transparent);
+    }
+    .live-course-card.course-humint{
+      background:
+        linear-gradient(180deg,rgba(5,15,27,.72),rgba(5,15,27,.96) 72%),
+        url("halado-humint-hero.webp") 66% center / cover no-repeat;
+    }
+    .live-course-card.course-osint{
+      background:
+        linear-gradient(180deg,rgba(8,16,28,.69),rgba(7,18,31,.97) 72%),
+        url("magyar-osint-hero.webp") 68% center / cover no-repeat;
+    }
+    .live-course-card.course-business{
+      background:
+        linear-gradient(180deg,rgba(5,15,27,.70),rgba(5,15,27,.97) 72%),
+        url("business-intelligence-hero.webp") 70% center / cover no-repeat;
+    }
+    .live-course-card h3,.live-course-card .course-meta,.live-course-card .course-desc,.live-course-card .course-price{
+      text-shadow:0 2px 12px rgba(0,0,0,.72);
     }
     .course-kicker{
       font-size:.72rem;
@@ -585,7 +605,7 @@
 
       <div class="live-course-grid">
 
-        <article class="live-course-card">
+        <article class="live-course-card course-humint">
           <div class="course-kicker" data-i18n="courseSepKicker">Hungarian · 31 October & 1 November</div>
           <h3 data-i18n="courseSepTitle">Advanced HUMINT Training</h3>
           <div class="course-meta" data-i18n="courseSepMeta">2 × 4 hours · 09:00–13:00 · 8 hours total</div>
@@ -597,7 +617,7 @@
           <a class="btn btn-secondary" href="/osint-kepzes/" data-i18n="courseSepCta">View Advanced Course</a>
         </article>
 
-        <article class="live-course-card featured">
+        <article class="live-course-card featured course-osint">
           <div class="course-kicker" data-i18n="courseNovHuKicker">Hungarian · 14–15 November</div>
           <h3 data-i18n="courseNovHuTitle">Intensive Advanced HUMINT Training</h3>
           <div class="course-meta" data-i18n="courseNovHuMeta">2 × 6 hours · 12 hours total · live online</div>
@@ -609,7 +629,7 @@
           <a class="btn btn-gold" href="/osint-kepzes-november/" data-i18n="courseNovHuCta">View November Hungarian Course</a>
         </article>
 
-        <article class="live-course-card">
+        <article class="live-course-card course-business">
           <div class="course-kicker" data-i18n="courseNovEnKicker">English · 28–29 November</div>
           <h3 data-i18n="courseNovEnTitle">Business Intelligence & OSINT</h3>
           <div class="course-meta" data-i18n="courseNovEnMeta">2 × 5 hours · live online · English</div>

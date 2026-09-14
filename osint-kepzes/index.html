@@ -52,8 +52,10 @@
     .brand-logo{width:58px;height:58px;object-fit:contain;border-radius:16px;box-shadow:0 0 28px rgba(22,199,238,.18);}
     .brand-name{font-family:var(--serif);font-size:1.35rem;font-weight:700;line-height:1.08;}
     .nav-cta{border:1px solid var(--cyan);color:var(--cyan2);border-radius:999px;padding:11px 18px;font-weight:850;}
-    .hero{padding:82px 0 56px;}
-    .hero-inner{max-width:980px;}
+    .hero{padding:82px 0 56px;position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(90deg,rgba(3,12,21,.97) 0%,rgba(3,12,21,.88) 48%,rgba(3,12,21,.52) 100%),url("../halado-humint-hero.webp") center / cover no-repeat;}
+    .hero:before{content:"";position:absolute;inset:-18px;z-index:-2;background:url("../halado-humint-hero.webp") center / cover no-repeat;filter:blur(5px);transform:scale(1.035);opacity:.48;}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,19,34,.12),rgba(7,19,34,.42));pointer-events:none;}
+    .hero-inner{max-width:980px;position:relative;z-index:1;}
     .hero h1 .accent{color:var(--cyan);}
     .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0;}
     .pill{padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--cyan2);background:rgba(16,34,58,.62);font-weight:800;font-size:.92rem;}
