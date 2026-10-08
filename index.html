@@ -781,7 +781,7 @@
         <p class="lead" data-i18n="blogLead">Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.</p>
       </div>
 
-      <div class="blog-grid">
+      <div class="blog-grid"><article class="card post-card"><img src="/blog/szeged-lecture.jpg" alt="Tarkó Investigations OSINT lecture in Szeged" style="filter:sepia(.08) contrast(1.04) brightness(1.03)"><div class="post-body"><div class="post-meta">OSINT · Szeged</div><h3 data-i18n="szegedTitle">Strong interest in Tarkó Investigations’ OSINT lecture in Szeged</h3><p data-i18n="szegedText">The interest in our programme at the University of Szeged reflects growing attention to the practical value of open-source information gathering.</p><a href="/blog/osint-szeged-en.html" data-blog-en="/blog/osint-szeged-en.html" data-blog-hu="/blog/osint-szeged.html" data-i18n="readArticle">Read article →</a></div></article>
         <article class="card post-card"><img src="blog-humint-emberi-forrasok.webp" alt="HUMINT és emberi források a magánnyomozásban"><div class="post-body"><div class="post-meta" data-i18n="post5Meta">HUMINT · Emberi források</div><h3 data-i18n="post5Title">Amikor az internet már nem elég: az emberi forrás döntő ereje</h3><p data-i18n="post5Text">Mit adhat hozzá a HUMINT egy olyan ügyhöz, amelyet a nyílt források önmagukban nem oldanak meg?</p><a href="/blog/humint-emberi-forrasok.html" data-blog-en="/blog/human-sources-humint.html" data-blog-hu="/blog/humint-emberi-forrasok.html" data-i18n="readArticle">Cikk elolvasása →</a></div></article>
         <article class="card post-card">
           <img src="blog-osint-gyakorlatban.png" alt="OSINT a gyakorlatban – információgyűjtés és nyomozás">
@@ -968,6 +968,10 @@ legalEyebrow:"Jogi információk",legalTitle:"Adatvédelem és feltételek",priv
 }
 };
 
+translations.hu.szegedTitle="Szegeden is nagy érdeklődés kísérte a Tarkó Investigations OSINT-előadását";
+translations.hu.szegedText="A Szegedi Tudományegyetemen tartott szakmai programunk iránti érdeklődés is jelzi: egyre nagyobb figyelem övezi a nyílt forrású információgyűjtés gyakorlati lehetőségeit.";
+translations.en.szegedTitle="Strong interest in Tarkó Investigations’ OSINT lecture in Szeged";
+translations.en.szegedText="The interest in our programme at the University of Szeged reflects growing attention to the practical value of open-source information gathering.";
 function setLanguage(lang){
   const t=translations[lang]||translations.en;
   document.documentElement.lang=lang;
