@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Köszönjük a jelentkezést | TARKÓ Investigations</title>
+  <meta name="robots" content="noindex,nofollow">
+
+  <style>
+    :root {
+      --navy: #071322;
+      --card: #10223a;
+      --cyan: #20c4e8;
+      --text: #f5f7fa;
+      --muted: #aeb9c9;
+      --line: rgba(32,196,232,.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(32,196,232,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32,196,232,.035) 1px, transparent 1px),
+        linear-gradient(180deg, #071c2d 0%, var(--navy) 100%);
+      background-size: 46px 46px, 46px 46px, auto;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrap {
+      width: min(760px, calc(100% - 30px));
+      margin: 0 auto;
+      padding: 40px 0 60px;
+    }
+
+    /* CSAK A LOGÓ */
+    .logo {
+      display: block;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 0 35px 0;
+    }
+
+    .card {
+      background: rgba(16,34,58,.96);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: clamp(28px, 6vw, 48px);
+      box-shadow: 0 25px 60px rgba(0,0,0,.25);
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 10vw, 72px);
+      line-height: .98;
+      letter-spacing: -.03em;
+      color: #fff;
+    }
+
+    .lead {
+      margin: 0 0 32px;
+      color: var(--muted);
+      font-size: clamp(20px, 4.5vw, 28px);
+      line-height: 1.6;
+    }
+
+    .payment {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      background: rgba(5,20,34,.45);
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .amount {
+      color: var(--cyan);
+      font-size: clamp(38px, 8vw, 52px);
+      font-weight: 900;
+      margin-bottom: 28px;
+    }
+
+    .row {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    .value {
+      margin-top: 8px;
+      color: #fff;
+      font-size: clamp(19px, 4.5vw, 24px);
+      font-weight: 800;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      margin-top: 26px;
+      padding: 22px;
+      border-left: 3px solid var(--cyan);
+      background: rgba(32,196,232,.06);
+      border-radius: 4px 14px 14px 4px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .note strong {
+      color: #fff;
+    }
+
+    .back {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      padding: 18px 20px;
+      text-align: center;
+      background: var(--cyan);
+      color: #04121e;
+      text-decoration: none;
+      border-radius: 15px;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .back:hover {
+      filter: brightness(1.05);
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        padding-top: 28px;
+      }
+
+      .logo {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 28px;
+      }
+
+      .card {
+        border-radius: 24px;
+        padding: 28px 24px;
+      }
+
+      .payment {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="wrap">
+
+    <a href="/" aria-label="TARKÓ Investigations főoldal">
+      <img
+        src="/logo.png"
+        alt="TARKÓ Investigations"
+        class="logo"
+      >
+    </a>
+
+    <section class="card">
+
+      <div class="eyebrow">Sikeres jelentkezés</div>
+
+      <h1>Köszönjük a jelentkezésed!</h1>
+
+      <p class="lead">
+        A 2026. november 14–15-i, magyar nyelvű OSINT-képzésre szóló jelentkezésedet rögzítettük. Kezdés mindkét napon: 08:30 (magyar idő szerint). A helyed a
+        <strong class="course-price">29 900 Ft</strong> részvételi díj
+        beérkezésével válik véglegessé.
+      </p>
+
+      <div class="payment">
+
+        <div class="label">Fizetendő összeg</div>
+        <div class="amount course-price">29 900 Ft</div>
+        <p>Október 31-ig 29 900 Ft, ezt követően 39 900 Ft. A jogosult diákok és egyetemi hallgatók 40% kedvezménnyel október 31-ig 17 940 Ft-ot, utána 23 940 Ft-ot fizetnek. Ha a jelentkezésben jelezted a hallgatói kedvezményt, a kedvezményes összeget utald. Egyéb, külön egyeztetett kedvezmény esetén az egyeztetett díj érvényes.</p>
+
+        <div class="row">
+          <div class="label">Kedvezményezett</div>
+          <div class="value">TARKÓ ÁRON</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Bankszámlaszám</div>
+          <div class="value">
+            11600006-00000002-04805874
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="label">Közlemény</div>
+          <div class="value">
+            A jelentkező neve + OSINT november 14–15.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note">
+        <strong>Fontos:</strong>
+        kérjük, az átutalás közleményében tüntesd fel
+        a jelentkezéskor megadott nevedet és az
+        „OSINT november 14–15.” megjelölést.
+      </div>
+
+      <a href="/osint-kepzes-november/" class="back">
+        Vissza a képzés oldalára
+      </a>
+
+    </section>
+
+  </main>
+
+<script>
+    const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Budapest" }).format(new Date());
+    if (today > "2026-10-31") {
+      document.querySelectorAll(".course-price").forEach(el => { el.textContent = "39 900 Ft"; });
+    }
+  </script>
+</body>
+</html>
