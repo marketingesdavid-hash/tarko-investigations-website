@@ -107,44 +107,92 @@
     if (success) success.style.display = "block";
   }
 
-  // Keep one Netlify Forms submission stream; send each request type to its own confirmation page.
   const trainingForm = document.getElementById("englishTrainingForm");
   const interestSelect = document.getElementById("interest");
   const interestNote = document.getElementById("interestNote");
   const submitButton = document.getElementById("englishSubmitButton");
   const liveCoursePricing = document.getElementById("liveCoursePricing");
   const livePaymentInfo = document.getElementById("livePaymentInfo");
+  const submissionMessage = document.getElementById("successMessage");
+  let isSubmitting = false;
 
-  function updateRegistrationRoute() {
+  function selectedDestination() {
     const selected = interestSelect.selectedOptions[0];
-    const confirmation = selected && selected.dataset.confirmation;
-    const corporateOnly = confirmation === "/business-intelligence/team-enquiry-thank-you.html";
-    const combined = confirmation === "/business-intelligence/live-and-team-thank-you.html";
+    return selected && selected.dataset.confirmation ? selected.dataset.confirmation : "";
+  }
 
-    // The public-course prices/payment guidance should not be shown to corporate-only prospects.
+  function updateRegistrationChoice() {
+    const destination = selectedDestination();
+    const corporateOnly = destination === "/business-intelligence/team-enquiry-thank-you.html";
+    const combined = destination === "/business-intelligence/live-and-team-thank-you.html";
+
     liveCoursePricing.hidden = corporateOnly;
     livePaymentInfo.hidden = corporateOnly;
     liveCoursePricing.style.display = corporateOnly ? "none" : "";
     livePaymentInfo.style.display = corporateOnly ? "none" : "";
 
     if (corporateOnly) {
-      interestNote.textContent = "Corporate training enquiry: no payment is required. We will contact you to discuss your team's needs and a tailored quotation.";
-      submitButton.textContent = "Send corporate training enquiry";
+      interestNote.textContent = "Corporate training enquiry: no payment is required. We will contact you about your team's needs and a tailored quotation.";
+      if (!isSubmitting) submitButton.textContent = "Send corporate training enquiry";
     } else if (combined) {
-      interestNote.textContent = "Both options: we will contact you about team training. Bank transfer details for reserving a separate live-course place appear after submission.";
-      submitButton.textContent = "Submit course registration & enquiry";
-    } else if (confirmation) {
-      interestNote.textContent = "Live course: the confirmation page will show the bank details. Your seat is secured after we receive the course fee.";
-      submitButton.textContent = "Register for the live course";
+      interestNote.textContent = "Both options: live-course payment details follow registration; your corporate-training enquiry is free and quoted separately.";
+      if (!isSubmitting) submitButton.textContent = "Submit course registration & enquiry";
+    } else if (destination) {
+      interestNote.textContent = "Live course: the confirmation page provides bank details. Your seat is confirmed after payment is received.";
+      if (!isSubmitting) submitButton.textContent = "Register for the live course";
     } else {
       interestNote.textContent = "Select an option to see the next steps for your enquiry.";
-      submitButton.textContent = "Submit registration or enquiry";
+      if (!isSubmitting) submitButton.textContent = "Submit registration or enquiry";
     }
-    trainingForm.action = confirmation || "/business-intelligence/thank-you.html";
   }
-  interestSelect.addEventListener("change", updateRegistrationRoute);
-  trainingForm.addEventListener("submit", updateRegistrationRoute);
-  updateRegistrationRoute();
+
+  interestSelect.addEventListener("change", updateRegistrationChoice);
+
+  // Netlify Forms uses the action defined at build time; changing form.action
+  // in JavaScript does not reliably change the HTML page returned to a POST.
+  // Submit to Netlify without page navigation, then use a normal GET for the
+  // precise confirmation page only after Netlify confirms success.
+  trainingForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (isSubmitting || !trainingForm.reportValidity()) return;
+
+    const destination = selectedDestination();
+    if (!destination) {
+      interestNote.textContent = "Please select the type of training you are interested in.";
+      interestSelect.focus();
+      return;
+    }
+
+    isSubmitting = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting…";
+    submissionMessage.style.display = "none";
+
+    try {
+      const formData = new FormData(trainingForm);
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+        credentials: "same-origin"
+      });
+
+      if (!response.ok) throw new Error("Submission failed with HTTP " + response.status);
+
+      // This is a fresh GET, not a Netlify form POST response. It avoids the
+      // wrong thank-you content that previously appeared for all 3 options.
+      window.location.assign(destination + "?submitted=1");
+    } catch (error) {
+      submissionMessage.textContent = "We could not confirm your submission. Please try again, or email contact@tarko-investigations.com.";
+      submissionMessage.setAttribute("role", "alert");
+      submissionMessage.style.display = "block";
+      isSubmitting = false;
+      submitButton.disabled = false;
+      updateRegistrationChoice();
+    }
+  });
+
+  updateRegistrationChoice();
 </script>
 </body>
 </html>
