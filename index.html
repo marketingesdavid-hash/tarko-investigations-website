@@ -781,7 +781,7 @@
         <p class="lead" data-i18n="blogLead">Short professional articles on OSINT, HUMINT, GDPR-conscious investigation, source verification and European investigative practice.</p>
       </div>
 
-      <div class="blog-grid"><article class="card post-card"><img src="/blog/szeged-lecture.jpg" alt="Tarkó Investigations OSINT lecture in Szeged" style="filter:sepia(.08) contrast(1.04) brightness(1.03)"><div class="post-body"><div class="post-meta">OSINT · Szeged</div><h3 data-i18n="szegedTitle">Strong interest in Tarkó Investigations’ OSINT lecture in Szeged</h3><p data-i18n="szegedText">The interest in our programme at the University of Szeged reflects growing attention to the practical value of open-source information gathering.</p><a href="/blog/osint-szeged-en.html" data-blog-en="/blog/osint-szeged-en.html" data-blog-hu="/blog/osint-szeged.html" data-i18n="readArticle">Read article →</a></div></article>
+      <div class="blog-grid"><article class="card post-card"><img src="/blog/ten-principles-hero.webp" alt="Investigator comparing documents and digital sources" loading="lazy"><div class="post-body"><div class="post-meta">OSINT · HUMINT · PDF</div><h3 data-i18n="tenTitle">10 Things Every European Investigator Must Know</h3><p data-i18n="tenText">Ten principles for accurate, traceable investigative work — with a free downloadable guide.</p><a href="/blog/10-things-every-investigator-must-know.html" data-blog-en="/blog/10-things-every-investigator-must-know.html" data-blog-hu="/blog/10-dolog-amit-egy-nyomozonak-tudnia-kell.html" data-i18n="readArticle">Read article →</a></div></article><article class="card post-card"><img src="/blog/szeged-lecture.jpg" alt="Tarkó Investigations OSINT lecture in Szeged" style="filter:sepia(.08) contrast(1.04) brightness(1.03)"><div class="post-body"><div class="post-meta">OSINT · Szeged</div><h3 data-i18n="szegedTitle">Strong interest in Tarkó Investigations’ OSINT lecture in Szeged</h3><p data-i18n="szegedText">The interest in our programme at the University of Szeged reflects growing attention to the practical value of open-source information gathering.</p><a href="/blog/osint-szeged-en.html" data-blog-en="/blog/osint-szeged-en.html" data-blog-hu="/blog/osint-szeged.html" data-i18n="readArticle">Read article →</a></div></article>
         <article class="card post-card"><img src="blog-humint-emberi-forrasok.webp" alt="HUMINT és emberi források a magánnyomozásban"><div class="post-body"><div class="post-meta" data-i18n="post5Meta">HUMINT · Emberi források</div><h3 data-i18n="post5Title">Amikor az internet már nem elég: az emberi forrás döntő ereje</h3><p data-i18n="post5Text">Mit adhat hozzá a HUMINT egy olyan ügyhöz, amelyet a nyílt források önmagukban nem oldanak meg?</p><a href="/blog/humint-emberi-forrasok.html" data-blog-en="/blog/human-sources-humint.html" data-blog-hu="/blog/humint-emberi-forrasok.html" data-i18n="readArticle">Cikk elolvasása →</a></div></article>
         <article class="card post-card">
           <img src="blog-osint-gyakorlatban.png" alt="OSINT a gyakorlatban – információgyűjtés és nyomozás">
@@ -892,13 +892,13 @@
     <span class="eyebrow" data-i18n="freeGuide">Free guide</span>
     <h2 style="margin:10px 0" data-i18n="guideModalTitle">Download the Investigative Guide</h2>
     <p class="lead" style="font-size:1rem;margin-bottom:20px" data-i18n="guideModalLead">Download the complimentary investigative guide and explore practical European investigative methods.</p>
-    <form id="guideForm" name="guide-download" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="guide-download">
-      <div class="field"><label for="guide-name" data-i18n="labelName">Name</label><input id="guide-name" name="name" required></div>
+    <form id="guideForm" data-guide-form name="guide-download" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="guide-download"><input type="hidden" name="language" value="en"><input type="hidden" name="source" value="homepage">
+      <div class="field"><label for="guide-name" data-i18n="labelName">Name</label><input id="guide-name" name="name" autocomplete="name"></div>
       <div class="field" style="margin-top:12px"><label for="guide-email" data-i18n="labelEmail">Email</label><input id="guide-email" name="email" type="email" required></div>
-      <div class="field checkbox-field" style="margin-top:12px"><input id="guide-privacy" type="checkbox" required><label for="guide-privacy" data-i18n-html="privacyAgree">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
+      <div class="field checkbox-field" style="margin-top:12px"><input id="guide-privacy" name="privacy" value="accepted" type="checkbox" required><label for="guide-privacy" data-i18n-html="privacyAgree">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>.</label></div>
       <button class="btn btn-primary submit" type="submit" data-i18n="downloadFreeGuide">Download the Free Guide</button>
-      <div class="success-box" id="guideSuccess"><strong data-i18n="guideThanks">Thank you for downloading the guide.</strong><br><a class="cyan" href="/10-things-every-european-investigator-must-know.pdf" target="_blank" data-i18n="clickDownload">click here to download it</a>.</div>
+      <p data-guide-status role="status" aria-live="polite"></p><div data-guide-result hidden></div>
     </form>
   </div>
 </div>
@@ -972,6 +972,10 @@ translations.hu.szegedTitle="Szegeden is nagy érdeklődés kísérte a Tarkó I
 translations.hu.szegedText="A Szegedi Tudományegyetemen tartott szakmai programunk iránti érdeklődés is jelzi: egyre nagyobb figyelem övezi a nyílt forrású információgyűjtés gyakorlati lehetőségeit.";
 translations.en.szegedTitle="Strong interest in Tarkó Investigations’ OSINT lecture in Szeged";
 translations.en.szegedText="The interest in our programme at the University of Szeged reflects growing attention to the practical value of open-source information gathering.";
+translations.hu.tenTitle="10 dolog, amit minden európai nyomozónak tudnia kell";
+translations.en.tenTitle="10 Things Every European Investigator Must Know";
+translations.hu.tenText="Tíz alapelv a pontos, visszakövethető nyomozói munkához – ingyenesen letölthető útmutatóval.";
+translations.en.tenText="Ten principles for accurate, traceable investigative work — with a free downloadable guide.";
 function setLanguage(lang){
   const t=translations[lang]||translations.en;
   document.documentElement.lang=lang;
@@ -986,6 +990,8 @@ function setLanguage(lang){
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{const k=el.dataset.i18nPlaceholder;if(t[k]!==undefined)el.placeholder=t[k]});
   document.querySelectorAll("[data-blog-en][data-blog-hu]").forEach(el=>{el.href=lang==="hu"?el.dataset.blogHu:el.dataset.blogEn});
   document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+  const form=document.getElementById("guideForm");
+  if(form){form.elements.language.value=lang;form.querySelector('[data-guide-result]').hidden=true;form.querySelector('[data-guide-status]').textContent='';}
   localStorage.setItem("eil_language",lang);
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));
@@ -1007,14 +1013,6 @@ document.getElementById("declineCookie").onclick=()=>{localStorage.setItem("eil_
 
 function encodeFormData(form){return new URLSearchParams(new FormData(form)).toString()}
 
-const guideForm=document.getElementById("guideForm");
-guideForm.addEventListener("submit",e=>{
-  e.preventDefault();
-  fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:encodeFormData(guideForm)})
-    .then(()=>{document.getElementById("guideSuccess").classList.add("active");window.open("/10-things-every-european-investigator-must-know.pdf","_blank")})
-    .catch(()=>guideForm.submit());
-});
-
 const contactForm=document.getElementById("contactForm");
 contactForm.addEventListener("submit",e=>{
   e.preventDefault();
@@ -1023,5 +1021,6 @@ contactForm.addEventListener("submit",e=>{
     .catch(()=>contactForm.submit());
 });
 </script>
+<script src="/guide-download.js"></script>
 </body>
 </html>
