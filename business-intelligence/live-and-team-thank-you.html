@@ -221,13 +221,14 @@
         </div>
       </div>
       <p class="next">If you would like to reserve your place on the public live course, please arrange the bank transfer below. Your live-course seat is confirmed once the applicable payment is received.</p>
-            <div class="course" style="text-align:left;margin-top:24px;">
+            <div id="conferenceWelcome" style="display:none;padding:14px 18px;border:1px solid #28c5da;border-radius:12px;background:rgba(20,179,199,.10);margin-top:20px"><strong>It was a pleasure meeting you at The Security Event Asia 2026!</strong><p>Thank you for joining our conference community. Your ASIA2026 code gives you the exclusive live-course rate of <strong>€179</strong>.</p></div>
+      <div class="course" style="text-align:left;margin-top:24px;">
         <strong style="margin-bottom:14px;">Bank transfer details</strong>
         <div style="display:grid;grid-template-columns:minmax(120px,.7fr) minmax(0,1.3fr);gap:10px 16px;font-size:.94rem;line-height:1.45;">
           <span style="color:var(--muted);">Account holder</span><b>TARKÓ ÁRON</b>
           <span style="color:var(--muted);">IBAN</span><b>HU62 1160 0006 0000 0002 0480 5874</b>
           <span style="color:var(--muted);">BIC / SWIFT</span><b>GIBAHUHB</b>
-          <span style="color:var(--muted);">Amount</span><b>€199 until 31 October 2026 · €249 from 1 November 2026</b>
+          <span style="color:var(--muted);">Amount</span><b><span id="transferAmount">€199 until 31 October 2026 · €249 from 1 November 2026</span></b>
           <span style="color:var(--muted);">Payment reference</span><b>Your full name + English Live Course</b>
         </div>
       </div>
@@ -241,5 +242,14 @@
       <div class="signature">Tarkó Investigations · European investigative training</div>
     </section>
   </main>
-</body>
+<script>
+(function(){
+ const p=new URLSearchParams(location.search);
+ const now=Date.now(),valid=now>=Date.parse("2026-10-31T00:00:00Z") && now<Date.parse("2026-11-28T00:00:00Z");
+ const discount=p.get("submitted")==="1" && (p.get("coupon")||"").toUpperCase()==="ASIA2026" && valid;
+ const amount=document.getElementById("transferAmount");
+ if(discount){amount.textContent="€179 — ASIA2026 conference offer";document.getElementById("conferenceWelcome").style.display="block";}
+ else if(amount){amount.textContent=now<Date.parse("2026-11-01T00:00:00Z")?"€199 — early bird price":"€249 — regular price";}
+})();
+</script></body>
 </html>
