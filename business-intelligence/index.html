@@ -70,7 +70,7 @@
 .conference-coupon input{flex:1;min-width:150px;padding:12px;border-radius:8px;border:1px solid #7896a8;background:#f8fcff;color:#10263c;font-size:16px}
 .conference-coupon button{padding:11px 18px;border:0;border-radius:8px;font-weight:800;background:#08d7ef;color:#06152b;cursor:pointer}
 .conference-coupon .coupon-result{margin:12px 0 0;color:#e7f5fd;font-weight:700}
-.conference-coupon .coupon-result.success{color:#8ff7d6}
+.conference-coupon .coupon-result.applied{color:#8ff7d6}
 </style>
 </head>
 <body>
@@ -144,10 +144,10 @@
     hiddenCoupon.value=applicable?"ASIA2026":"";
     hiddenAmount.value=applicable?"179":baseAmount();
     if(applicable) {
-      couponResult.classList.add("success");
+      couponResult.classList.add("applied");
       couponResult.textContent="ASIA2026 applied! Your live course conference price: €179 (regular €249). You will see €179 in the bank transfer instructions after registration.";
     } else {
-      couponResult.classList.remove("success");
+      couponResult.classList.remove("applied");
       couponResult.textContent=code?(code==="ASIA2026"?"This conference code is not yet active or has expired.":"Code not recognised. Please check and try again."):"Enter your conference code to check your special rate.";
     }
     return applicable;
