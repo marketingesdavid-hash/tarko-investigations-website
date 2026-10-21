@@ -63,6 +63,15 @@
     @media (max-width:900px){.risk-grid{grid-template-columns:1fr 1fr}.options{grid-template-columns:1fr}.topic-grid{grid-template-columns:1fr 1fr}.trainer{grid-template-columns:1fr}}
     @media (max-width:620px){.wrap{width:min(calc(100% - 26px),var(--max))}.hero{padding:58px 0 38px}h1{font-size:46px}.risk-grid,.topic-grid,.form-grid{grid-template-columns:1fr}.field.full,.checkline,.submitrow{grid-column:auto}.facts{grid-template-columns:1fr}.course-card{padding:25px}.toplink{display:none}}
   </style>
+<style>
+.conference-coupon{margin:16px 0 20px;padding:17px 19px;border:1px solid rgba(8,215,239,.45);border-radius:14px;background:rgba(8,215,239,.075)}
+.conference-coupon label{display:block;font-weight:800;margin-bottom:9px}
+.conference-coupon .coupon-row{display:flex;gap:10px;flex-wrap:wrap}
+.conference-coupon input{flex:1;min-width:150px;padding:12px;border-radius:8px;border:1px solid #7896a8;background:#f8fcff;color:#10263c;font-size:16px}
+.conference-coupon button{padding:11px 18px;border:0;border-radius:8px;font-weight:800;background:#08d7ef;color:#06152b;cursor:pointer}
+.conference-coupon .coupon-result{margin:12px 0 0;color:#e7f5fd;font-weight:700}
+.conference-coupon .coupon-result.success{color:#8ff7d6}
+</style>
 </head>
 <body>
 <header class="wrap topbar"><div class="brand"><img src="../logo.png" alt="Tarkó Investigations logo"><span>TARKÓ INVESTIGATIONS</span></div><a class="toplink" href="https://tarko-investigations.com/">tarko-investigations.com</a></header>
@@ -90,6 +99,12 @@
             <div style="margin-top:12px;color:#a8bfd1;font-size:.92rem;">10 hours of live online training · 28–29 November 2026 · Starts at 09:00 each day (Hungary time, CET, UTC+1)</div>
           </div>
 
+          <div class="conference-coupon" id="conferenceCouponBox">
+  <label for="conferenceCouponInput">Conference discount code</label>
+  <div class="coupon-row"><input id="conferenceCouponInput" type="text" placeholder="Enter your code" autocomplete="off" maxlength="32" aria-describedby="couponResult"><button type="button" id="applyConferenceCoupon">Apply code</button></div>
+  <p class="coupon-result" id="couponResult" role="status" aria-live="polite">Enter your conference code to check your special rate.</p>
+  <p class="coupon-result" style="font-weight:400">Offer is for the public live course only. Registration is confirmed after bank transfer.</p>
+</div>
           <div class="payment-method-note" id="livePaymentInfo" style="margin:14px 0 20px;padding:16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03);">
             <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">Payment method</div>
             <div style="margin-top:6px;color:#f5f9fc;font-weight:700;">Bank transfer</div>
@@ -97,7 +112,7 @@
               For live-course registrations only: after submitting the form you will see the bank details on the confirmation page. A live-course place is confirmed when payment is received. Corporate/team training is quoted separately, with no payment due when sending an enquiry.
             </div>
           </div>
-<form id="englishTrainingForm" name="english-live-course-2026" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/business-intelligence/thank-you.html"><input type="hidden" name="form-name" value="english-live-course-2026" /><p style="display:none"><label>Do not fill this out: <input name="bot-field" /></label></p><div class="form-grid"><div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" required autocomplete="name" /></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" /></div><div class="field"><label for="company">Company / organisation</label><input id="company" name="company" type="text" autocomplete="organization" /></div><div class="field"><label for="role">Job title / role</label><input id="role" name="role" type="text" autocomplete="organization-title" /></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div><div class="field"><label for="interest">I am interested in *</label><select id="interest" name="interest" required><option value="">Please select</option><option data-confirmation="/business-intelligence/thank-you.html">Live Online Course — 28–29 November 2026</option><option data-confirmation="/business-intelligence/team-enquiry-thank-you.html">Corporate / team training</option><option data-confirmation="/business-intelligence/live-and-team-thank-you.html">Both live course and corporate training</option></select><p id="interestNote" class="formnote" role="status" aria-live="polite" style="margin:8px 0 0;">Select an option to see the next steps for your enquiry.</p></div><div class="field full"><label for="message">Anything we should know?</label><textarea id="message" name="message" placeholder="Optional: your professional background, team size or questions."></textarea></div><label class="checkline"><input type="checkbox" name="privacy-consent" value="yes" required /><span>I agree that Tarkó Investigations may use the information above to respond to my course registration or training enquiry. I understand that I may request access, correction or deletion of my data.</span></label><div class="submitrow"><button id="englishSubmitButton" class="btn btn-primary" type="submit">Submit registration or enquiry</button><span class="formnote">Submitting the form is free. Live-course places are confirmed only after payment; team enquiries require no payment.</span></div></div><div class="success" id="successMessage">Thank you. Your registration has been received. We will contact you with the next steps.</div></form></div></section>
+<form id="englishTrainingForm" name="english-live-course-2026" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/business-intelligence/thank-you.html"><input type="hidden" name="form-name" value="english-live-course-2026" /><input type="hidden" name="conference_coupon" id="conferenceCouponHidden" value="" /><input type="hidden" name="quoted_amount_eur" id="quotedAmountHidden" value="" /><p style="display:none"><label>Do not fill this out: <input name="bot-field" /></label></p><div class="form-grid"><div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" required autocomplete="name" /></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" /></div><div class="field"><label for="company">Company / organisation</label><input id="company" name="company" type="text" autocomplete="organization" /></div><div class="field"><label for="role">Job title / role</label><input id="role" name="role" type="text" autocomplete="organization-title" /></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div><div class="field"><label for="interest">I am interested in *</label><select id="interest" name="interest" required><option value="">Please select</option><option data-confirmation="/business-intelligence/thank-you.html">Live Online Course — 28–29 November 2026</option><option data-confirmation="/business-intelligence/team-enquiry-thank-you.html">Corporate / team training</option><option data-confirmation="/business-intelligence/live-and-team-thank-you.html">Both live course and corporate training</option></select><p id="interestNote" class="formnote" role="status" aria-live="polite" style="margin:8px 0 0;">Select an option to see the next steps for your enquiry.</p></div><div class="field full"><label for="message">Anything we should know?</label><textarea id="message" name="message" placeholder="Optional: your professional background, team size or questions."></textarea></div><label class="checkline"><input type="checkbox" name="privacy-consent" value="yes" required /><span>I agree that Tarkó Investigations may use the information above to respond to my course registration or training enquiry. I understand that I may request access, correction or deletion of my data.</span></label><div class="submitrow"><button id="englishSubmitButton" class="btn btn-primary" type="submit">Submit registration or enquiry</button><span class="formnote">Submitting the form is free. Live-course places are confirmed only after payment; team enquiries require no payment.</span></div></div><div class="success" id="successMessage">Thank you. Your registration has been received. We will contact you with the next steps.</div></form></div></section>
 </main>
 <footer><div class="wrap footerrow"><span>© 2026 Tarkó Investigations</span><span>Information · Strategy · Protection</span><span><a href="https://tarko-investigations.com/" style="text-decoration:none">tarko-investigations.com</a></span></div></footer>
 <script>
@@ -114,6 +129,33 @@
   const liveCoursePricing = document.getElementById("liveCoursePricing");
   const livePaymentInfo = document.getElementById("livePaymentInfo");
   const submissionMessage = document.getElementById("successMessage");
+  const couponInput = document.getElementById("conferenceCouponInput");
+  const couponResult = document.getElementById("couponResult");
+  const couponBox = document.getElementById("conferenceCouponBox");
+  const hiddenCoupon = document.getElementById("conferenceCouponHidden");
+  const hiddenAmount = document.getElementById("quotedAmountHidden");
+  const couponButton = document.getElementById("applyConferenceCoupon");
+  // Same date rules are applied on the confirmation pages.
+  function offerIsValid() {const now=Date.now();return now>=Date.parse("2026-10-31T00:00:00Z") && now<Date.parse("2026-11-28T00:00:00Z");}
+  function baseAmount() {return Date.now()<Date.parse("2026-11-01T00:00:00Z")?"199":"249";}
+  function refreshCouponPrice() {
+    const code=couponInput.value.trim().toUpperCase();
+    const applicable=code==="ASIA2026" && offerIsValid();
+    hiddenCoupon.value=applicable?"ASIA2026":"";
+    hiddenAmount.value=applicable?"179":baseAmount();
+    if(applicable) {
+      couponResult.classList.add("success");
+      couponResult.textContent="ASIA2026 applied! Your live course conference price: €179 (regular €249). You will see €179 in the bank transfer instructions after registration.";
+    } else {
+      couponResult.classList.remove("success");
+      couponResult.textContent=code?(code==="ASIA2026"?"This conference code is not yet active or has expired.":"Code not recognised. Please check and try again."):"Enter your conference code to check your special rate.";
+    }
+    return applicable;
+  }
+  couponButton.addEventListener("click",refreshCouponPrice);
+  couponInput.addEventListener("change",refreshCouponPrice);
+  const incomingCode=new URLSearchParams(location.search).get("coupon") || new URLSearchParams(location.search).get("code");
+  if(incomingCode) {couponInput.value=incomingCode;refreshCouponPrice();}
   let isSubmitting = false;
 
   function selectedDestination() {
@@ -130,6 +172,8 @@
     livePaymentInfo.hidden = corporateOnly;
     liveCoursePricing.style.display = corporateOnly ? "none" : "";
     livePaymentInfo.style.display = corporateOnly ? "none" : "";
+    couponBox.hidden = corporateOnly;
+    couponBox.style.display = corporateOnly ? "none" : "";
 
     if (corporateOnly) {
       interestNote.textContent = "Corporate training enquiry: no payment is required. We will contact you about your team's needs and a tailored quotation.";
@@ -163,6 +207,7 @@
       return;
     }
 
+    refreshCouponPrice();
     isSubmitting = true;
     submitButton.disabled = true;
     submitButton.textContent = "Submitting…";
@@ -181,7 +226,10 @@
 
       // This is a fresh GET, not a Netlify form POST response. It avoids the
       // wrong thank-you content that previously appeared for all 3 options.
-      window.location.assign(destination + "?submitted=1");
+      const confirmedCode = hiddenCoupon.value;
+      const query = new URLSearchParams({submitted:"1"});
+      if (confirmedCode && destination !== "/business-intelligence/team-enquiry-thank-you.html") query.set("coupon",confirmedCode);
+      window.location.assign(destination + "?" + query.toString());
     } catch (error) {
       submissionMessage.textContent = "We could not confirm your submission. Please try again, or email contact@tarko-investigations.com.";
       submissionMessage.setAttribute("role", "alert");
