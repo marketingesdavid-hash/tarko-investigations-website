@@ -1,0 +1,856 @@
+<!doctype html><html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TECHINT-képzés – december 12–13. | Tarkó Investigations</title><meta name="description" content="TECHINT: technikai információgyűjtés. Magyar nyelvű élő online képzés 2026. december 12–13-án, 2×4 órában. Részvételi díj: 34 990 Ft."><link rel="canonical" href="https://tarko-investigations.com/techint-kepzes/"><meta property="og:type" content="website"><meta property="og:title" content="TECHINT-képzés – december 12–13."><meta property="og:description" content="2 × 4 óra • Élő online • 34 990 Ft"><style>
+    :root{
+      --navy:#071322;
+      --navy2:#0b1b2e;
+      --card:#10223a;
+      --cyan:#16c7ee;
+      --cyan2:#67e4ff;
+      --text:#f6f8fb;
+      --muted:#a8b7c9;
+      --line:rgba(22,199,238,.24);
+      --shadow:0 24px 70px rgba(0,0,0,.30);
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.6;
+      background:
+        radial-gradient(circle at 82% 7%,rgba(22,199,238,.10),transparent 26%),
+        linear-gradient(rgba(22,199,238,.028) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(22,199,238,.028) 1px,transparent 1px),
+        var(--navy);
+      background-size:auto,48px 48px,48px 48px,auto;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      width:min(1120px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .section{
+      padding:78px 0;
+    }
+
+    .eyebrow{
+      color:var(--cyan);
+      font-size:.88rem;
+      font-weight:900;
+      letter-spacing:.17em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3,p{
+      margin-top:0;
+    }
+
+    h1,h2{
+      font-family:var(--serif);
+      letter-spacing:-.035em;
+    }
+
+    h1{
+      font-size:clamp(3.35rem,8vw,6.6rem);
+      line-height:.93;
+      margin:.18em 0 .28em;
+      max-width:900px;
+    }
+
+    h2{
+      font-size:clamp(2.25rem,5vw,4rem);
+      line-height:1.04;
+      margin-bottom:20px;
+    }
+
+    h3{
+      font-size:1.25rem;
+    }
+
+    .lead{
+      font-size:clamp(1.12rem,2.2vw,1.38rem);
+      color:var(--muted);
+      max-width:820px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(7,19,34,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .brand-logo{
+      width:58px;
+      height:58px;
+      object-fit:contain;
+      border-radius:16px;
+      box-shadow:0 0 28px rgba(22,199,238,.18);
+    }
+
+    .brand-name{
+      font-family:var(--serif);
+      font-size:1.35rem;
+      font-weight:700;
+      line-height:1.08;
+    }
+
+    .nav-cta{
+      border:1px solid var(--cyan);
+      color:var(--cyan2);
+      border-radius:999px;
+      padding:11px 18px;
+      font-weight:850;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:82px 0 56px;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      background:
+        linear-gradient(90deg,rgba(3,12,21,.97) 0%,rgba(3,12,21,.87) 48%,rgba(3,12,21,.50) 100%),
+        url("../magyar-osint-hero.webp") center / cover no-repeat;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-18px;
+      z-index:-2;
+      background:url("../magyar-osint-hero.webp") center / cover no-repeat;
+      filter:blur(5px);
+      transform:scale(1.035);
+      opacity:.48;
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(180deg,rgba(7,19,34,.12),rgba(7,19,34,.42));
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      max-width:980px;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero h1 .accent{
+      color:var(--cyan);
+    }
+
+    .hero-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:28px 0;
+    }
+
+    .pill{
+      padding:9px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--cyan2);
+      background:rgba(16,34,58,.62);
+      font-weight:800;
+      font-size:.92rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:14px;
+      padding:15px 22px;
+      font-weight:900;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--cyan);
+      color:#04101b;
+      box-shadow:0 12px 30px rgba(22,199,238,.20);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#52dcfa;
+    }
+
+    .btn-secondary{
+      border-color:var(--line);
+      background:rgba(16,34,58,.6);
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .stat{
+      background:rgba(16,34,58,.78);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.8rem;
+      color:var(--cyan);
+      line-height:1.1;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* VIDEO */
+
+    .video-intro{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:44px;
+      align-items:center;
+      padding:40px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.08),
+          rgba(16,34,58,.78)
+        );
+      box-shadow:var(--shadow);
+    }
+
+    .video-copy .lead{
+      font-size:1.12rem;
+    }
+
+    .video-frame{
+      width:100%;
+      max-width:360px;
+      margin:auto;
+      aspect-ratio:9 / 16;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid rgba(22,199,238,.28);
+      box-shadow:0 24px 60px rgba(0,0,0,.35);
+      background:#000;
+    }
+
+    .video-frame iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+    /* CASE */
+
+    .case{
+      padding:34px;
+      border:1px solid rgba(22,199,238,.40);
+      border-radius:24px;
+      background:
+        linear-gradient(
+          120deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.62)
+        );
+      box-shadow:var(--shadow);
+    }
+
+    .case .big{
+      color:var(--cyan);
+      font-weight:1000;
+      font-size:clamp(1.9rem,4vw,3.2rem);
+      text-transform:uppercase;
+      letter-spacing:.01em;
+      margin:5px 0 12px;
+    }
+
+    /* CARDS */
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(16,34,58,.72);
+      border-radius:20px;
+      padding:26px;
+    }
+
+    .card .num{
+      color:var(--cyan);
+      font-weight:1000;
+      font-size:2rem;
+      font-family:var(--serif);
+    }
+
+    /* PROGRAM */
+
+    .agenda{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .agenda-day{
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(16,34,58,.85),
+          rgba(9,24,41,.84)
+        );
+    }
+
+    .agenda-day .date{
+      color:var(--cyan);
+      font-weight:900;
+    }
+
+    .agenda-day ul{
+      padding-left:20px;
+      margin:18px 0 0;
+    }
+
+    .agenda-day li{
+      margin:8px 0;
+      color:#dbe5ef;
+    }
+
+    /* TEACHER */
+
+    .teacher{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .teacher-photo{
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:center;
+      border-radius:24px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+    }
+
+    .teacher-badge{
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.82)
+        );
+    }
+
+    .teacher-name{
+      font-family:var(--serif);
+      font-size:2.35rem;
+      margin-bottom:6px;
+    }
+
+    .teacher-title{
+      color:var(--cyan);
+      font-weight:900;
+      margin-bottom:22px;
+    }
+
+    .teacher-points{
+      display:grid;
+      gap:12px;
+    }
+
+    .teacher-point{
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(7,19,34,.48);
+      border:1px solid rgba(22,199,238,.14);
+    }
+
+    /* AUDIENCE */
+
+    .audience{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .audience span{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 14px;
+      background:rgba(16,34,58,.58);
+      font-weight:750;
+      color:#dbe8f3;
+    }
+
+    /* PRICE */
+
+    .price-box{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:28px;
+      align-items:center;
+      border:1px solid rgba(22,199,238,.40);
+      border-radius:26px;
+      padding:34px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,199,238,.10),
+          rgba(16,34,58,.78)
+        );
+    }
+
+    .price{
+      font-size:clamp(3rem,7vw,5.5rem);
+      line-height:1;
+      font-weight:1000;
+      letter-spacing:-.05em;
+    }
+
+    .price small{
+      font-size:.32em;
+      color:var(--cyan);
+      letter-spacing:0;
+    }
+
+    /* FAQ */
+
+    details{
+      border-bottom:1px solid var(--line);
+      padding:17px 0;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:850;
+      font-size:1.05rem;
+    }
+
+    details p{
+      color:var(--muted);
+      padding-top:12px;
+      margin-bottom:0;
+    }
+
+    /* SIGNUP */
+
+    .signup{
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px;
+      background:rgba(16,34,58,.76);
+    }
+
+    .signup-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    label{
+      display:block;
+      font-weight:800;
+      margin-bottom:7px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:14px 15px;
+      border-radius:12px;
+      border:1px solid rgba(168,183,201,.25);
+      background:#081625;
+      color:white;
+      font:inherit;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:var(--cyan);
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .full{
+      grid-column:1/-1;
+    }
+
+    .notice{
+      font-size:.87rem;
+      color:var(--muted);
+    }
+
+    .form-note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:12px;
+      border:1px dashed rgba(103,228,255,.35);
+      color:var(--muted);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:34px 0 50px;
+      color:var(--muted);
+    }
+
+    /* TABLET / MOBILE */
+
+    @media(max-width:850px){
+
+      .wrap{
+        width:min(100% - 28px,1120px);
+      }
+
+      .section{
+        padding:60px 0;
+      }
+
+      .hero{
+        padding-top:56px;
+      }
+
+      .grid-3,
+      .stats,
+      .agenda,
+      .teacher,
+      .price-box,
+      .signup-grid{
+        grid-template-columns:1fr;
+      }
+
+      .video-intro{
+        grid-template-columns:1fr;
+        padding:30px;
+      }
+
+      .video-copy{
+        text-align:center;
+      }
+
+      .video-copy .lead{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .full{
+        grid-column:auto;
+      }
+
+      .nav-cta{
+        display:none;
+      }
+
+      .brand-name{
+        font-size:1.12rem;
+      }
+
+      .brand-logo{
+        width:54px;
+        height:54px;
+      }
+    }
+
+    @media(max-width:520px){
+
+      h1{
+        font-size:3.25rem;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .case,
+      .signup,
+      .price-box,
+      .teacher-badge,
+      .video-intro{
+        padding:24px;
+      }
+
+      .video-frame{
+        max-width:300px;
+      }
+    }
+  </style><style>.tech-hero{padding:74px 0 54px;background:radial-gradient(ellipse at 85% 10%,#123e59,transparent 55%)}.tech-hero h1{max-width:850px}.tech-meta{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.tech-meta span{border:1px solid #20c4e84d;padding:9px 16px;border-radius:30px}.tech-copy{max-width:800px}.tech-copy p{margin:18px 0}.tech-top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}.tech-top img{width:62px}.tech-top a{color:#20c4e8}.tech-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.tech-cards p{margin-top:15px}.tech-price{color:#20c4e8;font-size:40px;font-weight:800;margin:22px 0}@media(max-width:700px){.tech-cards{grid-template-columns:1fr}.tech-hero{padding:42px 0}.tech-meta{gap:8px}}</style></head><body><header><div class="wrap tech-top"><a href="/" aria-label="Tarkó Investigations kezdőlap"><img src="/logo.png" alt="Tarkó Investigations"></a><a href="#jelentkezes">Jelentkezés →</a></div></header><main>
+<section class="tech-hero"><div class="wrap"><div class="eyebrow">Élő online képzés • Magyar nyelven</div><h1>TECHINT<br>Technikai információgyűjtés</h1><p class="lead">A technikai eszközökből és adatokból származó információ megértése, értékelése és helye a nyomozói gondolkodásban.</p><div class="tech-meta"><span>2026. december 12–13.</span><span>2 × 4 óra</span><span>Összesen 8 óra</span></div><div class="tech-price">34 990 Ft</div><a class="btn btn-primary" href="#jelentkezes">Jelentkezem a TECHINT-képzésre →</a><p class="notice" style="margin-top:18px">A pontos kezdési időpontot és a csatlakozási információkat később küldjük.</p></div></section>
+<section class="section"><div class="wrap tech-copy"><div class="eyebrow">A képzésről</div><h2>Az eszköz önmagában még nem válasz.</h2><p>A technikai információ akkor válik hasznossá, ha értjük, honnan származik, mire alkalmas, és milyen következtetést enged meg. A TECHINT-képzés ezt a szemléletet helyezi a középpontba.</p><p>A decemberi alkalom a technikai információgyűjtés iránt érdeklődőknek szól. A részletes tematikát és a részvételhez szükséges előkészületeket a képzés előtt ismertetjük.</p><a href="/blog/techint-technikai-informaciogyujtes.html">Mi a TECHINT? Olvasd el a blogcikket →</a></div></section>
+<section class="section"><div class="wrap"><div class="tech-cards"><article class="card"><div class="eyebrow">Időpont</div><h3>December 12–13.</h3><p>Két egymást követő nap, naponta négy óra.</p></article><article class="card"><div class="eyebrow">Forma</div><h3>Élő online</h3><p>Magyar nyelvű képzés. A csatlakozási részleteket e-mailben küldjük.</p></article><article class="card"><div class="eyebrow">Részvételi díj</div><h3>34 990 Ft</h3><p>A teljes, kétnapos képzés részvételi díja.</p></article></div></div></section>
+<section class="section" id="jelentkezes"><div class="wrap"><div class="signup"><div class="eyebrow">Jelentkezés</div><h2>Csatlakozz a TECHINT-képzéshez!</h2><p class="lead">2026. december 12–13. • 2 × 4 óra • 34 990 Ft</p><form
+            name="techint-december-2026-jelentkezes"
+            action="/techint-kepzes/koszonjuk/"
+            method="POST"
+            data-netlify="true"
+          >
+
+            <input
+              type="hidden"
+              name="form-name"
+              value="techint-december-2026-jelentkezes"
+            >
+
+            <input
+              type="hidden"
+              name="subject"
+              data-remove-prefix
+              value="Új jelentkező – TECHINT képzés – december 12–13."
+            >
+
+            <input
+              type="hidden"
+              name="course"
+              value="TECHINT-HU-2026-12-12-13"
+            >
+
+
+            <div class="signup-grid">
+
+              <div>
+
+                <label for="name">
+                  Név
+                </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+
+              </div>
+
+
+              <div>
+
+                <label for="email">
+                  E-mail cím
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+
+              </div>
+
+
+              <div>
+
+                <label for="phone">
+                  Telefonszám
+                </label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                />
+
+              </div>
+
+
+              <div>
+
+                <label for="area">
+                  Terület / foglalkozás
+                </label>
+
+                <select
+                  id="area"
+                  name="area"
+                >
+
+                  <option value="">
+                    Válassz…
+                  </option>
+
+                  <option>
+                    HR / recruitment
+                  </option>
+
+                  <option>
+                    Compliance / KYC / due diligence
+                  </option>
+
+                  <option>
+                    Magánnyomozás / biztonság
+                  </option>
+
+                  <option>
+                    Kiberbiztonság
+                  </option>
+
+                  <option>
+                    Jog
+                  </option>
+
+                  <option>
+                    Újságírás
+                  </option>
+
+                  <option>
+                    Hallgató / pályakezdő
+                  </option>
+
+                  <option>
+                    Egyéb
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="full">
+
+                <label for="message">
+                  Megjegyzés vagy kérdés
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                ></textarea>
+
+              </div>
+
+
+              <div class="full">
+
+                <label
+                  style="
+                    display:flex;
+                    gap:10px;
+                    align-items:flex-start;
+                    font-weight:600;
+                  "
+                >
+
+                  <input
+                    type="checkbox"
+                    name="privacy"
+                    value="accepted"
+                    required
+                    style="
+                      width:auto;
+                      margin-top:5px;
+                    "
+                  >
+
+                  <span class="notice">
+                    Elolvastam és elfogadom az <a href="/hu/adatvedelmi-tajekoztato.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>.
+                  </span>
+
+                </label>
+
+              </div>
+
+
+              <div class="full">
+
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  style="
+                    border:0;
+                    cursor:pointer;
+                    width:100%;
+                  "
+                >
+                  Jelentkezem a képzésre
+                </button>
+
+              </div>
+
+            </div>
+
+          </form><p class="form-note">Az űrlap elküldése után megjelennek az átutalási adatok. A részvétel a díj beérkezésével válik véglegessé. Kérdésed van? <a href="mailto:contact@tarko-investigations.com">Írj nekünk!</a></p></div></div></section></main><footer><div class="wrap">Tarkó Investigations • <a href="/">Kezdőlap</a> • <a href="/hu/adatvedelmi-tajekoztato.html">Adatkezelés</a></div></footer></body></html>
