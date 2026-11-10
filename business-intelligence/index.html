@@ -85,10 +85,10 @@
 <section id="register"><div class="wrap register"><div class="section-head"><div class="eyebrow">Live training · 28–29 November 2026 · Starts at 09:00 (Hungary time, CET, UTC+1) · English</div><h2>Register for the course or enquire about team training.</h2><p>Choose an option below. Public live-course fees and private corporate-training quotations are handled separately.</p></div>
           <div class="course-price" id="liveCoursePricing" style="margin:18px 0 8px;padding:18px;border:1px solid rgba(54,189,245,.28);border-radius:16px;background:rgba(54,189,245,.06);">
             <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:stretch;">
-              <div style="flex:1 1 220px;padding:16px;border:1px solid rgba(54,189,245,.32);border-radius:14px;background:rgba(54,189,245,.07);">
+              <div id="universityOfferPrice" style="flex:1 1 220px;padding:16px;border:1px solid rgba(54,189,245,.32);border-radius:14px;background:rgba(54,189,245,.07);">
                 <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">University student offer</div>
                 <div style="font-size:2rem;font-weight:800;line-height:1.15;margin-top:4px;color:#fff;">€99</div>
-                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">Valid until 20 November 2026 · university students only. Ask your university for the discount code.</div>
+                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">Exclusive university student rate · request the discount code from your university.</div>
               </div>
               <div style="flex:1 1 220px;padding:16px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.03);">
                 <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#d7e5ef;font-weight:800;">Regular price</div>
@@ -103,7 +103,7 @@
   <label for="conferenceCouponInput">Discount code</label>
   <div class="coupon-row"><input id="conferenceCouponInput" type="text" placeholder="Enter your code" autocomplete="off" maxlength="32" aria-describedby="couponResult"><button type="button" id="applyConferenceCoupon">Apply code</button></div>
   <p class="coupon-result" id="couponResult" role="status" aria-live="polite">Enter your discount code to check your special rate.</p>
-  <p class="coupon-result" style="font-weight:400">The university student offer is valid until 20 November 2026 for eligible students only. Request your discount code from your university. Applies to the live course; registration is confirmed after bank transfer.</p>
+  <p class="coupon-result" style="font-weight:400">The university offer is exclusive to eligible students. Obtain your discount code from your university. Applies to the live course; registration is confirmed after bank transfer.</p>
 </div>
           <div class="payment-method-note" id="livePaymentInfo" style="margin:14px 0 20px;padding:16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03);">
             <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">Payment method</div>
@@ -138,6 +138,7 @@
   // Same date rules are applied on the confirmation pages.
   function offerIsValid() {const now=Date.now();return now>=Date.parse("2026-10-31T00:00:00Z") && now<Date.parse("2026-11-28T00:00:00Z");}
   function universityOfferIsValid() {return Date.now()<Date.parse("2026-11-20T23:00:00Z");} // 20 Nov 23:59 CET deadline
+  if(!universityOfferIsValid()){document.getElementById("universityOfferPrice").style.display="none";}
   function baseAmount() {return Date.now()<Date.parse("2026-11-01T00:00:00Z")?"199":"249";}
   function refreshCouponPrice() {
     const code=couponInput.value.trim().toUpperCase();
