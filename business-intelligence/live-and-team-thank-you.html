@@ -228,7 +228,7 @@
           <span style="color:var(--muted);">Account holder</span><b>TARKÓ ÁRON</b>
           <span style="color:var(--muted);">IBAN</span><b>HU62 1160 0006 0000 0002 0480 5874</b>
           <span style="color:var(--muted);">BIC / SWIFT</span><b>GIBAHUHB</b>
-          <span style="color:var(--muted);">Amount</span><b><span id="transferAmount">€199 until 31 October 2026 · €249 from 1 November 2026</span></b>
+          <span style="color:var(--muted);">Amount</span><b><span id="transferAmount">€249 — regular price</span></b>
           <span style="color:var(--muted);">Payment reference</span><b>Your full name + English Live Course</b>
         </div>
       </div>
@@ -246,9 +246,13 @@
 (function(){
  const p=new URLSearchParams(location.search);
  const now=Date.now(),valid=now>=Date.parse("2026-10-31T00:00:00Z") && now<Date.parse("2026-11-28T00:00:00Z");
- const discount=p.get("submitted")==="1" && (p.get("coupon")||"").toUpperCase()==="ASIA2026" && valid;
+ const code=(p.get("coupon")||"").toUpperCase();
+ const submitted=p.get("submitted")==="1";
+ const discount=submitted && code==="ASIA2026" && valid;
+ const university=submitted && code==="UNIVERSITY2026" && now<Date.parse("2026-11-20T23:00:00Z");
  const amount=document.getElementById("transferAmount");
- if(discount){amount.textContent="€179 — ASIA2026 conference offer";document.getElementById("conferenceWelcome").style.display="block";}
+ if(university){amount.textContent="€99 — UNIVERSITY2026 student offer (subject to university eligibility verification)";}
+ else if(discount){amount.textContent="€179 — ASIA2026 conference offer";document.getElementById("conferenceWelcome").style.display="block";}
  else if(amount){amount.textContent=now<Date.parse("2026-11-01T00:00:00Z")?"€199 — early bird price":"€249 — regular price";}
 })();
 </script></body>
