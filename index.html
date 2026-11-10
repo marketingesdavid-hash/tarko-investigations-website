@@ -1064,6 +1064,15 @@ contactForm.addEventListener("submit",e=>{
 </script>
 <script src="/guide-download.js"></script>
 <script src="/legal-language.js"></script>
-<script>(()=>{const update=()=>{const lang=document.documentElement.lang==='hu'?'hu':'en';document.querySelectorAll('[data-i18n-alt]').forEach(el=>{el.alt=translations[lang][el.dataset.i18nAlt]||el.alt;});};new MutationObserver(update).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});update();})();</script></body>
+<script>(()=>{const update=()=>{const lang=document.documentElement.lang==='hu'?'hu':'en';document.querySelectorAll('[data-i18n-alt]').forEach(el=>{el.alt=translations[lang][el.dataset.i18nAlt]||el.alt;});};new MutationObserver(update).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});update();})();</script>
+<script>
+/* After the student-code window closes, do not advertise an unavailable rate. */
+if (Date.now() >= Date.parse("2026-11-20T23:00:00Z")) {
+  translations.en.courseNovEnPriceNote = "Regular price";
+  translations.hu.courseNovEnPriceNote = "Normál ár";
+  const priceNote=document.querySelector('[data-i18n="courseNovEnPriceNote"]');
+  if(priceNote)priceNote.textContent=translations[document.documentElement.lang==="hu"?"hu":"en"].courseNovEnPriceNote;
+}
+</script></body>
 </html>
 
