@@ -86,24 +86,24 @@
           <div class="course-price" id="liveCoursePricing" style="margin:18px 0 8px;padding:18px;border:1px solid rgba(54,189,245,.28);border-radius:16px;background:rgba(54,189,245,.06);">
             <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:stretch;">
               <div style="flex:1 1 220px;padding:16px;border:1px solid rgba(54,189,245,.32);border-radius:14px;background:rgba(54,189,245,.07);">
-                <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">Early bird price</div>
-                <div style="font-size:2rem;font-weight:800;line-height:1.15;margin-top:4px;color:#fff;">€199</div>
-                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">Valid until 31 October 2026</div>
+                <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">University student offer</div>
+                <div style="font-size:2rem;font-weight:800;line-height:1.15;margin-top:4px;color:#fff;">€99</div>
+                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">Use UNIVERSITY2026 by 20 November 2026 · university students only</div>
               </div>
               <div style="flex:1 1 220px;padding:16px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.03);">
                 <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#d7e5ef;font-weight:800;">Regular price</div>
                 <div style="font-size:2rem;font-weight:800;line-height:1.15;margin-top:4px;color:#fff;">€249</div>
-                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">From 1 November 2026</div>
+                <div style="margin-top:5px;color:#a8bfd1;font-size:.92rem;">Standard registration</div>
               </div>
             </div>
             <div style="margin-top:12px;color:#a8bfd1;font-size:.92rem;">10 hours of live online training · 28–29 November 2026 · Starts at 09:00 each day (Hungary time, CET, UTC+1)</div>
           </div>
 
           <div class="conference-coupon" id="conferenceCouponBox">
-  <label for="conferenceCouponInput">Conference discount code</label>
+  <label for="conferenceCouponInput">Discount code</label>
   <div class="coupon-row"><input id="conferenceCouponInput" type="text" placeholder="Enter your code" autocomplete="off" maxlength="32" aria-describedby="couponResult"><button type="button" id="applyConferenceCoupon">Apply code</button></div>
-  <p class="coupon-result" id="couponResult" role="status" aria-live="polite">Enter your conference code to check your special rate.</p>
-  <p class="coupon-result" style="font-weight:400">Offer is for the public live course only. Registration is confirmed after bank transfer.</p>
+  <p class="coupon-result" id="couponResult" role="status" aria-live="polite">Enter your discount code to check your special rate.</p>
+  <p class="coupon-result" style="font-weight:400">Student offer UNIVERSITY2026 is valid until 20 November 2026 for eligible university students only. Applies to the live course; registration is confirmed after bank transfer.</p>
 </div>
           <div class="payment-method-note" id="livePaymentInfo" style="margin:14px 0 20px;padding:16px 18px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.03);">
             <div style="font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:#8bdcff;font-weight:800;">Payment method</div>
@@ -137,18 +137,21 @@
   const couponButton = document.getElementById("applyConferenceCoupon");
   // Same date rules are applied on the confirmation pages.
   function offerIsValid() {const now=Date.now();return now>=Date.parse("2026-10-31T00:00:00Z") && now<Date.parse("2026-11-28T00:00:00Z");}
+  function universityOfferIsValid() {return Date.now()<Date.parse("2026-11-20T23:00:00Z");} // 20 Nov 23:59 CET deadline
   function baseAmount() {return Date.now()<Date.parse("2026-11-01T00:00:00Z")?"199":"249";}
   function refreshCouponPrice() {
     const code=couponInput.value.trim().toUpperCase();
-    const applicable=code==="ASIA2026" && offerIsValid();
-    hiddenCoupon.value=applicable?"ASIA2026":"";
-    hiddenAmount.value=applicable?"179":baseAmount();
+    const university=code==="UNIVERSITY2026" && universityOfferIsValid();
+    const asia=code==="ASIA2026" && offerIsValid();
+    const applicable=university||asia;
+    hiddenCoupon.value=university?"UNIVERSITY2026":asia?"ASIA2026":"";
+    hiddenAmount.value=university?"99":asia?"179":baseAmount();
     if(applicable) {
       couponResult.classList.add("applied");
-      couponResult.textContent="ASIA2026 applied! Your live course conference price: €179 (regular €249). You will see €179 in the bank transfer instructions after registration.";
+      couponResult.textContent=university?"UNIVERSITY2026 applied! University student fee: €99 (regular €249). Please enter your university in the organisation field; student eligibility may be checked before confirmation.":"ASIA2026 applied! Your live course conference price: €179 (regular €249). You will see €179 in the bank transfer instructions after registration.";
     } else {
       couponResult.classList.remove("applied");
-      couponResult.textContent=code?(code==="ASIA2026"?"This conference code is not yet active or has expired.":"Code not recognised. Please check and try again."):"Enter your conference code to check your special rate.";
+      couponResult.textContent=code?((code==="ASIA2026"||code==="UNIVERSITY2026")?"This code has expired or is not yet active.":"Code not recognised. Please check and try again."):"Enter your discount code to check your special rate.";
     }
     return applicable;
   }
